@@ -36,7 +36,7 @@ const Chatbot = () => {
     if (isOpen && messages.length === 0) {
       const welcomeMessage: Message = {
         id: '1',
-        text: "Hi! I&apos;m Ram&apos;s AI assistant. I can answer questions about his experience, skills, projects, and background. What would you like to know?",
+        text: "Hi! I'm Ram's AI assistant. I can answer questions about his experience, skills, projects, and background. What would you like to know?",
         isBot: true,
         timestamp: new Date(),
       };
@@ -50,7 +50,7 @@ const Chatbot = () => {
 
     // Experience related
     if (message.includes('experience') || message.includes('work') || message.includes('job') || message.includes('cisco')) {
-      return "I&apos;m currently working as a Software Test Engineer Trainee at Cisco since November 2024. I specialize in automated testing using Java and Selenium, and I&apos;m developing a full-stack AI chatbot using Azure OpenAI, Django, and MySQL. I&apos;m also CCNA certified with strong networking fundamentals.";
+      return "I'm currently working as a Software Test Engineer Trainee at Cisco since November 2024. I specialize in automated testing using Java and Selenium, and I'm developing a full-stack AI chatbot using Azure OpenAI, Django, and MySQL. I'm also CCNA certified with strong networking fundamentals.";
     }
 
     // Skills related
@@ -60,7 +60,7 @@ const Chatbot = () => {
 
     // Projects related
     if (message.includes('project') || message.includes('built') || message.includes('developed') || message.includes('chatbot')) {
-      return "I&apos;ve worked on several key projects:\n\n🤖 AI Chatbot with Azure OpenAI - A full-stack solution with natural language processing\n\n🔍 Network-Based Pattern Searching - Client-server architecture for efficient file searching\n\n⚡ Self-Fuel Dispensing System - RFID-based automation that reduced operational errors by 25%\n\nWould you like details about any specific project?";
+      return "I've worked on several key projects:\n\n🤖 AI Chatbot with Azure OpenAI - A full-stack solution with natural language processing\n\n🔍 Network-Based Pattern Searching - Client-server architecture for efficient file searching\n\n⚡ Self-Fuel Dispensing System - RFID-based automation that reduced operational errors by 25%\n\nWould you like details about any specific project?";
     }
 
     // Education related
@@ -80,12 +80,12 @@ const Chatbot = () => {
 
     // Location related
     if (message.includes('location') || message.includes('where') || message.includes('based') || message.includes('kakinada')) {
-      return "I&apos;m based in Kakinada, Andhra Pradesh, India. Currently working at Cisco in Bengaluru, India.";
+      return "I'm based in Kakinada, Andhra Pradesh, India. Currently working at Cisco in Bengaluru, India.";
     }
 
     // AI/ML related
     if (message.includes('ai') || message.includes('artificial intelligence') || message.includes('machine learning') || message.includes('azure')) {
-      return "I&apos;m actively working with AI technologies! I&apos;m currently developing a full-stack AI chatbot using Azure OpenAI services, integrating Azure Cognitive Search for intelligent schema retrieval and dynamic SQL generation. This project showcases my ability to work with cutting-edge AI technologies.";
+      return "I'm actively working with AI technologies! I'm currently developing a full-stack AI chatbot using Azure OpenAI services, integrating Azure Cognitive Search for intelligent schema retrieval and dynamic SQL generation. This project showcases my ability to work with cutting-edge AI technologies.";
     }
 
     // Testing related
@@ -95,11 +95,11 @@ const Chatbot = () => {
 
     // General greeting
     if (message.includes('hello') || message.includes('hi') || message.includes('hey') || message.includes('good')) {
-      return "Hello! I&apos;m Ram&apos;s AI assistant. I&apos;m here to help you learn more about Ram Gopal Pampana&apos;s professional background, skills, and experience. What would you like to know?";
+      return "Hello! I'm Ram's AI assistant. I'm here to help you learn more about Ram Gopal Pampana's professional background, skills, and experience. What would you like to know?";
     }
 
     // Default response
-    return "That&apos;s an interesting question! I can tell you about Ram&apos;s experience at Cisco, his technical skills, projects like the AI chatbot and pattern searching system, his education, certifications, or how to contact him. What specific aspect would you like to know more about?";
+    return "That's an interesting question! I can tell you about Ram's experience at Cisco, his technical skills, projects like the AI chatbot and pattern searching system, his education, certifications, or how to contact him. What specific aspect would you like to know more about?";
   };
 
   const handleSendMessage = async () => {
