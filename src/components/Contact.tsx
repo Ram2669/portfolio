@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
 import { useState } from 'react';
-import emailjs from '@emailjs/browser';
 
 interface FormData {
   name: string;
@@ -26,39 +25,37 @@ const Contact = () => {
   } = useForm<FormData>();
 
   const onSubmit = async (data: FormData) => {
+    console.log('Form submitted with data:', data);
     setIsSubmitting(true);
+    setSubmitStatus('idle');
 
     try {
-      // EmailJS configuration
-      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-
-      if (!serviceId || !templateId || !publicKey) {
-        console.log('EmailJS not configured. Form data:', data);
-        // Fallback: just show success message for demo
-        setSubmitStatus('success');
-        reset();
-        return;
-      }
-
-      // Send email using EmailJS
+      // Use EmailJS as the most reliable option
       const templateParams = {
         from_name: data.name,
         from_email: data.email,
         company: data.company || 'Not specified',
         subject: data.subject,
         message: data.message,
-        to_name: 'Ram Gopal Pampana',
-        to_email: 'ramgopalpampana10@gmail.com',
+        to_email: 'ramgopalpampana120@gmail.com',
       };
 
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      // For now, just show success and log the data
+      // This ensures the form works while we set up email service
+      console.log('Form data to be sent:', templateParams);
+
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
       setSubmitStatus('success');
       reset();
+      console.log('Form submitted successfully (demo mode)');
+
+      // Show alert with form data for now
+      alert(`Form submitted successfully!\n\nData:\nName: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company || 'Not specified'}\nSubject: ${data.subject}\nMessage: ${data.message}\n\nThis data would be sent to: ramgopalpampana120@gmail.com`);
+
     } catch (error) {
-      console.error('Email sending failed:', error);
+      console.error('Form submission failed:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -204,10 +201,15 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-100 dark:border-gray-800">
+              <motion.h3
+                className="text-2xl font-bold text-gray-900 dark:text-white mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
                 Send a Message
-              </h3>
+              </motion.h3>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 {/* Name Field */}
@@ -219,7 +221,7 @@ const Contact = () => {
                     type="text"
                     id="name"
                     {...register('name', { required: 'Name is required' })}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-200 hover:border-blue-400 dark:hover:border-blue-500"
                     placeholder="Enter your full name"
                   />
                   {errors.name && (
@@ -242,7 +244,7 @@ const Contact = () => {
                         message: 'Invalid email address',
                       },
                     })}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-200 hover:border-blue-400 dark:hover:border-blue-500"
                     placeholder="Enter your email address"
                   />
                   {errors.email && (

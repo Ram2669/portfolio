@@ -87,15 +87,12 @@ const Footer = () => {
 
         {/* Bottom border */}
         <motion.div
-          className="mt-8 pt-8 border-t border-gray-800 text-center"
+          className="mt-8 pt-8 border-t border-gray-800"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <p className="text-sm text-gray-500">
-            Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion
-          </p>
         </motion.div>
       </div>
     </footer>

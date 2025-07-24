@@ -1,0 +1,110 @@
+================================================================================
+                            RAM GOPAL PAMPANA
+                    Software Test Engineer & Full Stack Developer
+================================================================================
+
+CONTACT INFORMATION
+📧 Email: ramgopalpampana10@gmail.com
+📱 Phone: +91 7730072669
+🔗 LinkedIn: https://www.linkedin.com/in/ramgopalpampana/
+💻 GitHub: github.com/Ram2669
+📍 Location: Kakinada, Andhra Pradesh, India
+
+================================================================================
+PROFESSIONAL EXPERIENCE
+================================================================================
+
+Software Test Engineer Trainee | CISCO
+November 2024 - Present | Bengaluru, India
+
+• Automated testing using Java and Selenium to ensure software quality and reliability
+• Developing full-stack AI chatbot using Azure OpenAI, Django, and MySQL
+• Integrating Azure Cognitive Search for intelligent schema retrieval and data processing
+• CCNA Certified with proficiency in networking protocols and IP fundamentals
+• Collaborating with cross-functional teams to deliver high-quality software solutions
+
+================================================================================
+EDUCATION
+================================================================================
+
+Bachelor of Technology - Electronics and Communication Engineering
+Pragati Engineering College, Kakinada
+August 2019 - June 2023 | CGPA: 7.87
+
+================================================================================
+KEY PROJECTS
+================================================================================
+
+🤖 AI Chatbot with Azure OpenAI
+• Full-stack AI chatbot enabling natural language query handling and real-time responses
+• Technologies: Azure OpenAI, Django, MySQL, HTML/CSS/JavaScript, Azure Cognitive Search
+• Features: Dynamic SQL generation, intelligent schema retrieval, real-time processing
+• Status: In Development
+
+🔍 Network-Based Pattern Searching
+• Client-server architecture application for searching words in files with efficient pattern matching
+• Technologies: Python, JSON, Client-Server Architecture, File Processing
+• Features: JSON-based communication, efficient file searching, error handling
+• GitHub: github.com/Ram2669/-NETWORK-BASED-PATTERN-SEARCHING_project.git
+• Status: Completed
+
+⚡ Self-Fuel Dispensing Automated Framework
+• RFID-based automated fuel dispensing system reducing operational errors and unauthorized access
+• Technologies: Embedded C, Arduino, RFID Technology, Real-time Processing
+• Achievements: 25% reduction in operational errors, 40% improvement in transaction efficiency
+• Features: RFID authentication, real-time data processing, advanced security algorithms
+• Status: Completed
+
+================================================================================
+TECHNICAL SKILLS
+================================================================================
+
+Programming Languages:
+• Java, Python, JavaScript
+
+Frameworks & Libraries:
+• Angular, TestNG, JUnit, Django
+
+Tools & Platforms:
+• Git, VSCode, PyCharm, Cypress, Selenium
+• AWS, Azure OpenAI, REST APIs, Postman
+
+Databases:
+• MySQL
+
+Testing:
+• Automated Testing, Selenium, TestNG, JUnit, Cypress
+
+================================================================================
+CERTIFICATIONS
+================================================================================
+
+• Cisco Certified Network Associate (CCNA)
+• The Joy of Computing using Python - IIT Madras (NPTEL)
+• Python Certification - HackerRank
+• Elite + Silver Badge - NPTEL Certification
+
+================================================================================
+ACHIEVEMENTS
+================================================================================
+
+• Successfully reduced operational errors by 25% in Self-Fuel Dispensing project
+• Improved transaction efficiency by 40% through automated framework implementation
+• Developed AI-powered solutions using cutting-edge Azure OpenAI technology
+• Demonstrated expertise in both frontend and backend development
+• Strong foundation in automated testing and quality assurance
+
+================================================================================
+PROFESSIONAL SUMMARY
+================================================================================
+
+Dedicated Software Test Engineer with expertise in automated testing, full-stack 
+development, and AI-powered solutions. Currently working at Cisco, developing 
+innovative applications using Azure OpenAI, Django, and modern web technologies. 
+Strong background in networking (CCNA certified), embedded systems, and database 
+management. Passionate about building robust, scalable applications that solve 
+real-world problems and deliver exceptional user experiences.
+
+================================================================================
+                        Generated from: ramgopalpampana.dev
+================================================================================

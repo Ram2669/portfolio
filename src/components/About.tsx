@@ -181,23 +181,41 @@ const About = () => {
                 return (
                   <motion.div
                     key={index}
-                    className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6"
+                    className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg hover:shadow-xl border border-gray-100 dark:border-gray-800 hover:border-blue-200 dark:hover:border-blue-700 transition-all duration-300"
                     variants={itemVariants}
+                    whileHover={{
+                      y: -4,
+                      scale: 1.02,
+                      transition: { duration: 0.2 }
+                    }}
                   >
-                    <div className="flex items-center mb-3">
-                      <IconComponent className="w-6 h-6 text-blue-600 mr-3" />
-                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    <div className="flex items-center mb-4">
+                      <motion.div
+                        className="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 rounded-xl flex items-center justify-center mr-4 shadow-md"
+                        whileHover={{ rotate: 5, scale: 1.1 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <IconComponent className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                      </motion.div>
+                      <h4 className="text-lg font-bold text-gray-900 dark:text-white">
                         {skillGroup.category}
                       </h4>
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {skillGroup.items.map((skill, skillIndex) => (
-                        <span
+                        <motion.span
                           key={skillIndex}
-                          className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
+                          className="px-3 py-1.5 bg-gradient-to-r from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 text-blue-800 dark:text-blue-200 rounded-full text-sm font-semibold shadow-sm hover:shadow-md transition-all duration-200"
+                          whileHover={{
+                            scale: 1.05,
+                            y: -1,
+                            backgroundColor: "#3B82F6",
+                            color: "#FFFFFF"
+                          }}
+                          transition={{ duration: 0.2 }}
                         >
                           {skill}
-                        </span>
+                        </motion.span>
                       ))}
                     </div>
                   </motion.div>

@@ -128,19 +128,28 @@ const Projects = () => {
             return (
               <motion.div
                 key={index}
-                className="bg-white dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                className="bg-white dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group border border-gray-100 dark:border-gray-800 hover:border-blue-200 dark:hover:border-blue-700"
                 variants={itemVariants}
-                whileHover={{ y: -5 }}
+                whileHover={{
+                  y: -8,
+                  scale: 1.02,
+                  transition: { duration: 0.3, ease: "easeOut" }
+                }}
+                whileTap={{ scale: 0.98 }}
               >
                 <div className="p-6">
                   {/* Header */}
-                  <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-start justify-between mb-6">
                     <div className="flex items-center">
-                      <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mr-4">
-                        <IconComponent className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                      </div>
+                      <motion.div
+                        className="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 rounded-xl flex items-center justify-center mr-4 group-hover:from-blue-200 group-hover:to-blue-300 dark:group-hover:from-blue-800 dark:group-hover:to-blue-700 transition-all duration-300 shadow-md"
+                        whileHover={{ rotate: 5, scale: 1.1 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <IconComponent className="w-7 h-7 text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300" />
+                      </motion.div>
                       <div>
-                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                        <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 leading-tight">
                           {project.title}
                         </h3>
                       </div>
@@ -148,13 +157,21 @@ const Projects = () => {
                   </div>
 
                   {/* Status and Category */}
-                  <div className="flex gap-2 mb-4">
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(project.status)}`}>
+                  <div className="flex gap-3 mb-5">
+                    <motion.span
+                      className={`px-3 py-1.5 rounded-full text-xs font-semibold shadow-sm ${getStatusColor(project.status)}`}
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.2 }}
+                    >
                       {project.status}
-                    </span>
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(project.category)}`}>
+                    </motion.span>
+                    <motion.span
+                      className={`px-3 py-1.5 rounded-full text-xs font-semibold shadow-sm ${getCategoryColor(project.category)}`}
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.2 }}
+                    >
                       {project.category}
-                    </span>
+                    </motion.span>
                   </div>
 
                   {/* Description */}
@@ -177,19 +194,26 @@ const Projects = () => {
 
                   {/* Technologies */}
                   <div className="mb-6">
-                    <div className="flex flex-wrap gap-1">
+                    <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Technologies:</h4>
+                    <div className="flex flex-wrap gap-2">
                       {project.technologies.slice(0, 4).map((tech, techIndex) => (
-                        <span
+                        <motion.span
                           key={techIndex}
-                          className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs"
+                          className="px-3 py-1.5 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 text-gray-700 dark:text-gray-300 rounded-lg text-xs font-medium shadow-sm hover:shadow-md transition-all duration-200"
+                          whileHover={{ scale: 1.05, y: -1 }}
+                          transition={{ duration: 0.2 }}
                         >
                           {tech}
-                        </span>
+                        </motion.span>
                       ))}
                       {project.technologies.length > 4 && (
-                        <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs">
+                        <motion.span
+                          className="px-3 py-1.5 bg-gradient-to-r from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 text-blue-700 dark:text-blue-300 rounded-lg text-xs font-medium shadow-sm"
+                          whileHover={{ scale: 1.05, y: -1 }}
+                          transition={{ duration: 0.2 }}
+                        >
                           +{project.technologies.length - 4} more
-                        </span>
+                        </motion.span>
                       )}
                     </div>
                   </div>
@@ -199,22 +223,24 @@ const Projects = () => {
                     {project.githubLink && (
                       <motion.a
                         href={project.githubLink}
-                        className="flex items-center gap-2 px-3 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
-                        whileHover={{ scale: 1.05 }}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-gray-900 to-gray-800 dark:from-gray-700 dark:to-gray-600 text-white rounded-lg text-sm font-medium hover:from-gray-800 hover:to-gray-700 dark:hover:from-gray-600 dark:hover:to-gray-500 transition-all duration-200 shadow-md hover:shadow-lg"
+                        whileHover={{ scale: 1.05, y: -2 }}
                         whileTap={{ scale: 0.95 }}
                       >
                         <Github className="w-4 h-4" />
-                        Code
+                        View Code
                       </motion.a>
                     )}
-                    {project.status === 'Completed' && (
+                    {project.status === 'Completed' && project.title !== 'Self-Fuel Dispensing Automated Framework' && (
                       <motion.button
-                        className="flex items-center gap-2 px-3 py-2 border border-blue-600 text-blue-600 rounded-lg text-sm font-medium hover:bg-blue-50 dark:hover:bg-blue-900 transition-colors"
-                        whileHover={{ scale: 1.05 }}
+                        className="flex items-center gap-2 px-4 py-2 border-2 border-blue-600 text-blue-600 rounded-lg text-sm font-medium hover:bg-blue-600 hover:text-white transition-all duration-200 shadow-md hover:shadow-lg"
+                        whileHover={{ scale: 1.05, y: -2 }}
                         whileTap={{ scale: 0.95 }}
                       >
                         <ExternalLink className="w-4 h-4" />
-                        Details
+                        Live Demo
                       </motion.button>
                     )}
                   </div>

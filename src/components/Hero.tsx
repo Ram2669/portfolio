@@ -64,7 +64,15 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            Ram Gopal Pampana
+            <motion.span
+              className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent"
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.2 }
+              }}
+            >
+              Ram Gopal Pampana
+            </motion.span>
           </motion.h1>
 
           {/* Animated Title */}
@@ -95,25 +103,35 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
           >
             <motion.button
               onClick={scrollToAbout}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-medium transition-colors duration-200 flex items-center gap-2"
-              whileHover={{ scale: 1.05 }}
+              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-4 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl"
+              whileHover={{
+                scale: 1.05,
+                y: -2,
+                boxShadow: "0 20px 25px -5px rgba(59, 130, 246, 0.3)"
+              }}
               whileTap={{ scale: 0.95 }}
             >
               Learn More About Me
             </motion.button>
-            
+
             <motion.a
-              href="/resume.pdf"
-              download
-              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-full font-medium transition-all duration-200 flex items-center gap-2"
-              whileHover={{ scale: 1.05 }}
+              href="/Ram_Gopal_Pampana_Resume.pdf"
+              download="Ram_Gopal_Pampana_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-10 py-4 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 shadow-md hover:shadow-lg"
+              whileHover={{
+                scale: 1.05,
+                y: -2,
+                boxShadow: "0 10px 15px -3px rgba(59, 130, 246, 0.2)"
+              }}
               whileTap={{ scale: 0.95 }}
             >
               <Download size={20} />
