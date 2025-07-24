@@ -30,30 +30,30 @@ const Contact = () => {
     setSubmitStatus('idle');
 
     try {
-      // Use EmailJS as the most reliable option
-      const templateParams = {
-        from_name: data.name,
-        from_email: data.email,
-        company: data.company || 'Not specified',
-        subject: data.subject,
-        message: data.message,
-        to_email: 'ramgopalpampana120@gmail.com',
-      };
+      // Netlify Forms submission
+      const formData = new FormData();
+      formData.append('form-name', 'contact');
+      formData.append('name', data.name);
+      formData.append('email', data.email);
+      formData.append('company', data.company || 'Not specified');
+      formData.append('subject', data.subject);
+      formData.append('message', data.message);
 
-      // For now, just show success and log the data
-      // This ensures the form works while we set up email service
-      console.log('Form data to be sent:', templateParams);
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString(),
+      });
 
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      console.log('Netlify Forms response status:', response.status);
 
-      setSubmitStatus('success');
-      reset();
-      console.log('Form submitted successfully (demo mode)');
-
-      // Show alert with form data for now
-      alert(`Form submitted successfully!\n\nData:\nName: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company || 'Not specified'}\nSubject: ${data.subject}\nMessage: ${data.message}\n\nThis data would be sent to: ramgopalpampana120@gmail.com`);
-
+      if (response.ok) {
+        setSubmitStatus('success');
+        reset();
+        console.log('Form submitted successfully via Netlify Forms');
+      } else {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
     } catch (error) {
       console.error('Form submission failed:', error);
       setSubmitStatus('error');
@@ -211,7 +211,17 @@ const Contact = () => {
                 Send a Message
               </motion.h3>
 
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                className="space-y-6"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+              >
+                {/* Hidden fields for Netlify */}
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="bot-field" />
                 {/* Name Field */}
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -220,6 +230,7 @@ const Contact = () => {
                   <input
                     type="text"
                     id="name"
+                    name="name"
                     {...register('name', { required: 'Name is required' })}
                     className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-200 hover:border-blue-400 dark:hover:border-blue-500"
                     placeholder="Enter your full name"
@@ -237,6 +248,7 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     {...register('email', {
                       required: 'Email is required',
                       pattern: {
@@ -260,6 +272,7 @@ const Contact = () => {
                   <input
                     type="text"
                     id="company"
+                    name="company"
                     {...register('company')}
                     className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
                     placeholder="Your company name"
@@ -274,6 +287,7 @@ const Contact = () => {
                   <input
                     type="text"
                     id="subject"
+                    name="subject"
                     {...register('subject', { required: 'Subject is required' })}
                     className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
                     placeholder="What's this about?"
@@ -290,6 +304,7 @@ const Contact = () => {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     rows={5}
                     {...register('message', { required: 'Message is required' })}
                     className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200 resize-none"
