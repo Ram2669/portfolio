@@ -10,6 +10,13 @@
   to = "/index.html"
   status = 200
 
+# Form success redirect
+[[redirects]]
+  from = "/contact"
+  to = "/thank-you.html"
+  status = 200
+  conditions = {Role = ["form-submission"]}
+
 # Enable Netlify Forms
 [form]
   # Form settings for contact form

@@ -30,8 +30,8 @@ const Contact = () => {
     setSubmitStatus('idle');
 
     try {
-      // Netlify Forms submission
-      const formData = new FormData();
+      // Netlify Forms submission using URLSearchParams
+      const formData = new URLSearchParams();
       formData.append('form-name', 'contact');
       formData.append('name', data.name);
       formData.append('email', data.email);
@@ -42,12 +42,12 @@ const Contact = () => {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString(),
+        body: formData.toString(),
       });
 
       console.log('Netlify Forms response status:', response.status);
 
-      if (response.ok) {
+      if (response.ok || response.status === 200) {
         setSubmitStatus('success');
         reset();
         console.log('Form submitted successfully via Netlify Forms');
