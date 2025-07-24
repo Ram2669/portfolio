@@ -1,19 +1,19 @@
 [build]
-  publish = ".next"
+  publish = "out"
   command = "npm run build"
 
 [build.environment]
-  NEXT_PRIVATE_TARGET = "server"
+  NODE_VERSION = "18"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
+# Enable Netlify Forms
 [form]
-  # Form settings
+  # Form settings for contact form
   [form.settings]
-    # Enable form notifications
+    # Send form submissions to your email
     [form.settings.notification]
-      # Send form submissions to your email
       email = "ramgopalpampana120@gmail.com"
