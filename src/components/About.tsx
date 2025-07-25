@@ -11,6 +11,11 @@ const About = () => {
       icon: Code,
     },
     {
+      category: 'Web Technologies',
+      items: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Next.js', 'Tailwind CSS'],
+      icon: Code,
+    },
+    {
       category: 'Frameworks & Libraries',
       items: ['Angular', 'TestNG', 'JUnit', 'Django'],
       icon: Code,
