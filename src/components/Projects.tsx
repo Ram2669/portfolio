@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Search, Zap, Shield } from 'lucide-react';
+import { Github, Search, Zap, Shield } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -233,16 +233,7 @@ const Projects = () => {
                         View Code
                       </motion.a>
                     )}
-                    {project.status === 'Completed' && project.title !== 'Self-Fuel Dispensing Automated Framework' && (
-                      <motion.button
-                        className="flex items-center gap-2 px-4 py-2 border-2 border-blue-600 text-blue-600 rounded-lg text-sm font-medium hover:bg-blue-600 hover:text-white transition-all duration-200 shadow-md hover:shadow-lg"
-                        whileHover={{ scale: 1.05, y: -2 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Live Demo
-                      </motion.button>
-                    )}
+
                   </div>
                 </div>
               </motion.div>
