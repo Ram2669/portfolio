@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 
 const Hero = () => {
   const [text, setText] = useState('');
-  const fullText = "Software Test Engineer & Full Stack Developer";
+  const fullText = "Software Engineer";
   
   useEffect(() => {
     let index = 0;
@@ -97,7 +97,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            Software Test Engineer at Cisco with expertise in automated testing and full-stack development.
+            Software Engineer at Cisco with expertise in automated testing and full-stack development.
             Currently building AI-powered solutions with Azure OpenAI and modern web technologies.
           </motion.p>
 
