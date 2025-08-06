@@ -94,13 +94,9 @@ Self-Fuel Dispensing Automated Framework                                     202
 EDUCATION
 ================================================================================
 
-Bachelor of Technology in Computer Science and Engineering        2020 - 2024
-Aditya Institute of Technology and Management          Tekkali, Andhra Pradesh
-
-• Relevant Coursework: Data Structures, Algorithms, Database Management, 
-  Software Engineering, Computer Networks
-• Final Year Project: AI-powered chatbot with natural language processing 
-  capabilities
+Bachelor of Technology in Electronics and Communication Engineering
+Pragati Engineering College, Kakinada                    August 2019 - June 2023
+CGPA: 7.87
 
 ================================================================================
 CERTIFICATIONS
