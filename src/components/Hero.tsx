@@ -121,22 +121,41 @@ const Hero = () => {
               Learn More About Me
             </motion.button>
 
-            <motion.a
-              href="/Ram_Gopal_Pampana_Resume.pdf"
-              download="Ram_Gopal_Pampana_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-10 py-4 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 shadow-md hover:shadow-lg"
-              whileHover={{
-                scale: 1.05,
-                y: -2,
-                boxShadow: "0 10px 15px -3px rgba(59, 130, 246, 0.2)"
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Download size={20} />
-              Download Resume
-            </motion.a>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <motion.a
+                href="/Ram_Gopal_Pampana_ATS_Resume.pdf"
+                download="Ram_Gopal_Pampana_ATS_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 shadow-md hover:shadow-lg justify-center"
+                whileHover={{
+                  scale: 1.05,
+                  y: -2,
+                  boxShadow: "0 10px 15px -3px rgba(59, 130, 246, 0.3)"
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Download size={20} />
+                Download ATS Resume
+              </motion.a>
+
+              <motion.a
+                href="/Ram_Gopal_Pampana_Resume.pdf"
+                download="Ram_Gopal_Pampana_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 shadow-md hover:shadow-lg justify-center"
+                whileHover={{
+                  scale: 1.05,
+                  y: -2,
+                  boxShadow: "0 10px 15px -3px rgba(59, 130, 246, 0.2)"
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Download size={20} />
+                Standard Resume
+              </motion.a>
+            </div>
           </motion.div>
         </motion.div>
 

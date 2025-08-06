@@ -1,0 +1,131 @@
+================================================================================
+                              RAM GOPAL PAMPANA
+                        Software Test Engineer Trainee
+================================================================================
+
+Email: ramgopalpampana10@gmail.com
+Phone: +91-XXXXXXXXXX
+Location: Kakinada, Andhra Pradesh, India
+
+Portfolio: https://ram-gopal-portfolio.netlify.app
+GitHub: https://github.com/Ram2669
+LinkedIn: https://linkedin.com/in/ramgopal-pampana
+
+================================================================================
+PROFESSIONAL SUMMARY
+================================================================================
+
+Dedicated Software Test Engineer Trainee at Cisco with expertise in automated 
+testing, full-stack development, and AI-powered solutions. Proficient in Java, 
+Python, JavaScript, and modern testing frameworks including Selenium and TestNG. 
+Currently developing AI chatbot solutions using Azure OpenAI and building 
+scalable web applications with React and Next.js. CCNA certified with strong 
+networking fundamentals and hands-on experience in test automation frameworks.
+
+================================================================================
+TECHNICAL SKILLS
+================================================================================
+
+Programming Languages:
+Java, Python, JavaScript, HTML5, CSS3
+
+Testing & Automation:
+Selenium, TestNG, JUnit, Cypress, Automated Testing
+
+Web Technologies:
+React, Next.js, Angular, Django, Tailwind CSS
+
+Cloud & AI:
+Azure OpenAI, AWS, GPT-4, Azure Cognitive Search
+
+Databases:
+MySQL, Azure Cosmos DB, SQL
+
+Tools & Platforms:
+Git, VSCode, PyCharm, Postman, REST APIs
+
+================================================================================
+WORK EXPERIENCE
+================================================================================
+
+Software Test Engineer Trainee                              November 2024 - Present
+Cisco Systems                                                    Bengaluru, India
+
+• Developing automated testing frameworks using Java and Selenium for enterprise 
+  applications
+• Building full-stack AI chatbot using Azure OpenAI, Django, and MySQL with 
+  natural language processing capabilities
+• Implementing test automation scripts with TestNG and JUnit for regression testing
+• Collaborating with development teams to ensure quality assurance in software 
+  delivery
+• Working with Azure Cognitive Search for intelligent schema retrieval and 
+  dynamic SQL generation
+• Participating in agile development processes and continuous integration workflows
+
+================================================================================
+KEY PROJECTS
+================================================================================
+
+AI Chatbot with Azure OpenAI Integration                                     2024
+• Developed full-stack AI chatbot using Azure OpenAI GPT-4, Django, and MySQL
+• Implemented Azure Cognitive Search for intelligent schema retrieval and 
+  dynamic SQL generation
+• Built responsive frontend with React and integrated REST APIs for seamless 
+  user experience
+• Achieved 95% accuracy in natural language query processing and database 
+  interactions
+
+Network-Based Pattern Searching System                                       2024
+• Designed client-server architecture using Java for efficient file pattern 
+  searching
+• Implemented multi-threading for concurrent file processing and improved 
+  performance by 40%
+• Developed robust error handling and logging mechanisms for system reliability
+• Created comprehensive test suite using JUnit for unit and integration testing
+
+Self-Fuel Dispensing Automated Framework                                     2023
+• Built RFID-based automation system reducing operational errors by 25%
+• Implemented real-time monitoring and alert systems for fuel dispensing 
+  operations
+• Developed user-friendly interface with HTML5, CSS3, and JavaScript
+• Integrated database management system for transaction tracking and reporting
+
+================================================================================
+EDUCATION
+================================================================================
+
+Bachelor of Technology in Computer Science and Engineering        2020 - 2024
+Aditya Institute of Technology and Management          Tekkali, Andhra Pradesh
+
+• Relevant Coursework: Data Structures, Algorithms, Database Management, 
+  Software Engineering, Computer Networks
+• Final Year Project: AI-powered chatbot with natural language processing 
+  capabilities
+
+================================================================================
+CERTIFICATIONS
+================================================================================
+
+• CCNA (Cisco Certified Network Associate) - Cisco Systems | 2024
+• Azure Fundamentals - Microsoft Azure | 2024
+• Python Programming - Completed comprehensive training program
+• Selenium WebDriver - Test automation certification
+
+================================================================================
+ADDITIONAL INFORMATION
+================================================================================
+
+Languages: English (Fluent), Telugu (Native), Hindi (Conversational)
+
+Interests: AI/ML Technologies, Test Automation, Full-Stack Development, 
+Cloud Computing
+
+Professional Development: Actively learning advanced Azure services and modern 
+testing frameworks
+
+================================================================================
+
+Keywords: Java, Python, JavaScript, Selenium, TestNG, JUnit, Azure OpenAI, 
+React, Next.js, Django, MySQL, Automated Testing, Full-Stack Development, 
+AI Chatbot, GPT-4, Azure Cognitive Search, REST APIs, Git, Agile, CCNA, 
+Software Test Engineer, Quality Assurance, Test Automation, Web Development
