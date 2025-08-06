@@ -7,9 +7,9 @@ Email: ramgopalpampana10@gmail.com
 Phone: +91-XXXXXXXXXX
 Location: Kakinada, Andhra Pradesh, India
 
-Portfolio: https://ram-gopal-portfolio.netlify.app
-GitHub: https://github.com/Ram2669
-LinkedIn: https://linkedin.com/in/ramgopal-pampana
+Portfolio: ram-gopal-portfolio.netlify.app
+GitHub: github.com/Ram2669
+LinkedIn: linkedin.com/in/ramgopal-pampana
 
 ================================================================================
 PROFESSIONAL SUMMARY
