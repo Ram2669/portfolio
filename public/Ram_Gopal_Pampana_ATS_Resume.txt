@@ -19,7 +19,7 @@ Dedicated Software Test Engineer Trainee at Cisco with expertise in automated
 testing, full-stack development, and AI-powered solutions. Proficient in Java, 
 Python, JavaScript, and modern testing frameworks including Selenium and TestNG. 
 Currently developing AI chatbot solutions using Azure OpenAI and building 
-scalable web applications with React and Next.js. CCNA certified with strong 
+scalable web applications with React. CCNA certified with strong
 networking fundamentals and hands-on experience in test automation frameworks.
 
 ================================================================================
@@ -33,7 +33,7 @@ Testing & Automation:
 Selenium, TestNG, JUnit, Cypress, Automated Testing
 
 Web Technologies:
-React, Next.js, Angular, Django, Tailwind CSS
+React, Angular, Django
 
 Cloud & AI:
 Azure OpenAI, AWS, GPT-4, Azure Cognitive Search
@@ -103,7 +103,7 @@ CERTIFICATIONS
 ================================================================================
 
 • CCNA (Cisco Certified Network Associate) - Cisco Systems | 2024
-• Azure Fundamentals - Microsoft Azure | 2024
+
 • Python Programming - Completed comprehensive training program
 • Automation Testing - Test Automation Training | 2024
   Certificate: https://drive.google.com/file/d/1p49OD-hYC9m_X9vy037mv3vWNaCblzfa/view?usp=drivesdk
@@ -123,6 +123,6 @@ testing frameworks
 ================================================================================
 
 Keywords: Java, Python, JavaScript, Selenium, TestNG, JUnit, Azure OpenAI, 
-React, Next.js, Django, MySQL, Automated Testing, Full-Stack Development, 
+React, Django, MySQL, Automated Testing, Full-Stack Development,
 AI Chatbot, GPT-4, Azure Cognitive Search, REST APIs, Git, Agile, CCNA, 
 Software Test Engineer, Quality Assurance, Test Automation, Web Development
