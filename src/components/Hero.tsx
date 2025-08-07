@@ -113,31 +113,7 @@ const Hero = () => {
             Currently learning LangChain and LangGraph for advanced AI applications.
           </motion.p>
 
-          {/* Interactive Stats */}
-          <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-          >
-            {[
-              { icon: Award, label: "Certifications", value: "5+", color: "text-yellow-500" },
-              { icon: Code, label: "Projects", value: "10+", color: "text-green-500" },
-              { icon: Brain, label: "AI Accuracy", value: "95%", color: "text-purple-500" },
-              { icon: Sparkles, label: "Experience", value: "2024", color: "text-blue-500" }
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
-                whileHover={{ scale: 1.05, y: -5 }}
-                transition={{ duration: 0.2 }}
-              >
-                <stat.icon className={`w-8 h-8 ${stat.color} mx-auto mb-2`} />
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">{stat.value}</div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">{stat.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
+
 
           {/* CTA Buttons */}
           <motion.div
