@@ -105,7 +105,8 @@ CERTIFICATIONS
 • CCNA (Cisco Certified Network Associate) - Cisco Systems | 2024
 • Azure Fundamentals - Microsoft Azure | 2024
 • Python Programming - Completed comprehensive training program
-• Selenium WebDriver - Test automation certification
+• Automation Testing - Test Automation Training | 2024
+  Certificate: https://drive.google.com/file/d/1p49OD-hYC9m_X9vy037mv3vWNaCblzfa/view?usp=drivesdk
 
 ================================================================================
 ADDITIONAL INFORMATION
