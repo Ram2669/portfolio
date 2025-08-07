@@ -1,46 +1,53 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Code, Database, Cloud, TestTube, Award, MapPin, Mail, Phone } from 'lucide-react';
+import { Code, Database, Cloud, TestTube, Award, MapPin, Mail, Phone, Brain, Network, Cpu } from 'lucide-react';
 
 const About = () => {
   const skills = [
     {
       category: 'Programming Languages',
-      items: ['Java', 'Python', 'JavaScript'],
+      items: ['Java', 'Python', 'JavaScript', 'HTML5', 'CSS3'],
       icon: Code,
+    },
+    {
+      category: 'Testing & Automation',
+      items: ['Selenium WebDriver', 'TestNG', 'JUnit', 'Cypress', 'Automated Testing'],
+      icon: TestTube,
     },
     {
       category: 'Web Technologies',
-      items: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Next.js', 'Tailwind CSS'],
+      items: ['React', 'Angular', 'Django', 'REST APIs'],
       icon: Code,
     },
     {
-      category: 'Frameworks & Libraries',
-      items: ['Angular', 'TestNG', 'JUnit', 'Django'],
-      icon: Code,
-    },
-    {
-      category: 'Tools & Platforms',
-      items: ['Git', 'VSCode', 'PyCharm', 'Cypress', 'Selenium', 'AWS', 'Azure OpenAI', 'REST APIs', 'Postman'],
+      category: 'Cloud & AI Technologies',
+      items: ['Azure OpenAI', 'AWS', 'GPT-4', 'Azure Cognitive Search', 'Generative AI'],
       icon: Cloud,
     },
     {
-      category: 'Databases',
-      items: ['MySQL'],
+      category: 'Data Science',
+      items: ['Generative AI', 'Machine Learning', 'Data Analysis', 'LangChain', 'LangGraph'],
+      icon: Brain,
+    },
+    {
+      category: 'Databases & Tools',
+      items: ['MySQL', 'Azure Cosmos DB', 'Git', 'VSCode', 'PyCharm'],
       icon: Database,
     },
     {
-      category: 'Testing',
-      items: ['Automated Testing', 'Selenium', 'TestNG', 'JUnit', 'Cypress'],
-      icon: TestTube,
+      category: 'Networking',
+      items: ['CCNA Certified', 'TCP/IP', 'Network Protocols'],
+      icon: Network,
     },
   ];
 
   const certifications = [
-    'Cisco Certified Network Associate (CCNA)',
-    'The Joy of Computing using Python - IIT Madras (NPTEL)',
-    'Python - HackerRank',
+    'Data Science Certification - Cisco Systems (2025) - Generative AI Green Belt Program',
+    'CCNA (Cisco Certified Network Associate) - Cisco Systems (2024)',
+    'Python Programming - NPTEL (2024)',
+    'Python (Basic) - HackerRank (2024)',
+    'Automation Testing - Test Automation Training (2024)',
   ];
 
   const containerVariants = {
@@ -78,7 +85,7 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Passionate Software Test Engineer with expertise in automated testing and full-stack development
+            Data Science certified Software Test Engineer with expertise in automated testing, AI solutions, and full-stack development. Currently learning LangChain and LangGraph for advanced AI applications.
           </p>
         </motion.div>
 
@@ -106,7 +113,7 @@ const About = () => {
                 </div>
                 <div className="flex items-center text-gray-600 dark:text-gray-300">
                   <MapPin className="w-5 h-5 mr-3 text-blue-600" />
-                  <span>Kakinada, Andhra Pradesh</span>
+                  <span>Bengaluru, Karnataka, India</span>
                 </div>
               </div>
             </div>
@@ -133,9 +140,9 @@ const About = () => {
                     </p>
                     <ul className="text-gray-600 dark:text-gray-300 space-y-1 text-sm">
                       <li>• Automated testing using Java and Selenium to ensure software quality</li>
-                      <li>• Developing full-stack AI chatbot using Azure OpenAI, Django, MySQL</li>
-                      <li>• Integrating Azure Cognitive Search for intelligent schema retrieval</li>
-                      <li>• CCNA Certified with proficiency in networking and IP fundamentals</li>
+                      <li>• Developing a full-stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure Cognitive Search for real-time natural language query handling</li>
+                      <li>• Integrating Azure Cognitive Search for intelligent schema retrieval and dynamic SQL generation</li>
+                      <li>• CCNA Certified: Proficient in networking, routing, switching, and IP fundamentals</li>
                     </ul>
                   </div>
                 </div>
@@ -186,19 +193,19 @@ const About = () => {
                 return (
                   <motion.div
                     key={index}
-                    className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg hover:shadow-xl border border-gray-100 dark:border-gray-800 hover:border-blue-200 dark:hover:border-blue-700 transition-all duration-300"
+                    className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300"
                     variants={itemVariants}
                     whileHover={{
-                      y: -4,
-                      scale: 1.02,
-                      transition: { duration: 0.2 }
+                      y: -6,
+                      scale: 1.03,
+                      transition: { duration: 0.3 }
                     }}
                   >
                     <div className="flex items-center mb-4">
                       <motion.div
-                        className="w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 rounded-xl flex items-center justify-center mr-4 shadow-md"
-                        whileHover={{ rotate: 5, scale: 1.1 }}
-                        transition={{ duration: 0.2 }}
+                        className="w-12 h-12 bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 dark:from-blue-900 dark:via-blue-800 dark:to-blue-700 rounded-xl flex items-center justify-center mr-4 shadow-lg"
+                        whileHover={{ rotate: 10, scale: 1.15 }}
+                        transition={{ duration: 0.3 }}
                       >
                         <IconComponent className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                       </motion.div>
@@ -210,14 +217,15 @@ const About = () => {
                       {skillGroup.items.map((skill, skillIndex) => (
                         <motion.span
                           key={skillIndex}
-                          className="px-3 py-1.5 bg-gradient-to-r from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 text-blue-800 dark:text-blue-200 rounded-full text-sm font-semibold shadow-sm hover:shadow-md transition-all duration-200"
+                          className="px-4 py-2 bg-gradient-to-r from-blue-50 via-blue-100 to-blue-150 dark:from-blue-900 dark:via-blue-800 dark:to-blue-700 text-blue-800 dark:text-blue-200 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-all duration-300 border border-blue-200 dark:border-blue-600"
                           whileHover={{
-                            scale: 1.05,
-                            y: -1,
+                            scale: 1.08,
+                            y: -2,
                             backgroundColor: "#3B82F6",
-                            color: "#FFFFFF"
+                            color: "#FFFFFF",
+                            borderColor: "#1D4ED8"
                           }}
-                          transition={{ duration: 0.2 }}
+                          transition={{ duration: 0.3 }}
                         >
                           {skill}
                         </motion.span>
@@ -231,28 +239,21 @@ const About = () => {
             {/* Certifications */}
             <div className="mt-8">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                Certifications & Awards
+                Certifications
               </h3>
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
-                <div className="space-y-3">
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="space-y-4">
                   {certifications.map((cert, index) => (
-                    <div key={index} className="flex items-center">
-                      <Award className="w-5 h-5 text-yellow-500 mr-3 flex-shrink-0" />
-                      <span className="text-gray-700 dark:text-gray-300">{cert}</span>
-                    </div>
+                    <motion.div
+                      key={index}
+                      className="flex items-start bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-300"
+                      whileHover={{ scale: 1.02, y: -2 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <Award className="w-5 h-5 text-yellow-500 mr-3 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">{cert}</span>
+                    </motion.div>
                   ))}
-                  <div className="flex items-center">
-                    <Award className="w-5 h-5 text-yellow-500 mr-3 flex-shrink-0" />
-                    <span className="text-gray-700 dark:text-gray-300">
-                      Elite + Silver Badge in NPTEL Certification
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <Award className="w-5 h-5 text-yellow-500 mr-3 flex-shrink-0" />
-                    <span className="text-gray-700 dark:text-gray-300">
-                      HackerRank Badges in Java, Python, and SQL
-                    </span>
-                  </div>
                 </div>
               </div>
             </div>
