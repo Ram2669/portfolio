@@ -1,12 +1,19 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ChevronDown, Download } from 'lucide-react';
+import { ChevronDown, Download, Sparkles, Code, Brain, Award } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const Hero = () => {
   const [text, setText] = useState('');
-  const fullText = "Software Test Engineer Trainee";
+  const [currentRole, setCurrentRole] = useState(0);
+  const roles = [
+    "Software Test Engineer Trainee",
+    "Data Science Certified Professional",
+    "AI & ML Enthusiast",
+    "CCNA Certified Network Engineer"
+  ];
+  const fullText = roles[currentRole];
   
   useEffect(() => {
     let index = 0;
@@ -15,11 +22,16 @@ const Hero = () => {
       index++;
       if (index > fullText.length) {
         clearInterval(timer);
+        // After completing current text, wait and switch to next role
+        setTimeout(() => {
+          setCurrentRole((prev) => (prev + 1) % roles.length);
+          setText('');
+        }, 2000);
       }
-    }, 100);
-    
+    }, 80);
+
     return () => clearInterval(timer);
-  }, []);
+  }, [currentRole, fullText, roles.length]);
 
   const scrollToAbout = () => {
     const element = document.querySelector('#about');
@@ -97,9 +109,35 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            Software Test Engineer Trainee at Cisco with expertise in automated testing and full-stack development.
-            Currently building AI-powered solutions with Azure OpenAI and modern web technologies.
+            Data Science certified Software Test Engineer at Cisco with expertise in automated testing, AI solutions, and full-stack development.
+            Currently learning LangChain and LangGraph for advanced AI applications.
           </motion.p>
+
+          {/* Interactive Stats */}
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+          >
+            {[
+              { icon: Award, label: "Certifications", value: "5+", color: "text-yellow-500" },
+              { icon: Code, label: "Projects", value: "10+", color: "text-green-500" },
+              { icon: Brain, label: "AI Accuracy", value: "95%", color: "text-purple-500" },
+              { icon: Sparkles, label: "Experience", value: "2024", color: "text-blue-500" }
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ duration: 0.2 }}
+              >
+                <stat.icon className={`w-8 h-8 ${stat.color} mx-auto mb-2`} />
+                <div className="text-2xl font-bold text-gray-900 dark:text-white">{stat.value}</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">{stat.label}</div>
+              </motion.div>
+            ))}
+          </motion.div>
 
           {/* CTA Buttons */}
           <motion.div

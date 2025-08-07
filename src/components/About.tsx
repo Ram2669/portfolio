@@ -1,53 +1,106 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { Code, Database, Cloud, TestTube, Award, MapPin, Mail, Phone, Brain, Network, Cpu } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Code, Database, Cloud, TestTube, Award, MapPin, Mail, Phone, Brain, Network, Cpu, Download, ExternalLink, ChevronRight, Star, TrendingUp } from 'lucide-react';
+import { useState } from 'react';
 
 const About = () => {
+  const [selectedSkill, setSelectedSkill] = useState<number | null>(null);
+  const [hoveredCert, setHoveredCert] = useState<number | null>(null);
+
   const skills = [
     {
       category: 'Programming Languages',
       items: ['Java', 'Python', 'JavaScript', 'HTML5', 'CSS3'],
       icon: Code,
+      description: 'Core programming languages with enterprise-level proficiency',
+      level: 90,
     },
     {
       category: 'Testing & Automation',
       items: ['Selenium WebDriver', 'TestNG', 'JUnit', 'Cypress', 'Automated Testing'],
       icon: TestTube,
+      description: 'Advanced test automation frameworks and quality assurance',
+      level: 95,
     },
     {
       category: 'Web Technologies',
       items: ['React', 'Angular', 'Django', 'REST APIs'],
       icon: Code,
+      description: 'Modern web development frameworks and API integration',
+      level: 85,
     },
     {
       category: 'Cloud & AI Technologies',
       items: ['Azure OpenAI', 'AWS', 'GPT-4', 'Azure Cognitive Search', 'Generative AI'],
       icon: Cloud,
+      description: 'Cutting-edge AI and cloud computing platforms',
+      level: 88,
     },
     {
       category: 'Data Science',
       items: ['Generative AI', 'Machine Learning', 'Data Analysis', 'LangChain', 'LangGraph'],
       icon: Brain,
+      description: 'Advanced AI frameworks and machine learning technologies',
+      level: 82,
     },
     {
       category: 'Databases & Tools',
       items: ['MySQL', 'Azure Cosmos DB', 'Git', 'VSCode', 'PyCharm'],
       icon: Database,
+      description: 'Database management and development tools',
+      level: 87,
     },
     {
       category: 'Networking',
       items: ['CCNA Certified', 'TCP/IP', 'Network Protocols'],
       icon: Network,
+      description: 'Network infrastructure and protocol expertise',
+      level: 92,
     },
   ];
 
   const certifications = [
-    'Data Science Certification - Cisco Systems (2025) - Generative AI Green Belt Program',
-    'CCNA (Cisco Certified Network Associate) - Cisco Systems (2024)',
-    'Python Programming - NPTEL (2024)',
-    'Python (Basic) - HackerRank (2024)',
-    'Automation Testing - Test Automation Training (2024)',
+    {
+      name: 'Data Science Certification',
+      issuer: 'Cisco Systems (2025)',
+      description: 'Generative AI Green Belt Program',
+      link: null,
+      featured: true,
+      icon: Brain,
+    },
+    {
+      name: 'CCNA (Cisco Certified Network Associate)',
+      issuer: 'Cisco Systems (2024)',
+      description: 'Network infrastructure and routing protocols',
+      link: 'https://drive.google.com/file/d/14mL6K7LUpqbGLT-ooHuhrWnoHTQOBXfT/view?usp=drivesdk',
+      featured: true,
+      icon: Network,
+    },
+    {
+      name: 'Python Programming',
+      issuer: 'NPTEL (2024)',
+      description: 'Comprehensive Python programming certification',
+      link: 'https://drive.google.com/file/d/1yAMGl6W62l1siimLQSd23Qr6o8HdZHrc/view?usp=drivesdk',
+      featured: false,
+      icon: Code,
+    },
+    {
+      name: 'Python (Basic)',
+      issuer: 'HackerRank (2024)',
+      description: 'Python programming fundamentals',
+      link: 'https://www.hackerrank.com/certificates/7569d3f33840',
+      featured: false,
+      icon: Code,
+    },
+    {
+      name: 'Automation Testing',
+      issuer: 'Test Automation Training (2024)',
+      description: 'Advanced test automation methodologies',
+      link: 'https://drive.google.com/file/d/1p49OD-hYC9m_X9vy037mv3vWNaCblzfa/view?usp=drivesdk',
+      featured: false,
+      icon: TestTube,
+    },
   ];
 
   const containerVariants = {
@@ -190,29 +243,75 @@ const About = () => {
             >
               {skills.map((skillGroup, index) => {
                 const IconComponent = skillGroup.icon;
+                const isSelected = selectedSkill === index;
                 return (
                   <motion.div
                     key={index}
-                    className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300"
+                    className={`bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl border transition-all duration-500 cursor-pointer ${
+                      isSelected
+                        ? 'border-blue-500 dark:border-blue-400 ring-2 ring-blue-200 dark:ring-blue-800'
+                        : 'border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600'
+                    }`}
                     variants={itemVariants}
                     whileHover={{
                       y: -6,
                       scale: 1.03,
                       transition: { duration: 0.3 }
                     }}
+                    onClick={() => setSelectedSkill(isSelected ? null : index)}
                   >
-                    <div className="flex items-center mb-4">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center">
+                        <motion.div
+                          className="w-12 h-12 bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 dark:from-blue-900 dark:via-blue-800 dark:to-blue-700 rounded-xl flex items-center justify-center mr-4 shadow-lg"
+                          whileHover={{ rotate: 10, scale: 1.15 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <IconComponent className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                        </motion.div>
+                        <div>
+                          <h4 className="text-lg font-bold text-gray-900 dark:text-white">
+                            {skillGroup.category}
+                          </h4>
+                          <div className="flex items-center mt-1">
+                            <div className="w-20 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                              <motion.div
+                                className="h-full bg-gradient-to-r from-blue-500 to-blue-600"
+                                initial={{ width: 0 }}
+                                animate={{ width: `${skillGroup.level}%` }}
+                                transition={{ duration: 1, delay: index * 0.1 }}
+                              />
+                            </div>
+                            <span className="ml-2 text-sm font-semibold text-blue-600 dark:text-blue-400">
+                              {skillGroup.level}%
+                            </span>
+                          </div>
+                        </div>
+                      </div>
                       <motion.div
-                        className="w-12 h-12 bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 dark:from-blue-900 dark:via-blue-800 dark:to-blue-700 rounded-xl flex items-center justify-center mr-4 shadow-lg"
-                        whileHover={{ rotate: 10, scale: 1.15 }}
+                        animate={{ rotate: isSelected ? 90 : 0 }}
                         transition={{ duration: 0.3 }}
                       >
-                        <IconComponent className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                        <ChevronRight className="w-5 h-5 text-gray-400" />
                       </motion.div>
-                      <h4 className="text-lg font-bold text-gray-900 dark:text-white">
-                        {skillGroup.category}
-                      </h4>
                     </div>
+
+                    <AnimatePresence>
+                      {isSelected && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="mb-4"
+                        >
+                          <p className="text-gray-600 dark:text-gray-300 text-sm italic">
+                            {skillGroup.description}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+
                     <div className="flex flex-wrap gap-2">
                       {skillGroup.items.map((skill, skillIndex) => (
                         <motion.span
@@ -238,22 +337,151 @@ const About = () => {
 
             {/* Certifications */}
             <div className="mt-8">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                Certifications
-              </h3>
-              <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
-                <div className="space-y-4">
-                  {certifications.map((cert, index) => (
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+                  Professional Certifications
+                </h3>
+                <motion.div
+                  className="flex items-center text-blue-600 dark:text-blue-400"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <TrendingUp className="w-5 h-5 mr-1" />
+                  <span className="text-sm font-semibold">5 Verified</span>
+                </motion.div>
+              </div>
+
+              <div className="space-y-4">
+                {certifications.map((cert, index) => {
+                  const IconComponent = cert.icon;
+                  const isHovered = hoveredCert === index;
+
+                  return (
                     <motion.div
                       key={index}
-                      className="flex items-start bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-300"
-                      whileHover={{ scale: 1.02, y: -2 }}
-                      transition={{ duration: 0.2 }}
+                      className={`relative bg-gradient-to-r from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl border transition-all duration-300 ${
+                        cert.featured
+                          ? 'border-yellow-300 dark:border-yellow-600 bg-gradient-to-r from-yellow-50 to-white dark:from-yellow-900/20 dark:to-gray-800'
+                          : 'border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600'
+                      }`}
+                      whileHover={{ scale: 1.02, y: -3 }}
+                      transition={{ duration: 0.3 }}
+                      onHoverStart={() => setHoveredCert(index)}
+                      onHoverEnd={() => setHoveredCert(null)}
                     >
-                      <Award className="w-5 h-5 text-yellow-500 mr-3 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">{cert}</span>
+                      {cert.featured && (
+                        <motion.div
+                          className="absolute -top-2 -right-2 bg-yellow-500 text-white rounded-full p-1"
+                          animate={{ rotate: [0, 10, -10, 0] }}
+                          transition={{ duration: 2, repeat: Infinity }}
+                        >
+                          <Star className="w-4 h-4" />
+                        </motion.div>
+                      )}
+
+                      <div className="flex items-start justify-between">
+                        <div className="flex items-start flex-1">
+                          <motion.div
+                            className={`w-12 h-12 rounded-xl flex items-center justify-center mr-4 shadow-md ${
+                              cert.featured
+                                ? 'bg-gradient-to-br from-yellow-100 to-yellow-200 dark:from-yellow-900 dark:to-yellow-800'
+                                : 'bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800'
+                            }`}
+                            whileHover={{ rotate: 5, scale: 1.1 }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            <IconComponent className={`w-6 h-6 ${
+                              cert.featured
+                                ? 'text-yellow-600 dark:text-yellow-400'
+                                : 'text-blue-600 dark:text-blue-400'
+                            }`} />
+                          </motion.div>
+
+                          <div className="flex-1">
+                            <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
+                              {cert.name}
+                            </h4>
+                            <p className="text-blue-600 dark:text-blue-400 font-semibold text-sm mb-2">
+                              {cert.issuer}
+                            </p>
+                            <p className="text-gray-600 dark:text-gray-300 text-sm">
+                              {cert.description}
+                            </p>
+                          </div>
+                        </div>
+
+                        {cert.link && (
+                          <motion.a
+                            href={cert.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="ml-4 flex items-center justify-center w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors duration-200"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.95 }}
+                          >
+                            <ExternalLink className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                          </motion.a>
+                        )}
+                      </div>
+
+                      <AnimatePresence>
+                        {isHovered && cert.link && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 10 }}
+                            className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700"
+                          >
+                            <div className="flex items-center text-blue-600 dark:text-blue-400 text-sm">
+                              <ExternalLink className="w-4 h-4 mr-2" />
+                              <span>Click to view certificate</span>
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </motion.div>
-                  ))}
+                  );
+                })}
+              </div>
+
+              {/* Resume Download Section */}
+              <div className="mt-8">
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                  Resume Downloads
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <motion.a
+                    href="/Ram_Gopal_Pampana_Professional_Resume.pdf"
+                    download
+                    className="flex items-center justify-between bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
+                    whileHover={{ scale: 1.02, y: -2 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <div className="flex items-center">
+                      <Download className="w-5 h-5 mr-3" />
+                      <div>
+                        <div className="font-semibold">Professional Resume</div>
+                        <div className="text-blue-100 text-sm">PDF Format</div>
+                      </div>
+                    </div>
+                    <ChevronRight className="w-5 h-5" />
+                  </motion.a>
+
+                  <motion.a
+                    href="/Ram_Gopal_Pampana_ATS_Resume.pdf"
+                    download
+                    className="flex items-center justify-between bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
+                    whileHover={{ scale: 1.02, y: -2 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <div className="flex items-center">
+                      <Download className="w-5 h-5 mr-3" />
+                      <div>
+                        <div className="font-semibold">ATS Resume</div>
+                        <div className="text-green-100 text-sm">Optimized for ATS</div>
+                      </div>
+                    </div>
+                    <ChevronRight className="w-5 h-5" />
+                  </motion.a>
                 </div>
               </div>
             </div>
