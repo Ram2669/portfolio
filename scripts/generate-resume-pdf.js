@@ -11,6 +11,26 @@ async function generateResumePDF() {
   });
   const page = await browser.newPage();
 
+  // Generate Professional Resume PDF
+  const professionalHtmlPath = path.join(__dirname, '../public/Ram_Gopal_Pampana_Professional_Resume.html');
+  if (fs.existsSync(professionalHtmlPath)) {
+    await page.goto(`file://${professionalHtmlPath}`, { waitUntil: 'networkidle0' });
+
+    const professionalPdfPath = path.join(__dirname, '../public/Ram_Gopal_Pampana_Professional_Resume.pdf');
+    await page.pdf({
+      path: professionalPdfPath,
+      format: 'A4',
+      printBackground: true,
+      margin: {
+        top: '0.4in',
+        right: '0.5in',
+        bottom: '0.4in',
+        left: '0.5in'
+      }
+    });
+    console.log('Professional Resume PDF generated successfully!');
+  }
+
   // Generate ATS Resume PDF
   const atsHtmlPath = path.join(__dirname, '../public/Ram_Gopal_Pampana_ATS_Resume.html');
   if (fs.existsSync(atsHtmlPath)) {
