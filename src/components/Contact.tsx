@@ -79,7 +79,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Kakinada, Andhra Pradesh',
+      value: 'Bengaluru, Karnataka, India',
       href: '#',
     },
   ];
