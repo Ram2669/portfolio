@@ -102,6 +102,7 @@ CGPA: 7.87
 CERTIFICATIONS
 ================================================================================
 
+• Data Science Certification - Cisco Systems | 2025 - Generative AI Green Belt Program
 • CCNA (Cisco Certified Network Associate) - Cisco Systems | 2024
 
 • Python Programming - Completed comprehensive training program
