@@ -51,16 +51,12 @@ WORK EXPERIENCE
 Software Test Engineer Trainee                              November 2024 - Present
 Cisco Systems                                                    Bengaluru, India
 
-• Developing automated testing frameworks using Java and Selenium for enterprise 
-  applications
-• Building full-stack AI chatbot using Azure OpenAI, Django, and MySQL with 
-  natural language processing capabilities
-• Implementing test automation scripts with TestNG and JUnit for regression testing
-• Collaborating with development teams to ensure quality assurance in software 
-  delivery
-• Working with Azure Cognitive Search for intelligent schema retrieval and 
-  dynamic SQL generation
-• Participating in agile development processes and continuous integration workflows
+• Automated testing using Java and Selenium to ensure software quality
+• Developing a full-stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure
+  Cognitive Search for real-time natural language query handling
+• Integrating Azure Cognitive Search for intelligent schema retrieval and dynamic
+  SQL generation
+• CCNA Certified: Proficient in networking, routing, switching, and IP fundamentals
 
 ================================================================================
 KEY PROJECTS
