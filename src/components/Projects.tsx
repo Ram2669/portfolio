@@ -6,19 +6,22 @@ import { Github, Search, Zap, Shield } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: 'AI Chatbot with Azure OpenAI',
-      description: 'Full-stack AI chatbot enabling natural language query handling and real-time responses using Azure OpenAI, Django, MySQL, and modern web technologies.',
-      technologies: ['Azure OpenAI', 'Django', 'MySQL', 'HTML/CSS/JavaScript', 'Azure Cognitive Search'],
+      title: 'Custom Infrastructure Tool & AI Chatbot Implementation – Cisco',
+      description: 'Comprehensive infrastructure management solution with AI-powered chatbot for automated query handling, built from scratch using modern web technologies and Azure cloud services.',
+      technologies: ['Django', 'MySQL', 'HTML/CSS/Bootstrap/JavaScript', 'Azure OpenAI (GPT-4)', 'Azure Cosmos DB', 'Azure Blob Storage', 'Azure AI Search', 'Azure AI Language', 'Azure VNet'],
       features: [
-        'Natural language processing with Azure OpenAI',
-        'Intelligent schema retrieval with Azure Cognitive Search',
-        'Dynamic SQL generation',
-        'Real-time response handling',
-        'Full-stack web application'
+        'Infrastructure management tool for efficient asset tracking and operations',
+        'AI-powered chatbot with Azure OpenAI (GPT-4) for natural language understanding',
+        'Azure Cosmos DB for structured/semi-structured data storage',
+        'Azure Blob Storage for file and document handling',
+        'Azure AI Search for intelligent schema and document retrieval',
+        'Azure AI Language for NLP-based intent detection and classification',
+        'Azure VNet for secure network access and compliance',
+        'Enhanced scalability, security, and intelligence through Azure integration'
       ],
       icon: Zap,
-      status: 'In Development',
-      category: 'AI/ML'
+      status: 'Ongoing',
+      category: 'AI/ML & Infrastructure'
     },
     {
       title: 'Network-Based Pattern Searching',
