@@ -467,7 +467,7 @@ const About = () => {
                   </motion.a>
 
                   <motion.a
-                    href="/Ram_Gopal_Pampana_Professional_Resume.docx"
+                    href="/Ram_Gopal_Pampana_Professional_Resume.doc"
                     download
                     className="flex items-center justify-between bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
                     whileHover={{ scale: 1.02, y: -2 }}
@@ -501,7 +501,7 @@ const About = () => {
                   </motion.a>
 
                   <motion.a
-                    href="/Ram_Gopal_Pampana_ATS_Resume.docx"
+                    href="/Ram_Gopal_Pampana_ATS_Resume.doc"
                     download
                     className="flex items-center justify-between bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
                     whileHover={{ scale: 1.02, y: -2 }}

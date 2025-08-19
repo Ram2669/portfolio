@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+      xmlns:w="urn:schemas-microsoft-com:office:word"
+      xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="utf-8">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 15">
+<meta name="Originator" content="Microsoft Word 15">
+<title>Professional Resume</title>
+<!--[if gte mso 9]>
+<xml>
+<w:WordDocument>
+<w:View>Print</w:View>
+<w:Zoom>90</w:Zoom>
+<w:DoNotPromptForConvert/>
+<w:DoNotShowRevisions/>
+<w:DoNotPrintRevisions/>
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+<w:UseMarginsForDrawingGridOrigin/>
+<w:ValidateAgainstSchemas/>
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:Compatibility>
+<w:BreakWrappedTables/>
+<w:SnapToGridInCell/>
+<w:WrapTextWithPunct/>
+<w:UseAsianBreakRules/>
+<w:DontGrowAutofit/>
+<w:UseFELayout/>
+</w:Compatibility>
+</w:WordDocument>
+</xml>
+<![endif]-->
+<style>
+@page {
+  size: 8.5in 11.0in;
+  margin: 0.5in 0.5in 0.5in 0.5in;
+  mso-header-margin: 0.5in;
+  mso-footer-margin: 0.5in;
+  mso-paper-source: 0;
+}
+body {
+  font-family: Calibri, sans-serif;
+  font-size: 11pt;
+  line-height: 1.2;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+.name {
+  font-size: 18pt;
+  font-weight: bold;
+  color: #2E86AB;
+  text-align: center;
+  margin-bottom: 4pt;
+}
+.title {
+  font-size: 12pt;
+  color: #555555;
+  text-align: center;
+  margin-bottom: 6pt;
+}
+.contact-info {
+  font-size: 10pt;
+  text-align: center;
+  margin-bottom: 12pt;
+}
+.section-title {
+  font-size: 12pt;
+  font-weight: bold;
+  color: #2E86AB;
+  text-transform: uppercase;
+  border-bottom: 1pt solid #2E86AB;
+  margin-bottom: 6pt;
+  margin-top: 8pt;
+  padding-bottom: 2pt;
+}
+.job-title, .project-title {
+  font-weight: bold;
+  font-size: 11pt;
+  margin-bottom: 2pt;
+}
+.company {
+  font-weight: bold;
+  color: #2E86AB;
+}
+.date {
+  font-weight: bold;
+  color: #666666;
+  font-size: 10pt;
+  float: right;
+}
+.description ul {
+  margin: 4pt 0;
+  padding-left: 16pt;
+}
+.description li {
+  margin-bottom: 2pt;
+  font-size: 10pt;
+}
+.skill-category {
+  margin-bottom: 6pt;
+}
+.skill-category strong {
+  color: #2E86AB;
+  font-size: 10pt;
+}
+.skill-list {
+  font-size: 10pt;
+}
+.summary {
+  font-size: 11pt;
+  text-align: justify;
+  margin-bottom: 12pt;
+}
+a {
+  color: #2E86AB;
+  text-decoration: none;
+}
+.cert-link {
+  font-size: 9pt;
+  color: #2E86AB;
+}
+.job-header {
+  margin-bottom: 3pt;
+  overflow: hidden;
+}
+.location {
+  font-style: italic;
+  color: #666666;
+  font-size: 9pt;
+}
+</style>
+</head>
+<body>
+    <div class="header">
+        <div class="name">PAMPANA SIVA SURYA RAM GOPAL</div>
+        <div class="title">Software Test Engineer Trainee</div>
+        <div class="contact-info">
+            Email: <a href="mailto:ramgopalpampana10@gmail.com">ramgopalpampana10@gmail.com</a> |
+            Phone: +91-7730072669<br>
+            Location: Bengaluru, Karnataka, India<br>
+            <a href="https://ram-gopal-portfolio.netlify.app">Portfolio</a> |
+            <a href="https://linkedin.com/in/ramgopal-pampana">LinkedIn</a> |
+            <a href="https://github.com/Ram2669">GitHub</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Professional Summary</div>
+        <div class="summary">
+            Software Test Engineer Trainee at Cisco with expertise in automated testing, AI solutions, and full-stack development. Proficient in Java, Python, JavaScript, Selenium, and TestNG. Data Science certified (Generative AI Green Belt 2025) and CCNA certified with experience in Azure OpenAI and React. Currently learning LangChain and LangGraph for advanced AI applications. Demonstrated impact: Achieved 95% accuracy in AI chatbot, reduced testing errors by 25%, and improved performance by 40% through automation and optimization.
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Technical Skills</div>
+        <div class="skills-grid">
+            <div>
+                <div class="skill-category">
+                    <strong>Programming Languages:</strong>
+                    <div class="skill-list">Java, Python, JavaScript, HTML5, CSS3</div>
+                </div>
+                <div class="skill-category">
+                    <strong>Testing & Automation:</strong>
+                    <div class="skill-list">Selenium WebDriver, TestNG, JUnit, Cypress, Automated Testing</div>
+                </div>
+                <div class="skill-category">
+                    <strong>Web Technologies:</strong>
+                    <div class="skill-list">React, Angular, Django, REST APIs</div>
+                </div>
+            </div>
+            <div>
+                <div class="skill-category">
+                    <strong>Cloud & AI Technologies:</strong>
+                    <div class="skill-list">Azure OpenAI, AWS, GPT-4, Azure Cognitive Search, Generative AI</div>
+                </div>
+                <div class="skill-category">
+                    <strong>Data Science:</strong>
+                    <div class="skill-list">Generative AI, Machine Learning, Data Analysis, LangChain, LangGraph</div>
+                </div>
+                <div class="skill-category">
+                    <strong>Databases & Tools:</strong>
+                    <div class="skill-list">MySQL, Azure Cosmos DB, Git, VSCode, PyCharm, Postman</div>
+                </div>
+                <div class="skill-category">
+                    <strong>Networking:</strong>
+                    <div class="skill-list">CCNA Certified, TCP/IP, Network Protocols, Network Troubleshooting</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Professional Experience</div>
+        <div class="job-entry">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Software Test Engineer Trainee</div>
+                    <div class="company">Cisco Systems</div>
+                    <div class="location">Bengaluru, India</div>
+                </div>
+                <div class="date">November 2024 - Present</div>
+            </div>
+            <div class="description">
+                <ul>
+                    <li>Automated testing using Java and Selenium to ensure software quality</li>
+                    <li>Developing a full-stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure Cognitive Search for real-time natural language query handling</li>
+                    <li>Integrating Azure Cognitive Search for intelligent schema retrieval and dynamic SQL generation</li>
+                    <li>CCNA Certified: Proficient in networking, routing, switching, and IP fundamentals</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Key Projects</div>
+        
+        <div class="project-entry">
+            <div class="job-header">
+                <div class="project-title">Custom Infrastructure Tool & AI Chatbot Implementation – Cisco</div>
+                <div class="date">Ongoing</div>
+            </div>
+            <div class="description">
+                <ul>
+                    <li>Developed infrastructure management tool from scratch using Django, MySQL, and frontend technologies (HTML, CSS, Bootstrap, JavaScript) for efficient asset tracking and operations management</li>
+                    <li>Built custom AI-powered chatbot to auto-respond to infrastructure queries, leveraging Azure OpenAI (GPT-4) for natural language understanding and response generation</li>
+                    <li>Integrated comprehensive Azure services: Cosmos DB for data storage, Blob Storage for file handling, AI Search for intelligent retrieval, AI Language for NLP-based intent detection, and VNet for secure network access</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project-entry">
+            <div class="job-header">
+                <div class="project-title">Network-Based Pattern Searching System</div>
+                <div class="date">2024</div>
+            </div>
+            <div class="description">
+                <ul>
+                    <li>Developed a client-server system for keyword search using Java sockets and multithreading, improving performance by 40%</li>
+                    <li>Created comprehensive test suite using JUnit for unit and integration testing</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project-entry">
+            <div class="job-header">
+                <div class="project-title">Self-Fuel Dispensing Automated Framework</div>
+                <div class="date">2023</div>
+            </div>
+            <div class="description">
+                <ul>
+                    <li>Built RFID-based automation system reducing operational errors by 25% and improving efficiency</li>
+                    <li>Developed real-time monitoring interface with HTML5, CSS3, JavaScript and database integration</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Education</div>
+        <div class="job-entry">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Bachelor of Technology in Electronics and Communication Engineering</div>
+                    <div class="company">Pragati Engineering College</div>
+                    <div class="location">Kakinada, Andhra Pradesh, India</div>
+                </div>
+                <div class="date">August 2019 - June 2023</div>
+            </div>
+            <div class="description">
+                <ul>
+                    <li><strong>CGPA:</strong> 7.87/10.0</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Certifications & Training</div>
+        
+        <div class="description">
+            <ul>
+                <li><strong>Data Science Certification</strong> – Cisco Systems (2025) - Generative AI Green Belt Program</li>
+                <li><strong>CCNA</strong> – Cisco Systems (2024) <a href="https://drive.google.com/file/d/14mL6K7LUpqbGLT-ooHuhrWnoHTQOBXfT/view?usp=drivesdk" class="cert-link">[View Certificate]</a></li>
+                <li><strong>Python Programming</strong> – NPTEL (2024) <a href="https://drive.google.com/file/d/1yAMGl6W62l1siimLQSd23Qr6o8HdZHrc/view?usp=drivesdk" class="cert-link">[View]</a></li>
+                <li><strong>Python (Basic)</strong> – HackerRank (2024) <a href="https://www.hackerrank.com/certificates/7569d3f33840" class="cert-link">[View]</a></li>
+                <li><strong>Automation Testing</strong> – Test Automation Training (2024) <a href="https://drive.google.com/file/d/1p49OD-hYC9m_X9vy037mv3vWNaCblzfa/view?usp=drivesdk" class="cert-link">[View]</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Additional Information</div>
+        <div class="description">
+            <ul>
+                <li><strong>Languages:</strong> English (Fluent), Telugu (Native), Hindi (Conversational)</li>
+                <li><strong>Interests:</strong> AI/ML Technologies, Test Automation, Full-Stack Development, Cloud Computing</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+</html>
+      
