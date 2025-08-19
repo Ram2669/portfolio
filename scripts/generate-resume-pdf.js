@@ -74,4 +74,22 @@ async function generateResumePDF() {
   await browser.close();
 }
 
-generateResumePDF().catch(console.error);
+// Also generate Word documents
+async function generateWordDocuments() {
+  const { execSync } = require('child_process');
+  try {
+    console.log('Generating Word documents...');
+    execSync('node scripts/generate-resume-docx.js', { stdio: 'inherit' });
+    console.log('Word documents generated successfully!');
+  } catch (error) {
+    console.error('Error generating Word documents:', error);
+  }
+}
+
+// Run both PDF and Word generation
+async function generateAllFormats() {
+  await generateResumePDF();
+  await generateWordDocuments();
+}
+
+generateAllFormats().catch(console.error);

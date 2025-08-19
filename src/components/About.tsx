@@ -448,7 +448,7 @@ const About = () => {
                 <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                   Resume Downloads
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                   <motion.a
                     href="/Ram_Gopal_Pampana_Professional_Resume.pdf"
                     download
@@ -459,8 +459,25 @@ const About = () => {
                     <div className="flex items-center">
                       <Download className="w-5 h-5 mr-3" />
                       <div>
-                        <div className="font-semibold">Professional Resume</div>
+                        <div className="font-semibold">Professional</div>
                         <div className="text-blue-100 text-sm">PDF Format</div>
+                      </div>
+                    </div>
+                    <ChevronRight className="w-5 h-5" />
+                  </motion.a>
+
+                  <motion.a
+                    href="/Ram_Gopal_Pampana_Professional_Resume.docx"
+                    download
+                    className="flex items-center justify-between bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
+                    whileHover={{ scale: 1.02, y: -2 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <div className="flex items-center">
+                      <Download className="w-5 h-5 mr-3" />
+                      <div>
+                        <div className="font-semibold">Professional</div>
+                        <div className="text-purple-100 text-sm">Word Format</div>
                       </div>
                     </div>
                     <ChevronRight className="w-5 h-5" />
@@ -477,7 +494,24 @@ const About = () => {
                       <Download className="w-5 h-5 mr-3" />
                       <div>
                         <div className="font-semibold">ATS Resume</div>
-                        <div className="text-green-100 text-sm">Optimized for ATS</div>
+                        <div className="text-green-100 text-sm">PDF Format</div>
+                      </div>
+                    </div>
+                    <ChevronRight className="w-5 h-5" />
+                  </motion.a>
+
+                  <motion.a
+                    href="/Ram_Gopal_Pampana_ATS_Resume.docx"
+                    download
+                    className="flex items-center justify-between bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
+                    whileHover={{ scale: 1.02, y: -2 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <div className="flex items-center">
+                      <Download className="w-5 h-5 mr-3" />
+                      <div>
+                        <div className="font-semibold">ATS Resume</div>
+                        <div className="text-orange-100 text-sm">Word Format</div>
                       </div>
                     </div>
                     <ChevronRight className="w-5 h-5" />
