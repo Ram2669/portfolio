@@ -18,14 +18,14 @@ const About = () => {
     },
     {
       category: 'Testing & Automation',
-      items: ['Selenium WebDriver', 'TestNG', 'JUnit', 'Cypress', 'Automated Testing'],
+      items: ['Selenium WebDriver', 'TestNG', 'JUnit', 'Automated Testing'],
       icon: TestTube,
       description: 'Advanced test automation frameworks and quality assurance',
       level: 95,
     },
     {
       category: 'Web Technologies',
-      items: ['React', 'Angular', 'Django', 'REST APIs'],
+      items: ['React', 'Django', 'REST APIs'],
       icon: Code,
       description: 'Modern web development frameworks and API integration',
       level: 85,
@@ -46,7 +46,7 @@ const About = () => {
     },
     {
       category: 'Databases & Tools',
-      items: ['MySQL', 'Azure Cosmos DB', 'Git', 'VSCode', 'PyCharm'],
+      items: ['MySQL', 'Azure Cosmos DB', 'Git', 'VSCode', 'PyCharm', 'GitHub Copilot'],
       icon: Database,
       description: 'Database management and development tools',
       level: 87,

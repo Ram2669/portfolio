@@ -6,7 +6,7 @@ import { Github, Search, Zap, Shield } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: 'AI-Powered Chatbot for Infrastructure Management (Cisco, 2024 – Ongoing)',
+      title: 'AI-Powered Chatbot for Infrastructure Management (Cisco, 2024 – Currently Implementing)',
       description: 'Contributing to an AI chatbot integrated with a Django/MySQL infrastructure management tool. Implementing Azure OpenAI (GPT-4) for NLU and automated responses with Azure Cosmos DB, Cognitive Search, Blob Storage, and AI Language for secure, intelligent retrieval.',
       technologies: ['Django', 'MySQL', 'Azure OpenAI (GPT-4)', 'Azure Cosmos DB', 'Azure Cognitive Search', 'Azure Blob Storage', 'Azure AI Language'],
       features: [
@@ -19,7 +19,7 @@ const Projects = () => {
         'Goal: Improve real-time query handling and reduce manual intervention through automation'
       ],
       icon: Zap,
-      status: 'Ongoing',
+      status: 'Currently Implementing',
       category: 'AI/ML & Infrastructure'
     },
     {

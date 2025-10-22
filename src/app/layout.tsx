@@ -15,6 +15,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Ram Gopal Pampana - Portfolio",
   description: "Software Test Engineer at Cisco specializing in automated testing, full-stack development, and AI-powered solutions with Azure OpenAI.",
+  metadataBase: new URL("https://ramgopal-portfolio.vercel.app"),
+  alternates: { canonical: "/" },
 };
 
 export default function RootLayout({
