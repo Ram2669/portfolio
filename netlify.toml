@@ -1,6 +1,6 @@
 [build]
   publish = "out"
-  command = "npm run build"
+  command = "npm run export"
 
 [build.environment]
   NODE_VERSION = "18"
@@ -24,3 +24,20 @@
     # Send form submissions to your email
     [form.settings.notification]
       email = "ramgopalpampana120@gmail.com"
+
+
+# Disable CDN/browser caching for resume files to ensure latest downloads
+[[headers]]
+  for = "/*.pdf"
+  [headers.values]
+    Cache-Control = "no-store, no-cache, must-revalidate, max-age=0"
+
+[[headers]]
+  for = "/*.doc"
+  [headers.values]
+    Cache-Control = "no-store, no-cache, must-revalidate, max-age=0"
+
+[[headers]]
+  for = "/*.docx"
+  [headers.values]
+    Cache-Control = "no-store, no-cache, must-revalidate, max-age=0"

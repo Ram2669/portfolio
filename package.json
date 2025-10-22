@@ -23,7 +23,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next build"
+    "export": "next build && next export -o out"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
