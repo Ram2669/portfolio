@@ -70,6 +70,15 @@ const About = () => {
       icon: Brain,
     },
     {
+      name: 'Cisco Certified DevNet Associate',
+      issuer: 'Cisco Systems (2023)',
+      description: 'Validated skills in developing and maintaining applications built on Cisco platforms',
+      link: 'https://drive.google.com/file/d/1jYhIJSlXs6xgIpc46KxSOn22RWEPmfV8/view?usp=drivesdk',
+      featured: true,
+      icon: Network,
+    },
+
+    {
       name: 'CCNA (Cisco Certified Network Associate)',
       issuer: 'Cisco Systems (2024)',
       description: 'Network infrastructure and routing protocols',
@@ -192,10 +201,10 @@ const About = () => {
                       November 2024 - Present • Bengaluru, India
                     </p>
                     <ul className="text-gray-600 dark:text-gray-300 space-y-1 text-sm">
-                      <li>• Automated testing using Java and Selenium to ensure software quality</li>
+                      <li>• Automated testing using Python with Selenium and Pytest to ensure software quality</li>
                       <li>• Developing a full-stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure Cognitive Search for real-time natural language query handling</li>
                       <li>• Integrating Azure Cognitive Search for intelligent schema retrieval and dynamic SQL generation</li>
-                      <li>• CCNA Certified: Proficient in networking, routing, switching, and IP fundamentals</li>
+                      <li>• CCNA Certified; Google Cloud Certified (ACE); proficient in networking, routing, switching, and IP fundamentals</li>
                     </ul>
                   </div>
                 </div>
@@ -448,36 +457,37 @@ const About = () => {
                 <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                   Resume Downloads
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {/* 2025 Professional Resume */}
                   <motion.a
-                    href="/Ram_Gopal_Pampana_Professional_Resume.pdf"
+                    href="/Pampana_Siva_Surya_Ram_Gopal_Resume_2025.pdf"
                     download
-                    className="flex items-center justify-between bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="flex items-center justify-between bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 text-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
                     whileHover={{ scale: 1.02, y: -2 }}
                     whileTap={{ scale: 0.98 }}
                   >
                     <div className="flex items-center">
                       <Download className="w-5 h-5 mr-3" />
                       <div>
-                        <div className="font-semibold">Professional</div>
-                        <div className="text-blue-100 text-sm">PDF Format</div>
+                        <div className="font-semibold">Resume 2025</div>
+                        <div className="text-indigo-100 text-sm">PDF Format</div>
                       </div>
                     </div>
                     <ChevronRight className="w-5 h-5" />
                   </motion.a>
 
                   <motion.a
-                    href="/Ram_Gopal_Pampana_Professional_Resume.doc"
+                    href="/Pampana_Siva_Surya_Ram_Gopal_Resume_2025.doc"
                     download
-                    className="flex items-center justify-between bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="flex items-center justify-between bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
                     whileHover={{ scale: 1.02, y: -2 }}
                     whileTap={{ scale: 0.98 }}
                   >
                     <div className="flex items-center">
                       <Download className="w-5 h-5 mr-3" />
                       <div>
-                        <div className="font-semibold">Professional</div>
-                        <div className="text-purple-100 text-sm">Word Format</div>
+                        <div className="font-semibold">Resume 2025</div>
+                        <div className="text-teal-100 text-sm">Word Format</div>
                       </div>
                     </div>
                     <ChevronRight className="w-5 h-5" />
@@ -495,23 +505,6 @@ const About = () => {
                       <div>
                         <div className="font-semibold">ATS Resume</div>
                         <div className="text-green-100 text-sm">PDF Format</div>
-                      </div>
-                    </div>
-                    <ChevronRight className="w-5 h-5" />
-                  </motion.a>
-
-                  <motion.a
-                    href="/Ram_Gopal_Pampana_ATS_Resume.doc"
-                    download
-                    className="flex items-center justify-between bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
-                    whileHover={{ scale: 1.02, y: -2 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <div className="flex items-center">
-                      <Download className="w-5 h-5 mr-3" />
-                      <div>
-                        <div className="font-semibold">ATS Resume</div>
-                        <div className="text-orange-100 text-sm">Word Format</div>
                       </div>
                     </div>
                     <ChevronRight className="w-5 h-5" />

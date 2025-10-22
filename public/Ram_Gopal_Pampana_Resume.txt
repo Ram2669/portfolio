@@ -17,7 +17,7 @@ PROFESSIONAL EXPERIENCE
 Software Test Engineer Trainee | CISCO
 November 2024 - Present | Bengaluru, India
 
-• Automated testing using Java and Selenium to ensure software quality and reliability
+• Automated testing using Python with Selenium and Pytest to ensure software quality and reliability
 • Developing full-stack AI chatbot using Azure OpenAI, Django, and MySQL
 • Integrating Azure Cognitive Search for intelligent schema retrieval and data processing
 • CCNA Certified with proficiency in networking protocols and IP fundamentals
@@ -35,18 +35,16 @@ August 2019 - June 2023 | CGPA: 7.87
 KEY PROJECTS
 ================================================================================
 
-🤖 AI Chatbot with Azure OpenAI
-• Full-stack AI chatbot enabling natural language query handling and real-time responses
-• Technologies: Azure OpenAI, Django, MySQL, HTML/CSS/JavaScript, Azure Cognitive Search
-• Features: Dynamic SQL generation, intelligent schema retrieval, real-time processing
-• Status: In Development
+AI-Powered Chatbot for Infrastructure Management (Cisco, 2024 – Ongoing)
+• Contributing to a custom AI chatbot integrated into an infrastructure management tool built on Django and MySQL.
+• Implementing Azure OpenAI (GPT-4) for natural language understanding and automated query responses.
+• Working on integration with Cosmos DB, Azure Cognitive Search, Blob Storage, and AI Language for intelligent retrieval, secure data handling, and NLP-based intent detection.
+• Aiming to enhance real-time infrastructure query handling and reduce manual intervention through automation.
 
-🔍 Network-Based Pattern Searching
-• Client-server architecture application for searching words in files with efficient pattern matching
-• Technologies: Python, JSON, Client-Server Architecture, File Processing
-• Features: JSON-based communication, efficient file searching, error handling
-• GitHub: github.com/Ram2669/-NETWORK-BASED-PATTERN-SEARCHING_project.git
-• Status: Completed
+NETWORK BASED PATTERN SEARCHING | Link Python
+• Developed a Network-Based Pattern Searching project with client-server architecture to search for words in a file.
+• Implemented client-server communication using JSON requests to query and return matching lines with line numbers.
+• Designed a Search class to read, clean, and search file content efficiently, handling errors like "File Not Found."
 
 ⚡ Self-Fuel Dispensing Automated Framework
 • RFID-based automated fuel dispensing system reducing operational errors and unauthorized access
@@ -73,7 +71,7 @@ Databases:
 • MySQL
 
 Testing:
-• Automated Testing, Selenium, TestNG, JUnit, Cypress
+• Automated Testing, Selenium, Pytest, TestNG, JUnit, Cypress
 
 ================================================================================
 CERTIFICATIONS

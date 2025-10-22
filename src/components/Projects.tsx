@@ -6,33 +6,30 @@ import { Github, Search, Zap, Shield } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: 'Custom Infrastructure Tool & AI Chatbot Implementation – Cisco',
-      description: 'Comprehensive infrastructure management solution with AI-powered chatbot for automated query handling, built from scratch using modern web technologies and Azure cloud services.',
-      technologies: ['Django', 'MySQL', 'HTML/CSS/Bootstrap/JavaScript', 'Azure OpenAI (GPT-4)', 'Azure Cosmos DB', 'Azure Blob Storage', 'Azure AI Search', 'Azure AI Language', 'Azure VNet'],
+      title: 'AI-Powered Chatbot for Infrastructure Management (Cisco, 2024 – Ongoing)',
+      description: 'Contributing to an AI chatbot integrated with a Django/MySQL infrastructure management tool. Implementing Azure OpenAI (GPT-4) for NLU and automated responses with Azure Cosmos DB, Cognitive Search, Blob Storage, and AI Language for secure, intelligent retrieval.',
+      technologies: ['Django', 'MySQL', 'Azure OpenAI (GPT-4)', 'Azure Cosmos DB', 'Azure Cognitive Search', 'Azure Blob Storage', 'Azure AI Language'],
       features: [
-        'Infrastructure management tool for efficient asset tracking and operations',
-        'AI-powered chatbot with Azure OpenAI (GPT-4) for natural language understanding',
-        'Azure Cosmos DB for structured/semi-structured data storage',
-        'Azure Blob Storage for file and document handling',
-        'Azure AI Search for intelligent schema and document retrieval',
+        'Integrated AI chatbot within infrastructure management workflow (Django, MySQL)',
+        'Natural language understanding and automated query handling using GPT-4',
+        'Cosmos DB for structured/semi-structured data and secure storage',
+        'Azure Cognitive Search for intelligent retrieval over assets/documents',
+        'Blob Storage for file/document management with access controls',
         'Azure AI Language for NLP-based intent detection and classification',
-        'Azure VNet for secure network access and compliance',
-        'Enhanced scalability, security, and intelligence through Azure integration'
+        'Goal: Improve real-time query handling and reduce manual intervention through automation'
       ],
       icon: Zap,
       status: 'Ongoing',
       category: 'AI/ML & Infrastructure'
     },
     {
-      title: 'Network-Based Pattern Searching',
-      description: 'Client-server architecture application for searching words in files with efficient pattern matching and JSON-based communication.',
-      technologies: ['Python', 'JSON', 'Client-Server Architecture', 'File Processing'],
+      title: 'NETWORK BASED PATTERN SEARCHING',
+      description: 'Python',
+      technologies: ['Python', 'Client-Server Architecture', 'JSON'],
       features: [
-        'Client-server communication using JSON requests',
-        'Efficient file content searching',
-        'Returns matching lines with line numbers',
-        'Error handling for file operations',
-        'Clean and optimized search algorithms'
+        'Developed a Network-Based Pattern Searching project with client-server architecture to search for words in a file.',
+        'Implemented client-server communication using JSON requests to query and return matching lines with line numbers.',
+        'Designed a Search class to read, clean, and search file content efficiently, handling errors like "File Not Found."'
       ],
       icon: Search,
       status: 'Completed',
@@ -40,8 +37,8 @@ const Projects = () => {
       githubLink: 'https://github.com/Ram2669/-NETWORK-BASED-PATTERN-SEARCHING_project.git'
     },
     {
-      title: 'Self-Fuel Dispensing Automated Framework',
-      description: 'RFID-based automated fuel dispensing system reducing operational errors and unauthorized access while improving transaction efficiency.',
+      title: 'Self-Fuel Dispensing Automated Framework Using RFID Cards',
+      description: 'Developed and implemented an RFID-based self-fuel dispensing system, reducing operational errors and unauthorized access by 25%. Optimized transaction efficiency by 40%, improving accuracy and user satisfaction through advanced algorithms and real-time data processing.',
       technologies: ['Embedded C', 'Arduino', 'RFID Technology', 'Real-time Processing'],
       features: [
         'RFID card-based authentication',

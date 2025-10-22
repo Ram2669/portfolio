@@ -20,7 +20,7 @@ const Chatbot = () => {
 
   // Debug log to ensure component is rendering
   useEffect(() => {
-    console.log('Chatbot component mounted');
+    // removed debug log for production
   }, []);
 
   const scrollToBottom = () => {
@@ -36,13 +36,22 @@ const Chatbot = () => {
     if (isOpen && messages.length === 0) {
       const welcomeMessage: Message = {
         id: '1',
-        text: "Hi! I'm Ram's AI assistant. I can answer questions about his experience, skills, projects, and background. What would you like to know?",
+        text: "Hi! I'm Ram's AI assistant. I can answer questions about experience, skills, projects, education, and certifications. What would you like to know?",
         isBot: true,
         timestamp: new Date(),
       };
       setMessages([welcomeMessage]);
     }
   }, [isOpen, messages.length]);
+  // Reset chat when closed so each open starts fresh
+  useEffect(() => {
+    if (!isOpen) {
+      setMessages([]);
+      setIsTyping(false);
+      setInputText('');
+    }
+  }, [isOpen]);
+
 
   // AI Response Logic based on Ram's resume
   const getAIResponse = (userMessage: string): string => {
@@ -50,17 +59,17 @@ const Chatbot = () => {
 
     // Experience related
     if (message.includes('experience') || message.includes('work') || message.includes('job') || message.includes('cisco')) {
-      return "I'm currently working as a Software Test Engineer Trainee at Cisco since November 2024. I specialize in automated testing using Java and Selenium, and I'm developing a full-stack AI chatbot using Azure OpenAI, Django, and MySQL. I'm also CCNA certified with strong networking fundamentals.";
+      return "I’m a Software Engineer at Cisco (since Nov 2024). I work on automated testing using Python with Selenium and Pytest, and I’m building a full‑stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure Cognitive Search.";
     }
 
     // Skills related
     if (message.includes('skill') || message.includes('technology') || message.includes('programming') || message.includes('language')) {
-      return "My technical skills include:\n\n• Programming: Java, Python, JavaScript\n• Frameworks: Angular, TestNG, JUnit, Django\n• Tools: Git, VSCode, PyCharm, Cypress, Selenium, AWS, Azure OpenAI\n• Databases: MySQL\n• Testing: Automated Testing, Selenium, TestNG, JUnit, Cypress\n• Cloud: Azure OpenAI, Azure Cognitive Search";
+      return "My technical skills include:\n\n• Programming: Java, Python, JavaScript\n• Frameworks: Angular, TestNG, JUnit, Django\n• Tools: Git, VSCode, PyCharm, Cypress, Selenium, AWS, Azure OpenAI\n• Databases: MySQL\n• Testing: Automated Testing, Selenium, TestNG, JUnit, Cypress\n• Cloud: AWS, Azure OpenAI, Azure Cognitive Search";
     }
 
     // Projects related
     if (message.includes('project') || message.includes('built') || message.includes('developed') || message.includes('chatbot')) {
-      return "I've worked on several key projects:\n\n🤖 AI Chatbot with Azure OpenAI - A full-stack solution with natural language processing\n\n🔍 Network-Based Pattern Searching - Client-server architecture for efficient file searching\n\n⚡ Self-Fuel Dispensing System - RFID-based automation that reduced operational errors by 25%\n\nWould you like details about any specific project?";
+      return "Key projects:\n\n• AI Chatbot for Infrastructure Management — Full‑stack solution using Azure OpenAI, Django, MySQL, and Azure Cognitive Search\n• Network‑Based Pattern Searching — Client–server system for file search with JSON requests\n• Self‑Fuel Dispensing Framework — RFID‑based automation to reduce errors\n\nWould you like details about any specific project?";
     }
 
     // Education related
@@ -70,27 +79,27 @@ const Chatbot = () => {
 
     // Certifications related
     if (message.includes('certification') || message.includes('certified') || message.includes('ccna') || message.includes('nptel')) {
-      return "My certifications include:\n\n• Cisco Certified Network Associate (CCNA)\n• The Joy of Computing using Python - IIT Madras (NPTEL)\n• Python Certification - HackerRank\n• Elite + Silver Badge - NPTEL\n\nI also have HackerRank badges in Java, Python, and SQL.";
+      return "My certifications include:\n\n• Cisco Certified DevNet Associate\n• CCNA (Cisco Certified Network Associate)\n• Data Science Certification — Cisco Generative AI Green Belt (2025)\n• Python Programming — NPTEL (2024)\n• Python (Basic) — HackerRank (2024)";
     }
 
     // Contact related
     if (message.includes('contact') || message.includes('email') || message.includes('phone') || message.includes('linkedin')) {
-      return "You can reach Ram at:\n\n📧 Email: ramgopalpampana10@gmail.com\n📱 Phone: +91 7730072669\n🔗 LinkedIn: linkedin.com/in/ramgopalpampana\n💻 GitHub: github.com/Ram2669\n📍 Location: Kakinada, Andhra Pradesh, India";
+      return "You can reach Ram at:\n\nEmail: ramgopalpampana10@gmail.com\nPhone: +91 7730072669\nLinkedIn: https://linkedin.com/in/ramgopal-pampana\nGitHub: https://github.com/Ram2669\nLocation: Bengaluru, Karnataka, India";
     }
 
     // Location related
     if (message.includes('location') || message.includes('where') || message.includes('based') || message.includes('kakinada')) {
-      return "I'm based in Kakinada, Andhra Pradesh, India. Currently working at Cisco in Bengaluru, India.";
+      return "I’m based in Bengaluru, Karnataka, India.";
     }
 
     // AI/ML related
     if (message.includes('ai') || message.includes('artificial intelligence') || message.includes('machine learning') || message.includes('azure')) {
-      return "I'm actively working with AI technologies! I'm currently developing a full-stack AI chatbot using Azure OpenAI services, integrating Azure Cognitive Search for intelligent schema retrieval and dynamic SQL generation. This project showcases my ability to work with cutting-edge AI technologies.";
+      return "I’m actively working with AI technologies: building a full‑stack AI chatbot using Azure OpenAI, Django, and MySQL, with Azure Cognitive Search for intelligent retrieval and dynamic SQL generation.";
     }
 
     // Testing related
     if (message.includes('testing') || message.includes('selenium') || message.includes('automation') || message.includes('qa')) {
-      return "I specialize in automated testing! At Cisco, I use Java and Selenium for automated testing to ensure software quality and reliability. I'm proficient in TestNG, JUnit, and Cypress for comprehensive test automation frameworks.";
+      return "I specialize in automated testing: Python with Selenium and Pytest for UI automation; experience with TestNG, JUnit, and Cypress as well.";
     }
 
     // General greeting
@@ -143,7 +152,7 @@ const Chatbot = () => {
       <div className="fixed bottom-6 right-6 z-[9999]">
         <button
           onClick={() => {
-            console.log('Chatbot button clicked, isOpen:', isOpen);
+            // toggle chat
             setIsOpen(!isOpen);
           }}
           className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-white flex items-center justify-center"

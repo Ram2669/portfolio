@@ -149,7 +149,7 @@ a {
 <body>
     <div class="header">
         <div class="name">PAMPANA SIVA SURYA RAM GOPAL</div>
-        <div class="title">Software Test Engineer Trainee</div>
+        <div class="title">Software Engineer</div>
         <div class="contact-info">
             Email: <a href="mailto:ramgopalpampana10@gmail.com">ramgopalpampana10@gmail.com</a> |
             Phone: +91-7730072669<br>
@@ -163,7 +163,7 @@ a {
     <div class="section">
         <div class="section-title">Professional Summary</div>
         <div class="summary">
-            Software Test Engineer Trainee at Cisco with expertise in automated testing, AI solutions, and full-stack development. Proficient in Java, Python, JavaScript, Selenium, and TestNG. Data Science certified (Generative AI Green Belt 2025) and CCNA certified with experience in Azure OpenAI and React. Currently learning LangChain and LangGraph for advanced AI applications. Demonstrated impact: Achieved 95% accuracy in AI chatbot, reduced testing errors by 25%, and improved performance by 40% through automation and optimization.
+            Software Test Engineer and Full‑Stack Developer with expertise in automated testing, AI solutions, and modern web development. Proficient in Java, Python, JavaScript, Selenium, and TestNG. CCNA certified with experience in Azure OpenAI, Google Cloud, and React. Currently learning LangChain and LangGraph for advanced AI applications. Impact highlights: Achieved 95% accuracy in AI chatbot, reduced testing errors by 25%, and improved performance by 40% through automation and optimization.
         </div>
     </div>
 
@@ -177,7 +177,7 @@ a {
                 </div>
                 <div class="skill-category">
                     <strong>Testing & Automation:</strong>
-                    <div class="skill-list">Selenium WebDriver, TestNG, JUnit, Cypress, Automated Testing</div>
+                    <div class="skill-list">Selenium WebDriver, Pytest, TestNG, JUnit, Cypress, Automated Testing</div>
                 </div>
                 <div class="skill-category">
                     <strong>Web Technologies:</strong>
@@ -187,7 +187,7 @@ a {
             <div>
                 <div class="skill-category">
                     <strong>Cloud & AI Technologies:</strong>
-                    <div class="skill-list">Azure OpenAI, AWS, GPT-4, Azure Cognitive Search, Generative AI</div>
+                    <div class="skill-list">AWS, Azure OpenAI, GPT-4, Azure Cognitive Search, Generative AI</div>
                 </div>
                 <div class="skill-category">
                     <strong>Data Science:</strong>
@@ -218,7 +218,7 @@ a {
             </div>
             <div class="description">
                 <ul>
-                    <li>Automated testing using Java and Selenium to ensure software quality</li>
+                    <li>Automated testing using Python with Selenium and Pytest to ensure software quality</li>
                     <li>Developing a full-stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure Cognitive Search for real-time natural language query handling</li>
                     <li>Integrating Azure Cognitive Search for intelligent schema retrieval and dynamic SQL generation</li>
                     <li>CCNA Certified: Proficient in networking, routing, switching, and IP fundamentals</li>
@@ -229,43 +229,45 @@ a {
 
     <div class="section">
         <div class="section-title">Key Projects</div>
-        
+
         <div class="project-entry">
             <div class="job-header">
-                <div class="project-title">Custom Infrastructure Tool & AI Chatbot Implementation – Cisco</div>
+                <div class="project-title">AI-Powered Chatbot for Infrastructure Management (Cisco, 2024 – Ongoing)</div>
                 <div class="date">Ongoing</div>
             </div>
             <div class="description">
                 <ul>
-                    <li>Developed infrastructure management tool from scratch using Django, MySQL, and frontend technologies (HTML, CSS, Bootstrap, JavaScript) for efficient asset tracking and operations management</li>
-                    <li>Built custom AI-powered chatbot to auto-respond to infrastructure queries, leveraging Azure OpenAI (GPT-4) for natural language understanding and response generation</li>
-                    <li>Integrated comprehensive Azure services: Cosmos DB for data storage, Blob Storage for file handling, AI Search for intelligent retrieval, AI Language for NLP-based intent detection, and VNet for secure network access</li>
+                    <li>Contributing to a custom AI chatbot integrated into an infrastructure management tool built on Django and MySQL.</li>
+                    <li>Implementing Azure OpenAI (GPT-4) for natural language understanding and automated query responses.</li>
+                    <li>Working on integration with Cosmos DB, Azure Cognitive Search, Blob Storage, and AI Language for intelligent retrieval, secure data handling, and NLP-based intent detection.</li>
+                    <li>Integrated comprehensive Azure services: Cosmos DB for data storage, Blob Storage for file handling, AI Search for intelligent retrieval, AI Language for NLP-based intent detection, and VNet for secure network access.</li>
                 </ul>
             </div>
         </div>
 
         <div class="project-entry">
             <div class="job-header">
-                <div class="project-title">Network-Based Pattern Searching System</div>
+                <div class="project-title">Network-Based Pattern Searching System (Academic)</div>
                 <div class="date">2024</div>
             </div>
             <div class="description">
                 <ul>
-                    <li>Developed a client-server system for keyword search using Java sockets and multithreading, improving performance by 40%</li>
-                    <li>Created comprehensive test suite using JUnit for unit and integration testing</li>
+                    <li>Developed a <strong>Network-Based Pattern Searching</strong> project with <strong>client-server architecture</strong> to search for words in a file.</li>
+                    <li>Implemented <strong>client-server communication</strong> using <strong>JSON requests</strong> to query and return matching lines with line numbers.</li>
+                    <li>Designed a <strong>Search class</strong> to read, clean, and search file content efficiently, handling errors like "File Not Found."</li>
                 </ul>
             </div>
         </div>
 
         <div class="project-entry">
             <div class="job-header">
-                <div class="project-title">Self-Fuel Dispensing Automated Framework</div>
+                <div class="project-title">Self-Fuel Dispensing Automated Framework Using RFID Cards (Academic)</div>
                 <div class="date">2023</div>
             </div>
             <div class="description">
                 <ul>
-                    <li>Built RFID-based automation system reducing operational errors by 25% and improving efficiency</li>
-                    <li>Developed real-time monitoring interface with HTML5, CSS3, JavaScript and database integration</li>
+                    <li>Developed and implemented an RFID-based self-fuel dispensing system, reducing operational errors and unauthorized access by 25%.</li>
+                    <li>Optimized transaction efficiency by 40%, improving accuracy and user satisfaction through advanced algorithms and real-time data processing.</li>
                 </ul>
             </div>
         </div>
@@ -292,14 +294,16 @@ a {
 
     <div class="section">
         <div class="section-title">Certifications & Training</div>
-        
+
         <div class="description">
             <ul>
                 <li><strong>Data Science Certification</strong> – Cisco Systems (2025) - Generative AI Green Belt Program</li>
-                <li><strong>CCNA</strong> – Cisco Systems (2024) <a href="https://drive.google.com/file/d/14mL6K7LUpqbGLT-ooHuhrWnoHTQOBXfT/view?usp=drivesdk" class="cert-link">[View Certificate]</a></li>
-                <li><strong>Python Programming</strong> – NPTEL (2024) <a href="https://drive.google.com/file/d/1yAMGl6W62l1siimLQSd23Qr6o8HdZHrc/view?usp=drivesdk" class="cert-link">[View]</a></li>
-                <li><strong>Python (Basic)</strong> – HackerRank (2024) <a href="https://www.hackerrank.com/certificates/7569d3f33840" class="cert-link">[View]</a></li>
-                <li><strong>Automation Testing</strong> – Test Automation Training (2024) <a href="https://drive.google.com/file/d/1p49OD-hYC9m_X9vy037mv3vWNaCblzfa/view?usp=drivesdk" class="cert-link">[View]</a></li>
+                <li><a href="https://drive.google.com/file/d/1jYhIJSlXs6xgIpc46KxSOn22RWEPmfV8/view?usp=drivesdk" class="cert-link"><strong>Cisco Certified DevNet Associate</strong></a> – Cisco Systems (2023)</li>
+
+                <li><a href="https://drive.google.com/file/d/14mL6K7LUpqbGLT-ooHuhrWnoHTQOBXfT/view?usp=drivesdk" class="cert-link"><strong>CCNA</strong></a> – Cisco Systems (2024)</li>
+                <li><a href="https://drive.google.com/file/d/1yAMGl6W62l1siimLQSd23Qr6o8HdZHrc/view?usp=drivesdk" class="cert-link"><strong>Python Programming</strong></a> – NPTEL (2024)</li>
+                <li><a href="https://www.hackerrank.com/certificates/7569d3f33840" class="cert-link"><strong>Python (Basic)</strong></a> – HackerRank (2024)</li>
+                <li><a href="https://drive.google.com/file/d/1p49OD-hYC9m_X9vy037mv3vWNaCblzfa/view?usp=drivesdk" class="cert-link"><strong>Automation Testing</strong></a> – Test Automation Training (2024)</li>
             </ul>
         </div>
     </div>
@@ -308,7 +312,6 @@ a {
         <div class="section-title">Additional Information</div>
         <div class="description">
             <ul>
-                <li><strong>Languages:</strong> English (Fluent), Telugu (Native), Hindi (Conversational)</li>
                 <li><strong>Interests:</strong> AI/ML Technologies, Test Automation, Full-Stack Development, Cloud Computing</li>
             </ul>
         </div>

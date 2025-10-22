@@ -1,0 +1,279 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<meta name=Originator content="Microsoft Word 15">
+<title>Pampana Siva Surya Ram Gopal - Resume</title>
+<!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Print</w:View>
+<w:Zoom>100</w:Zoom>
+<w:DoNotPromptForConvert/>
+<w:DoNotShowInsertionsAndDeletions/>
+</w:WordDocument>
+</xml><![endif]-->
+<style>
+@page Section1 {
+    size: 8.5in 11.0in;
+    margin: 0.5in 0.5in 0.5in 0.5in;
+    mso-header-margin: 0.5in;
+    mso-footer-margin: 0.5in;
+    mso-paper-source: 0;
+}
+div.Section1 { page: Section1; }
+body {
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.4;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    text-align: center;
+    margin-bottom: 12pt;
+    border-bottom: 1pt solid #000;
+    padding-bottom: 6pt;
+}
+.name {
+    font-size: 18pt;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 3pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5pt;
+}
+.title {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 6pt;
+}
+.contact-info {
+    font-size: 10pt;
+    line-height: 1.3;
+    color: #333;
+}
+.contact-info a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+.section {
+    margin-bottom: 12pt;
+}
+.section-title {
+    font-size: 13pt;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+    border-bottom: 1pt solid #000;
+    margin-bottom: 6pt;
+    padding-bottom: 2pt;
+    letter-spacing: 0.3pt;
+}
+.job-entry {
+    margin-bottom: 8pt;
+}
+.job-title {
+    font-weight: bold;
+    font-size: 11pt;
+    color: #000;
+}
+.company {
+    font-weight: bold;
+    color: #000;
+    font-size: 11pt;
+}
+.location {
+    font-style: italic;
+    color: #666;
+    font-size: 10pt;
+}
+.date {
+    font-style: italic;
+    color: #666;
+    font-size: 10pt;
+}
+.description ul {
+    margin: 0;
+    padding-left: 18pt;
+}
+.description li {
+    margin-bottom: 2pt;
+    text-align: justify;
+}
+.skill-category {
+    margin-bottom: 4pt;
+}
+.project-entry {
+    margin-bottom: 10pt;
+}
+.project-title {
+    font-weight: bold;
+    color: #000;
+    font-size: 11pt;
+}
+.project-subtitle {
+    font-style: italic;
+    color: #666;
+    font-size: 10pt;
+    margin-bottom: 3pt;
+}
+.education-entry {
+    margin-bottom: 4pt;
+}
+.degree {
+    font-weight: bold;
+    color: #000;
+    font-size: 11pt;
+}
+.school {
+    color: #000;
+    font-size: 11pt;
+}
+.gpa {
+    color: #666;
+    font-size: 10pt;
+}
+.summary {
+    text-align: justify;
+    line-height: 1.4;
+    margin-bottom: 6pt;
+}
+</style>
+</head>
+<body>
+<div class=Section1>
+
+<div class="header">
+    <div class="name">PAMPANA SIVA SURYA RAM GOPAL</div>
+    <div class="title">Software Engineer | AI & Automation | Full-Stack Development</div>
+    <div class="contact-info">
+        Bengaluru, India | +91 7730072669 | ramgopalpampana10@gmail.com<br>
+        LinkedIn: <a href="https://linkedin.com/in/ramgopal-pampana">linkedin.com/in/ramgopal-pampana</a> | GitHub: <a href="https://github.com/Ram2669">github.com/Ram2669</a> | Portfolio: <a href="https://ram-gopal-portfolio.netlify.app">ram-gopal-portfolio.netlify.app</a>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">PROFESSIONAL SUMMARY</div>
+    <div class="summary">
+        Python Full-Stack Developer skilled in <b>Django</b>, <b>React</b>, and <b>Azure OpenAI</b> with a focus on building scalable, AI-driven web applications. Experienced in backend APIs, frontend design, and database management. Completed automation testing training to enhance software quality and performance awareness. CCNA-certified with strong cloud and networking knowledge.
+    </div>
+    <div style="margin-top: 6pt; font-size: 10pt; color: #333;">
+        <b>Core Competencies:</b> AI Chatbots, Test Automation, REST API Development, Cloud Integration, CI/CD, Generative AI
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">TECHNICAL SKILLS</div>
+    <div class="skill-category">
+        <b>Programming:</b> Python, Java, JavaScript, HTML5, CSS3
+    </div>
+    <div class="skill-category">
+        <b>Frameworks & Tools:</b> Django, React, Angular, Selenium, Pytest, TestNG, JUnit, Cypress
+    </div>
+    <div class="skill-category">
+        <b>Cloud & AI:</b> Azure OpenAI, AWS, GPT-4, Azure Cognitive Search, LangChain, LangGraph
+    </div>
+    <div class="skill-category">
+        <b>Databases:</b> MySQL, Azure Cosmos DB
+    </div>
+    <div class="skill-category">
+        <b>Version Control & IDEs:</b> Git, VS Code, PyCharm, Postman
+    </div>
+    <div class="skill-category">
+        <b>Networking:</b> CCNA Certified – Routing, Switching, TCP/IP, Network Troubleshooting
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">PROFESSIONAL EXPERIENCE</div>
+    <div class="job-entry">
+        <div class="job-title">Software Test Engineer Trainee</div>
+        <div class="company">Cisco Systems</div>
+        <div class="location">Bengaluru, India</div>
+        <div class="date">Nov 2024 – Present</div>
+        <div class="description">
+            <ul>
+                <li>Automated web testing workflows using <b>Python</b>, <b>Selenium</b>, and <b>Pytest</b>, improving regression coverage by 40%.</li>
+                <li>Developed a full-stack AI chatbot leveraging <b>Azure OpenAI</b>, <b>Django</b>, and <b>MySQL</b> for real-time query processing.</li>
+                <li>Engineered intelligent schema retrieval using <b>Azure Cognitive Search</b>, reducing token usage by 30%.</li>
+                <li>Collaborated with networking and DevOps teams to optimize API scalability and overall system performance.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">KEY PROJECTS</div>
+    
+    <div class="project-entry">
+        <div class="project-title">AI-Powered Chatbot for Infrastructure Management</div>
+        <div class="project-subtitle">Cisco, 2024 – Currently Implementing</div>
+        <div class="description">
+            <ul>
+                <li>Designed and implemented a <b>GPT-4</b>-powered chatbot integrated with <b>Azure OpenAI</b>, <b>Django</b>, and <b>MySQL</b> to automate infrastructure queries.</li>
+                <li>Engineered a smart retrieval system using <b>Azure Cognitive Search</b>, <b>Cosmos DB</b>, and <b>AI Language</b> for NLP-based intent detection.</li>
+                <li>Secured deployments with <b>Azure VNet</b> and optimized query execution, improving response latency by 35% and chatbot accuracy to 95%.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="project-entry">
+        <div class="project-title">Network-Based Pattern Searching System</div>
+        <div class="project-subtitle">Academic, 2024</div>
+        <div class="description">
+            <ul>
+                <li>Developed a client-server pattern searching tool using <b>Python</b> and <b>JSON</b> for efficient text matching.</li>
+                <li>Optimized error handling and file parsing, reducing query latency by 25% and improving reliability.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="project-entry">
+        <div class="project-title">Self-Fuel Dispensing Automated Framework Using RFID Cards</div>
+        <div class="project-subtitle">Academic, 2023</div>
+        <div class="description">
+            <ul>
+                <li>Designed and implemented an <b>RFID</b>-based automated fuel dispensing framework to minimize manual errors and unauthorized access.</li>
+                <li>Improved transaction accuracy by 40% through real-time data synchronization and algorithm optimization.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">EDUCATION</div>
+    <div class="education-entry">
+        <div class="degree">Bachelor of Technology in Electronics and Communication Engineering</div>
+        <div class="school">Pragati Engineering College, Kakinada</div>
+        <div class="date">Aug 2019 – Jun 2023</div>
+        <div class="gpa">CGPA: 7.87 / 10</div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">CERTIFICATIONS</div>
+    <div class="description">
+        <ul>
+            <li><b>Data Science Certification</b> – Cisco Systems (Generative AI Green Belt, 2025)</li>
+            <li><b>Cisco Certified Network Associate (CCNA)</b> (2024)</li>
+            <li><b>Cisco Certified DevNet Associate</b> (2023)</li>
+            <li><b>Python Programming</b> – NPTEL (2024)</li>
+            <li><b>Python (Basic)</b> – HackerRank (2024)</li>
+            <li><b>Automation Testing</b> – Test Automation Training (2024)</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">ADDITIONAL INFORMATION</div>
+    <div class="description">
+        <b>Interests:</b> AI/ML Applications, Test Automation, Full-Stack Development, Cloud Computing, and Generative AI
+    </div>
+</div>
+
+</div>
+</body>
+</html>

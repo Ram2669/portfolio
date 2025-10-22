@@ -30,7 +30,7 @@ Programming Languages:
 Java, Python, JavaScript, HTML5, CSS3
 
 Testing & Automation:
-Selenium, TestNG, JUnit, Cypress, Automated Testing
+Selenium, Pytest, TestNG, JUnit, Cypress, Automated Testing
 
 Web Technologies:
 React, Angular, Django
@@ -54,7 +54,7 @@ WORK EXPERIENCE
 Software Test Engineer Trainee                              November 2024 - Present
 Cisco Systems                                                    Bengaluru, India
 
-• Automated testing using Java and Selenium to ensure software quality
+• Automated testing using Python with Selenium and Pytest to ensure software quality
 • Developing a full-stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure
   Cognitive Search for real-time natural language query handling
 • Integrating Azure Cognitive Search for intelligent schema retrieval and dynamic
@@ -65,26 +65,17 @@ Cisco Systems                                                    Bengaluru, Indi
 KEY PROJECTS
 ================================================================================
 
-Custom Infrastructure Tool & AI Chatbot Implementation – Cisco           Ongoing
-• Developed infrastructure management tool from scratch using Django, MySQL, and
-  frontend technologies (HTML, CSS, Bootstrap, JavaScript) for efficient asset
-  tracking and operations management
-• Built custom AI-powered chatbot to auto-respond to infrastructure queries,
-  leveraging Azure OpenAI (GPT-4) for natural language understanding and response
-  generation
-• Integrated comprehensive Azure services: Cosmos DB for data storage, Blob
-  Storage for file handling, AI Search for intelligent retrieval, AI Language
-  for NLP-based intent detection, and VNet for secure network access
-• Enhanced scalability, security, and intelligence through Azure cloud integration
+AI-Powered Chatbot for Infrastructure Management (Cisco, 2024 – Ongoing)
+• Contributing to a custom AI chatbot integrated into an infrastructure management tool built on Django and MySQL.
+• Implementing Azure OpenAI (GPT-4) for natural language understanding and automated query responses.
+• Working on integration with Cosmos DB, Azure Cognitive Search, Blob Storage, and AI Language for intelligent retrieval, secure data handling, and NLP-based intent detection.
+• Aiming to enhance real-time infrastructure query handling and reduce manual intervention through automation.
   for enterprise-level infrastructure management
 
-Network-Based Pattern Searching System                                       2024
-• Designed client-server architecture using Java for efficient file pattern 
-  searching
-• Implemented multi-threading for concurrent file processing and improved 
-  performance by 40%
-• Developed robust error handling and logging mechanisms for system reliability
-• Created comprehensive test suite using JUnit for unit and integration testing
+NETWORK BASED PATTERN SEARCHING | Link Python
+• Developed a Network-Based Pattern Searching project with client-server architecture to search for words in a file.
+• Implemented client-server communication using JSON requests to query and return matching lines with line numbers.
+• Designed a Search class to read, clean, and search file content efficiently, handling errors like "File Not Found."
 
 Self-Fuel Dispensing Automated Framework                                     2023
 • Built RFID-based automation system reducing operational errors by 25%
@@ -116,7 +107,6 @@ CERTIFICATIONS
 ADDITIONAL INFORMATION
 ================================================================================
 
-Languages: English (Fluent), Telugu (Native), Hindi (Conversational)
 
 Interests: AI/ML Technologies, Test Automation, Full-Stack Development, 
 Cloud Computing

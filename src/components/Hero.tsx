@@ -8,10 +8,9 @@ const Hero = () => {
   const [text, setText] = useState('');
   const [currentRole, setCurrentRole] = useState(0);
   const roles = [
-    "Software Test Engineer Trainee",
-    "Data Science Certified Professional",
+    "Software Engineer",
     "AI & ML Enthusiast",
-    "CCNA Certified Network Engineer"
+    "Cisco Certified DevNet Associate"
   ];
   const fullText = roles[currentRole];
   
@@ -109,7 +108,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            Data Science certified Software Test Engineer at Cisco with expertise in automated testing, AI solutions, and full-stack development.
+            Software Test Engineer at Cisco with expertise in automated testing, AI solutions, and full-stack development.
             Currently learning LangChain and LangGraph for advanced AI applications.
           </motion.p>
 
@@ -136,8 +135,8 @@ const Hero = () => {
             </motion.button>
 
             <motion.a
-              href="/Ram_Gopal_Pampana_Professional_Resume.pdf"
-              download="Ram_Gopal_Pampana_Professional_Resume.pdf"
+              href="/Pampana_Siva_Surya_Ram_Gopal_Resume_2025.pdf"
+              download="Pampana_Siva_Surya_Ram_Gopal_Resume_2025.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-10 py-4 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 shadow-md hover:shadow-lg"
