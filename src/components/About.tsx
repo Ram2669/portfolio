@@ -460,7 +460,7 @@ const About = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {/* 2025 Professional Resume */}
                   <motion.a
-                    href="/Pampana_Siva_Surya_Ram_Gopal_Resume_2025.pdf"
+                    href="/Pampana_Siva_Surya_Ram_Gopal_Resume_2025.pdf?v=20251022-1405"
                     download
                     className="flex items-center justify-between bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 text-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
                     whileHover={{ scale: 1.02, y: -2 }}
@@ -477,7 +477,7 @@ const About = () => {
                   </motion.a>
 
                   <motion.a
-                    href="/Pampana_Siva_Surya_Ram_Gopal_Resume_2025.doc"
+                    href="/Pampana_Siva_Surya_Ram_Gopal_Resume_2025.doc?v=20251022-1405"
                     download
                     className="flex items-center justify-between bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
                     whileHover={{ scale: 1.02, y: -2 }}
@@ -494,7 +494,7 @@ const About = () => {
                   </motion.a>
 
                   <motion.a
-                    href="/Ram_Gopal_Pampana_ATS_Resume.pdf"
+                    href="/Ram_Gopal_Pampana_ATS_Resume.pdf?v=20251022-1405"
                     download
                     className="flex items-center justify-between bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
                     whileHover={{ scale: 1.02, y: -2 }}
