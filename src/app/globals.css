@@ -198,3 +198,83 @@ a:focus {
   -webkit-mask-image: radial-gradient(ellipse at 50% 35%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 70%);
   mask-image: radial-gradient(ellipse at 50% 35%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 70%);
 }
+
+/* Horizontal journey layout */
+.horizontal-journey {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.slide {
+  width: 100vw;
+  height: 100vh;
+  flex: 0 0 100vw;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+/* Mobile vertical fallback */
+@media (max-width: 768px) {
+  .horizontal-journey {
+    height: auto;
+    width: 100vw;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: y proximity;
+  }
+  .slide {
+    width: 100%;
+    min-height: 100vh;
+    flex: 0 0 auto;
+  }
+}
+
+/* Neon buttons */
+.btn-neon {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+  padding: 0.9rem 1.5rem;
+  border-radius: 9999px;
+  color: black;
+  background-image: linear-gradient(135deg, #00E3FF, #7C4DFF);
+  box-shadow: 0 10px 30px rgba(0, 227, 255, 0.25);
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.btn-neon:hover { transform: translateY(-2px) scale(1.02); filter: brightness(1.08); }
+.btn-neon:active { transform: scale(0.98); }
+
+.btn-ghost {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+  padding: 0.85rem 1.4rem;
+  border-radius: 9999px;
+  color: var(--mission-accent);
+  border: 2px solid var(--mission-accent);
+  background: transparent;
+  transition: all .2s ease;
+}
+.btn-ghost:hover { background: var(--mission-accent); color: #000; }
+
+/* Inputs */
+.field {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 0.75rem;
+  background: var(--mission-surface);
+  color: var(--mission-text);
+  border: 1px solid var(--mission-border);
+}
+.field:focus { outline: 2px solid var(--mission-accent); outline-offset: 2px; }
+
+/* 3D tilt */
+.tilt-hover { transform-style: preserve-3d; transition: transform .25s ease; }
+.tilt-hover:hover { transform: perspective(900px) rotateY(6deg) translateZ(10px); }
