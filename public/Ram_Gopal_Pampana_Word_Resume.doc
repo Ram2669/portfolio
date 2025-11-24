@@ -152,7 +152,7 @@ a {
         <div class="title">Software Engineer</div>
         <div class="contact">
             📧 ramgopalpampana10@gmail.com | 📞 +91-7730072669 | 📍 Bengaluru, Karnataka, India<br>
-            🌐 <a href="https://ram-gopal-portfolio.netlify.app">Portfolio</a> |
+            🌐 <a href="https://ramgopal-portfolio.vercel.app">Portfolio</a> |
             💼 <a href="https://linkedin.com/in/ramgopal-pampana">LinkedIn</a> |
             💻 <a href="https://github.com/Ram2669">GitHub</a>
         </div>
@@ -174,15 +174,15 @@ a {
             </div>
             <div class="skill-row">
                 <span class="skill-category">Testing & Automation: </span>
-                <span class="skill-list">Selenium WebDriver, Pytest, TestNG, JUnit, Cypress, Automated Testing</span>
+                <span class="skill-list">Selenium WebDriver, Pytest, TestNG, JUnit, Automated Testing</span>
             </div>
             <div class="skill-row">
                 <span class="skill-category">Web Technologies: </span>
-                <span class="skill-list">React, Angular, Django, REST APIs</span>
+                <span class="skill-list">React, Django, REST APIs</span>
             </div>
             <div class="skill-row">
                 <span class="skill-category">Cloud & AI Technologies: </span>
-                <span class="skill-list">AWS, Azure OpenAI, GPT-4, Azure Cognitive Search</span>
+                <span class="skill-list">AWS, Azure OpenAI, GPT-4, Azure AI Search</span>
             </div>
             <div class="skill-row">
                 <span class="skill-category">Data Science: </span>
@@ -190,7 +190,7 @@ a {
             </div>
             <div class="skill-row">
                 <span class="skill-category">Databases & Tools: </span>
-                <span class="skill-list">MySQL, Azure Cosmos DB, Git, VSCode, PyCharm, Postman</span>
+                <span class="skill-list">MySQL, Azure Cosmos DB, Git, VSCode, PyCharm, GitHub Copilot, Postman</span>
             </div>
             <div class="skill-row">
                 <span class="skill-category">Networking: </span>
@@ -211,8 +211,8 @@ a {
             <div class="description">
                 <ul>
                     <li>Automated testing using Python with Selenium and Pytest to ensure software quality</li>
-                    <li>Developing a full-stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure Cognitive Search for real-time natural language query handling</li>
-                    <li>Integrating Azure Cognitive Search for intelligent schema retrieval and dynamic SQL generation</li>
+                    <li>Developing a full-stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure AI Search for real-time natural language query handling</li>
+                    <li>Integrating Azure AI Search for intelligent schema retrieval and dynamic SQL generation</li>
                     <li>CCNA Certified: Proficient in networking, routing, switching, and IP fundamentals</li>
                 </ul>
             </div>
@@ -231,7 +231,7 @@ a {
                 <ul>
                     <li>Contributing to a custom AI chatbot integrated into an infrastructure management tool built on Django and MySQL.</li>
                     <li>Implementing Azure OpenAI (GPT-4) for natural language understanding and automated query responses.</li>
-                    <li>Working on integration with Cosmos DB, Azure Cognitive Search, Blob Storage, and AI Language for intelligent retrieval, secure data handling, and NLP-based intent detection.</li>
+                    <li>Working on integration with Cosmos DB, Azure AI Search, Blob Storage, and AI Language for intelligent retrieval, secure data handling, and NLP-based intent detection.</li>
                     <li>Integrated comprehensive Azure services: Cosmos DB for data storage, Blob Storage for file handling, AI Search for intelligent retrieval, AI Language for NLP-based intent detection, and VNet for secure network access.</li>
                 </ul>
             </div>
