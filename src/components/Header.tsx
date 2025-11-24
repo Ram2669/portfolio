@@ -60,7 +60,7 @@ const Header = () => {
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/80 backdrop-blur-md shadow-lg dark:bg-gray-900/80'
+          ? 'bg-[rgba(14,22,41,0.7)] backdrop-blur-md border-b border-[var(--mission-border)]'
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
@@ -71,12 +71,12 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.div
-            className="text-2xl font-bold text-gray-900 dark:text-white"
+            className="text-2xl font-bold text-[var(--mission-text)] tracking-wide"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('#home'); }}>
-              Portfolio
+              Ram Gopal Pampana
             </a>
           </motion.div>
 
@@ -90,8 +90,8 @@ const Header = () => {
                 aria-current={activeSection === item.href ? 'page' : undefined}
                 className={`relative font-medium pb-1 transition-colors duration-200 border-b-2 ${
                   activeSection === item.href
-                    ? 'text-blue-600 dark:text-blue-400 border-blue-600'
-                    : 'text-gray-700 dark:text-gray-300 border-transparent hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-600'
+                    ? 'text-[var(--mission-accent)] border-[var(--mission-accent)]'
+                    : 'text-[var(--mission-muted)] border-transparent hover:text-[var(--mission-accent)] hover:border-[var(--mission-accent)]'
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -105,7 +105,7 @@ const Header = () => {
           <div className="md:hidden">
             <motion.button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+              className="text-[var(--mission-text)] opacity-80 hover:text-[var(--mission-accent)] transition-colors duration-200"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -133,8 +133,8 @@ const Header = () => {
                     aria-current={activeSection === item.href ? 'page' : undefined}
                     className={`font-medium py-2 transition-colors duration-200 ${
                       activeSection === item.href
-                        ? 'text-blue-600 dark:text-blue-400'
-                        : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                        ? 'text-[var(--mission-accent)]'
+                        : 'text-[var(--mission-muted)] hover:text-[var(--mission-accent)]'
                     }`}
                     whileHover={{ x: 10 }}
                     whileTap={{ scale: 0.95 }}

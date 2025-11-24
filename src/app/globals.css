@@ -1,29 +1,52 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Mission Control theme tokens */
+  --mission-bg: #0A0F1F;
+  --mission-surface: #0E1629;
+  --mission-panel: #0C1325;
+  --mission-card: #0F1B2E;
+
+  --mission-text: #C8D1E5;
+  --mission-muted: #9AA6BF;
+
+  --mission-accent: #00E3FF;
+  --mission-accent-2: #00FFC6;
+
+  --mission-success: #2EE6A6;
+  --mission-warning: #FFC857;
+  --mission-danger:  #FF6B6B;
+
+  --mission-border: rgba(200, 209, 229, 0.12);
+  --mission-grid: rgba(0, 227, 255, 0.08);
+
+  /* Default document colors */
+  --background: var(--mission-bg);
+  --foreground: var(--mission-text);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: var(--mission-bg);
+  --color-foreground: var(--mission-text);
+  --color-brand: var(--mission-accent);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-mono);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
+/* Typography: use Orbitron for headings, Inter for body, Geist Mono for code */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  letter-spacing: 0.02em;
+}
+code, kbd, pre, samp {
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
 
 /* Custom animations */
 @keyframes blob {
@@ -96,7 +119,7 @@ button:focus,
 input:focus,
 textarea:focus,
 a:focus {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid var(--mission-accent);
   outline-offset: 2px;
 }
 
@@ -121,6 +144,53 @@ a:focus {
   .bg-grid {
     background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
   }
+}
+
+/* Mission Control utilities */
+.mission-grid {
+  background-image: linear-gradient(
+      to right,
+      var(--mission-grid) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      var(--mission-grid) 1px,
+      transparent 1px
+    );
+  background-size: 32px 32px, 32px 32px;
+}
+
+.holo-border {
+  position: relative;
+}
+.holo-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(0,227,255,.5), rgba(0,255,198,.35));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.glow-text {
+  text-shadow: 0 0 8px rgba(0,227,255,.4);
+}
+
+.telemetry-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: var(--mission-accent);
+  box-shadow: 0 0 12px rgba(0,227,255,.7);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-blob, .animation-delay-2000, .animation-delay-4000 { animation: none !important; }
 }
 
 /* Faded radial mask to soften edges of overlays */

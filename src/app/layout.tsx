@@ -1,20 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Orbitron, Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const heading = Orbitron({
+  variable: "--font-heading",
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+});
+
+const body = Inter({
+  variable: "--font-body",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const mono = Geist_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Ram Gopal Pampana - Portfolio",
-  description: "Software Test Engineer at Cisco specializing in automated testing, full-stack development, and AI-powered solutions with Azure OpenAI.",
+  title: "Ram Gopal Pampana — Python Developer & AI/LLM Engineer",
+  description:
+    "Python Developer & AI/LLM Engineer at Cisco. Building intelligent systems, multi-agent architectures, and production-grade automation.",
   metadataBase: new URL("https://ramgopal-portfolio.vercel.app"),
   alternates: { canonical: "/" },
 };
@@ -27,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${heading.variable} ${body.variable} ${mono.variable} antialiased bg-[var(--mission-bg)] text-[var(--mission-text)]`}
       >
         {children}
       </body>
