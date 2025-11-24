@@ -151,7 +151,7 @@ body {
     <div class="title">Software Engineer | AI & Automation | Full-Stack Development</div>
     <div class="contact-info">
         Bengaluru, India | +91 7730072669 | ramgopalpampana10@gmail.com<br>
-        LinkedIn: <a href="https://linkedin.com/in/ramgopal-pampana">linkedin.com/in/ramgopal-pampana</a> | GitHub: <a href="https://github.com/Ram2669">github.com/Ram2669</a> | Portfolio: <a href="https://ram-gopal-portfolio.netlify.app">ram-gopal-portfolio.netlify.app</a>
+        LinkedIn: <a href="https://linkedin.com/in/ramgopal-pampana">linkedin.com/in/ramgopal-pampana</a> | GitHub: <a href="https://github.com/Ram2669">github.com/Ram2669</a> | Portfolio: <a href="https://ramgopal-portfolio.vercel.app">ramgopal-portfolio.vercel.app</a>
     </div>
 </div>
 
@@ -171,16 +171,16 @@ body {
         <b>Programming:</b> Python, Java, JavaScript, HTML5, CSS3
     </div>
     <div class="skill-category">
-        <b>Frameworks & Tools:</b> Django, React, Angular, Selenium, Pytest, TestNG, JUnit, Cypress
+        <b>Frameworks & Tools:</b> Django, React, Selenium, Pytest, TestNG, JUnit
     </div>
     <div class="skill-category">
-        <b>Cloud & AI:</b> Azure OpenAI, AWS, GPT-4, Azure Cognitive Search, LangChain, LangGraph
+        <b>Cloud & AI:</b> Azure OpenAI, AWS, GPT-4, Azure AI Search, LangChain, LangGraph
     </div>
     <div class="skill-category">
         <b>Databases:</b> MySQL, Azure Cosmos DB
     </div>
     <div class="skill-category">
-        <b>Version Control & IDEs:</b> Git, VS Code, PyCharm, Postman
+        <b>Version Control & IDEs:</b> Git, VS Code, PyCharm, GitHub Copilot, Postman
     </div>
     <div class="skill-category">
         <b>Networking:</b> CCNA Certified – Routing, Switching, TCP/IP, Network Troubleshooting
@@ -222,7 +222,7 @@ body {
 
     <div class="project-entry">
         <div class="project-title">Network-Based Pattern Searching System</div>
-        <div class="project-subtitle">Academic, 2024</div>
+        <div class="project-subtitle">2024</div>
         <div class="description">
             <ul>
                 <li>Developed a client-server pattern searching tool using <b>Python</b> and <b>JSON</b> for efficient text matching.</li>
@@ -233,7 +233,7 @@ body {
 
     <div class="project-entry">
         <div class="project-title">Self-Fuel Dispensing Automated Framework Using RFID Cards</div>
-        <div class="project-subtitle">Academic, 2023</div>
+        <div class="project-subtitle">2023</div>
         <div class="description">
             <ul>
                 <li>Designed and implemented an <b>RFID</b>-based automated fuel dispensing framework to minimize manual errors and unauthorized access.</li>

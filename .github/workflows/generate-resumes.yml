@@ -1,0 +1,55 @@
+name: Generate resumes (PDF and DOC)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Generate PDFs and DOCs
+        run: |
+          node scripts/generate-resume-pdf.js
+
+      - name: Commit generated artifacts (PDF/DOC)
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          shopt -s nullglob
+          files=(public/*.pdf public/*.doc public/*.docx)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "No generated files found"
+            exit 0
+          fi
+
+          # Stage only the generated artifacts
+          git add "${files[@]}"
+
+          # Commit only if there are staged changes
+          if git diff --cached --quiet; then
+            echo "No resume artifacts changed."
+          else
+            git commit -m "chore(ci): auto-generate resumes [skip ci]"
+            git push
+          fi
+

@@ -13,7 +13,7 @@ const Hero = () => {
     "Cisco Certified DevNet Associate"
   ];
   const fullText = roles[currentRole];
-  
+
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -47,6 +47,9 @@ const Hero = () => {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
         <div className="absolute top-40 left-40 w-80 h-80 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
       </div>
+      {/* Subtle grid overlay for depth */}
+      <div className="absolute inset-0 bg-grid mask-radial-faded" />
+
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <motion.div
@@ -111,6 +114,28 @@ const Hero = () => {
             Software Test Engineer at Cisco with expertise in automated testing, AI solutions, and full-stack development.
             Currently learning LangChain and LangGraph for advanced AI applications.
           </motion.p>
+
+              {/* Quick credibility metrics */}
+              <motion.div
+                className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+              >
+                <div className="rounded-xl border border-gray-200/60 dark:border-gray-700/60 bg-white/70 dark:bg-gray-900/40 backdrop-blur p-4 shadow-sm">
+                  <div className="text-3xl font-bold text-gray-900 dark:text-white">5+</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">Certifications</div>
+                </div>
+                <div className="rounded-xl border border-gray-200/60 dark:border-gray-700/60 bg-white/70 dark:bg-gray-900/40 backdrop-blur p-4 shadow-sm">
+                  <div className="text-3xl font-bold text-gray-900 dark:text-white">3</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">Key Projects</div>
+                </div>
+                <div className="rounded-xl border border-gray-200/60 dark:border-gray-700/60 bg-white/70 dark:bg-gray-900/40 backdrop-blur p-4 shadow-sm">
+                  <div className="text-3xl font-bold text-gray-900 dark:text-white">Cisco</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">DevNet Associate</div>
+                </div>
+              </motion.div>
+
 
 
 

@@ -1,22 +1,21 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Github, Search, Zap, Shield } from 'lucide-react';
+import { Code2, Search, Zap, Shield } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
     {
       title: 'AI-Powered Chatbot for Infrastructure Management (Cisco, 2024 – Currently Implementing)',
-      description: 'Contributing to an AI chatbot integrated with a Django/MySQL infrastructure management tool. Implementing Azure OpenAI (GPT-4) for NLU and automated responses with Azure Cosmos DB, Cognitive Search, Blob Storage, and AI Language for secure, intelligent retrieval.',
-      technologies: ['Django', 'MySQL', 'Azure OpenAI (GPT-4)', 'Azure Cosmos DB', 'Azure Cognitive Search', 'Azure Blob Storage', 'Azure AI Language'],
+      description: 'AI-powered multi-agent architecture: GPT-4.0 primary + GPT-3.5-Turbo SQL agent; intelligent query routing (RAG/SQL/web-search) via LangChain & LangGraph; RAG with Azure AI Search (chunking, Azure embeddings, vector index); autonomous SQL agent generates/validates/executes queries (Azure MySQL Server, Azure Cosmos DB); secure Azure (Azure OpenAI, Blob Storage, VNet + private networking); real-time grounded responses; production-ready.',
+      technologies: ['LangChain', 'LangGraph', 'Azure AI Search', 'Azure OpenAI (GPT-4.0, GPT-3.5-Turbo)', 'Azure MySQL Server', 'Azure Cosmos DB', 'Azure VNet', 'Azure Blob Storage', 'Django'],
       features: [
-        'Integrated AI chatbot within infrastructure management workflow (Django, MySQL)',
-        'Natural language understanding and automated query handling using GPT-4',
-        'Cosmos DB for structured/semi-structured data and secure storage',
-        'Azure Cognitive Search for intelligent retrieval over assets/documents',
-        'Blob Storage for file/document management with access controls',
-        'Azure AI Language for NLP-based intent detection and classification',
-        'Goal: Improve real-time query handling and reduce manual intervention through automation'
+        'Architected multi-agent: GPT-4.0 primary + GPT-3.5-Turbo SQL agent',
+        'Intelligent routing across RAG, SQL, and web-search via LangChain & LangGraph',
+        'RAG with Azure AI Search: chunking, Azure embeddings, vector index',
+        'Autonomous SQL agent generates, validates, and executes queries (Azure MySQL Server, Azure Cosmos DB)',
+        'Secure Azure: Azure OpenAI, Blob Storage, VNet + private networking',
+        'Real-time, accurate, grounded responses; production-ready architecture'
       ],
       icon: Zap,
       status: 'Currently Implementing',
@@ -78,6 +77,8 @@ const Projects = () => {
     switch (status) {
       case 'In Development':
         return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200';
+      case 'Currently Implementing':
+        return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
       case 'Completed':
         return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
       default:
@@ -88,6 +89,7 @@ const Projects = () => {
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'AI/ML':
+      case 'AI/ML & Infrastructure':
         return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200';
       case 'Backend':
         return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
@@ -128,7 +130,7 @@ const Projects = () => {
             return (
               <motion.div
                 key={index}
-                className="bg-white dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group border border-gray-100 dark:border-gray-800 hover:border-blue-200 dark:hover:border-blue-700"
+                className="relative bg-white dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group border border-gray-100 dark:border-gray-800 hover:border-blue-200 dark:hover:border-blue-700"
                 variants={itemVariants}
                 whileHover={{
                   y: -8,
@@ -229,13 +231,56 @@ const Projects = () => {
                         whileHover={{ scale: 1.05, y: -2 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        <Github className="w-4 h-4" />
+                        <Code2 className="w-4 h-4" />
                         View Code
                       </motion.a>
                     )}
 
                   </div>
                 </div>
+
+                  {/* Hover/Focus overlay: reveals more details */}
+                  <div
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300"
+                    aria-hidden="false"
+                  >
+                    <div className="absolute inset-0 bg-white/80 dark:bg-gray-900/70 backdrop-blur-md" />
+                    <div className="relative h-full p-6 flex flex-col justify-center items-start">
+                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2">
+                        {project.title}
+                      </h4>
+                      <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1 max-h-40 overflow-y-auto pr-1">
+                        {project.features.map((feature, fi) => (
+                          <li key={fi} className="flex items-start">
+                            <span className="w-1 h-1 bg-blue-600 rounded-full mt-2 mr-2 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {project.technologies.slice(0, 6).map((tech, ti) => (
+                          <span
+                            key={ti}
+                            className="px-2.5 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-md text-xs font-medium shadow-sm"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      {project.githubLink && (
+                        <a
+                          href={project.githubLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors"
+                        >
+                          <Code2 className="w-4 h-4" />
+                          View Code
+                        </a>
+                      )}
+                    </div>
+                  </div>
+
               </motion.div>
             );
           })}

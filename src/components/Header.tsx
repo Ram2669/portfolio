@@ -7,6 +7,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('#home');
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +18,28 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    const sectionIds = ['home', 'about', 'projects', 'contact'];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(`#${entry.target.id}`);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -63,7 +87,12 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => { e.preventDefault(); scrollToSection(item.href); }}
-                className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200 font-medium"
+                aria-current={activeSection === item.href ? 'page' : undefined}
+                className={`relative font-medium pb-1 transition-colors duration-200 border-b-2 ${
+                  activeSection === item.href
+                    ? 'text-blue-600 dark:text-blue-400 border-blue-600'
+                    : 'text-gray-700 dark:text-gray-300 border-transparent hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-600'
+                }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -101,7 +130,12 @@ const Header = () => {
                     key={item.name}
                     href={item.href}
                     onClick={(e) => { e.preventDefault(); scrollToSection(item.href); }}
-                    className="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200 font-medium py-2"
+                    aria-current={activeSection === item.href ? 'page' : undefined}
+                    className={`font-medium py-2 transition-colors duration-200 ${
+                      activeSection === item.href
+                        ? 'text-blue-600 dark:text-blue-400'
+                        : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                    }`}
                     whileHover={{ x: 10 }}
                     whileTap={{ scale: 0.95 }}
                   >

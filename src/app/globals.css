@@ -110,3 +110,21 @@ a:focus {
 .animate-spin {
   animation: spin 1s linear infinite;
 }
+
+
+/* Subtle grid background utility */
+.bg-grid {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+@media (prefers-color-scheme: dark) {
+  .bg-grid {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  }
+}
+
+/* Faded radial mask to soften edges of overlays */
+.mask-radial-faded {
+  -webkit-mask-image: radial-gradient(ellipse at 50% 35%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 70%);
+  mask-image: radial-gradient(ellipse at 50% 35%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 70%);
+}

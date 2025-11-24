@@ -32,7 +32,7 @@ const About = () => {
     },
     {
       category: 'Cloud & AI Technologies',
-      items: ['Azure OpenAI', 'AWS', 'GPT-4', 'Azure Cognitive Search', 'Generative AI'],
+      items: ['Azure OpenAI', 'AWS', 'GPT-4', 'Azure AI Search', 'Generative AI'],
       icon: Cloud,
       description: 'Cutting-edge AI and cloud computing platforms',
       level: 88,
@@ -202,8 +202,8 @@ const About = () => {
                     </p>
                     <ul className="text-gray-600 dark:text-gray-300 space-y-1 text-sm">
                       <li>• Automated testing using Python with Selenium and Pytest to ensure software quality</li>
-                      <li>• Developing a full-stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure Cognitive Search for real-time natural language query handling</li>
-                      <li>• Integrating Azure Cognitive Search for intelligent schema retrieval and dynamic SQL generation</li>
+                      <li>• Developing a full-stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure AI Search for real-time natural language query handling</li>
+                      <li>• Integrating Azure AI Search for intelligent schema retrieval and dynamic SQL generation</li>
                       <li>• CCNA Certified; Google Cloud Certified (ACE); proficient in networking, routing, switching, and IP fundamentals</li>
                     </ul>
                   </div>

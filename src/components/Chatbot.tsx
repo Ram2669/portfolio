@@ -59,17 +59,17 @@ const Chatbot = () => {
 
     // Experience related
     if (message.includes('experience') || message.includes('work') || message.includes('job') || message.includes('cisco')) {
-      return "I’m a Software Engineer at Cisco (since Nov 2024). I work on automated testing using Python with Selenium and Pytest, and I’m building a full‑stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure Cognitive Search.";
+      return "I’m a Software Engineer at Cisco (since Nov 2024). I work on automated testing using Python with Selenium and Pytest, and I’m building a full‑stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure AI Search.";
     }
 
     // Skills related
     if (message.includes('skill') || message.includes('technology') || message.includes('programming') || message.includes('language')) {
-      return "My technical skills include:\n\n• Programming: Java, Python, JavaScript\n• Frameworks: Angular, TestNG, JUnit, Django\n• Tools: Git, VSCode, PyCharm, Cypress, Selenium, AWS, Azure OpenAI\n• Databases: MySQL\n• Testing: Automated Testing, Selenium, TestNG, JUnit, Cypress\n• Cloud: AWS, Azure OpenAI, Azure Cognitive Search";
+      return "My technical skills include:\n\n• Programming: Java, Python, JavaScript\n• Frameworks: React, Django, TestNG, JUnit\n• Tools: Git, VSCode, PyCharm, Selenium, Postman, GitHub Copilot\n• Databases: MySQL, Azure Cosmos DB\n• Testing: Automated Testing, Selenium, TestNG, JUnit\n• Cloud: AWS, Azure OpenAI, Azure AI Search";
     }
 
     // Projects related
     if (message.includes('project') || message.includes('built') || message.includes('developed') || message.includes('chatbot')) {
-      return "Key projects:\n\n• AI Chatbot for Infrastructure Management — Full‑stack solution using Azure OpenAI, Django, MySQL, and Azure Cognitive Search\n• Network‑Based Pattern Searching — Client–server system for file search with JSON requests\n• Self‑Fuel Dispensing Framework — RFID‑based automation to reduce errors\n\nWould you like details about any specific project?";
+      return "Key projects:\n\n• AI Chatbot for Infrastructure Management — Full‑stack solution using Azure OpenAI, Django, MySQL, and Azure AI Search\n• Network‑Based Pattern Searching — Client–server system for file search with JSON requests\n• Self‑Fuel Dispensing Framework — RFID‑based automation to reduce errors\n\nWould you like details about any specific project?";
     }
 
     // Education related
@@ -94,12 +94,12 @@ const Chatbot = () => {
 
     // AI/ML related
     if (message.includes('ai') || message.includes('artificial intelligence') || message.includes('machine learning') || message.includes('azure')) {
-      return "I’m actively working with AI technologies: building a full‑stack AI chatbot using Azure OpenAI, Django, and MySQL, with Azure Cognitive Search for intelligent retrieval and dynamic SQL generation.";
+      return "I’m actively working with AI technologies: building a full‑stack AI chatbot using Azure OpenAI, Django, and MySQL, with Azure AI Search for intelligent retrieval and dynamic SQL generation.";
     }
 
     // Testing related
     if (message.includes('testing') || message.includes('selenium') || message.includes('automation') || message.includes('qa')) {
-      return "I specialize in automated testing: Python with Selenium and Pytest for UI automation; experience with TestNG, JUnit, and Cypress as well.";
+      return "I specialize in automated testing: Python with Selenium and Pytest for UI automation; experience with TestNG and JUnit as well.";
     }
 
     // General greeting
