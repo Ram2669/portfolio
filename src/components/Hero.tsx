@@ -40,13 +40,8 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
-      {/* Background Animation */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-40 left-40 w-80 h-80 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
-      </div>
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[var(--mission-surface)]">
+
       {/* Subtle grid overlay for depth */}
       <div className="absolute inset-0 bg-grid mask-radial-faded" />
 
@@ -64,22 +59,22 @@ const Hero = () => {
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
-              <div className="w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                <span className="text-2xl font-bold text-gray-600 dark:text-gray-300">RG</span>
+            <div className="w-32 h-32 mx-auto rounded-full p-0.5 border border-[var(--mission-border)] bg-[rgba(0,227,255,.12)]">
+              <div className="w-full h-full rounded-full bg-[var(--mission-panel)] flex items-center justify-center">
+                <span className="text-2xl font-bold text-[var(--mission-text)]">RG</span>
               </div>
             </div>
           </motion.div>
 
           {/* Name */}
           <motion.h1
-            className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4"
+            className="text-4xl md:text-6xl font-bold text-[var(--mission-text)] mb-4 glow-text"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <motion.span
-              className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent"
+              className="text-[var(--mission-text)]"
               whileHover={{
                 scale: 1.02,
                 transition: { duration: 0.2 }
@@ -91,14 +86,14 @@ const Hero = () => {
 
           {/* Animated Title */}
           <motion.div
-            className="text-2xl md:text-3xl text-blue-600 dark:text-blue-400 mb-6 h-12"
+            className="text-2xl md:text-3xl text-[var(--mission-accent)] mb-6 h-12"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             <span className="font-medium">{text}</span>
             <motion.span
-              className="inline-block w-0.5 h-8 bg-blue-600 dark:bg-blue-400 ml-1"
+              className="inline-block w-0.5 h-8 bg-[var(--mission-accent)] ml-1"
               animate={{ opacity: [0, 1, 0] }}
               transition={{ duration: 1, repeat: Infinity }}
             />
@@ -106,7 +101,7 @@ const Hero = () => {
 
           {/* Description */}
           <motion.p
-            className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed"
+            className="text-xl text-[var(--mission-muted)] mb-8 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
@@ -122,17 +117,17 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
-                <div className="rounded-xl border border-gray-200/60 dark:border-gray-700/60 bg-white/70 dark:bg-gray-900/40 backdrop-blur p-4 shadow-sm">
-                  <div className="text-3xl font-bold text-gray-900 dark:text-white">5+</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-300">Certifications</div>
+                <div className="rounded-xl border border-[var(--mission-border)] bg-[color:var(--mission-panel)]/70 backdrop-blur p-4 shadow-sm">
+                  <div className="text-3xl font-bold text-[var(--mission-text)]">5+</div>
+                  <div className="text-sm text-[var(--mission-muted)]">Certifications</div>
                 </div>
-                <div className="rounded-xl border border-gray-200/60 dark:border-gray-700/60 bg-white/70 dark:bg-gray-900/40 backdrop-blur p-4 shadow-sm">
-                  <div className="text-3xl font-bold text-gray-900 dark:text-white">3</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-300">Key Projects</div>
+                <div className="rounded-xl border border-[var(--mission-border)] bg-[color:var(--mission-panel)]/70 backdrop-blur p-4 shadow-sm">
+                  <div className="text-3xl font-bold text-[var(--mission-text)]">3</div>
+                  <div className="text-sm text-[var(--mission-muted)]">Key Projects</div>
                 </div>
-                <div className="rounded-xl border border-gray-200/60 dark:border-gray-700/60 bg-white/70 dark:bg-gray-900/40 backdrop-blur p-4 shadow-sm">
-                  <div className="text-3xl font-bold text-gray-900 dark:text-white">Cisco</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-300">DevNet Associate</div>
+                <div className="rounded-xl border border-[var(--mission-border)] bg-[color:var(--mission-panel)]/70 backdrop-blur p-4 shadow-sm">
+                  <div className="text-3xl font-bold text-[var(--mission-text)]">Cisco</div>
+                  <div className="text-sm text-[var(--mission-muted)]">DevNet Associate</div>
                 </div>
               </motion.div>
 
@@ -148,7 +143,7 @@ const Hero = () => {
           >
             <motion.button
               onClick={scrollToAbout}
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-10 py-4 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl"
+              className="bg-[var(--mission-accent)] text-black hover:brightness-110 px-10 py-4 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl"
               whileHover={{
                 scale: 1.05,
                 y: -2,
@@ -164,7 +159,7 @@ const Hero = () => {
               download="Pampana_Siva_Surya_Ram_Gopal_Resume_2025.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-10 py-4 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 shadow-md hover:shadow-lg"
+              className="border-2 border-[var(--mission-accent)] text-[var(--mission-accent)] hover:bg-[var(--mission-accent)] hover:text-black px-10 py-4 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 shadow-md hover:shadow-lg"
               whileHover={{
                 scale: 1.05,
                 y: -2,
@@ -187,7 +182,7 @@ const Hero = () => {
         >
           <motion.button
             onClick={scrollToAbout}
-            className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+            className="text-[var(--mission-muted)] hover:text-[var(--mission-accent)] transition-colors duration-200"
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >

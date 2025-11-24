@@ -23,7 +23,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="py-12 bg-[var(--mission-surface)] text-[var(--mission-text)]">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Left side - Copyright */}
@@ -34,7 +34,7 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <p className="text-gray-400">
+            <p className="text-[var(--mission-muted)]">
               © {new Date().getFullYear()} Ram Gopal Pampana. All rights reserved.
             </p>
           </motion.div>
@@ -55,7 +55,7 @@ const Footer = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className="text-[var(--mission-muted)] hover:text-[var(--mission-text)] transition-colors duration-200"
                   whileHover={{ scale: 1.2, y: -2 }}
                   whileTap={{ scale: 0.9 }}
                 >
@@ -68,7 +68,7 @@ const Footer = () => {
 
           {/* Right side - Made with love */}
           <motion.div
-            className="flex items-center text-gray-400"
+            className="flex items-center text-[var(--mission-muted)]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -79,7 +79,7 @@ const Footer = () => {
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 1, repeat: Infinity, repeatDelay: 2 }}
             >
-              <Heart size={16} className="text-red-500 fill-current" />
+              <Heart size={16} className="text-[var(--mission-accent)] fill-current" />
             </motion.div>
             <span className="ml-2">and Next.js</span>
           </motion.div>
@@ -87,7 +87,7 @@ const Footer = () => {
 
         {/* Bottom border */}
         <motion.div
-          className="mt-8 pt-8 border-t border-gray-800"
+          className="mt-8 pt-8 border-t border-[var(--mission-border)]"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}

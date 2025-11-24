@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code, Database, Cloud, TestTube, Award, MapPin, Mail, Phone, Brain, Network, Cpu, Download, ExternalLink, ChevronRight, Star, TrendingUp } from 'lucide-react';
+import { Code, Database, Cloud, TestTube, MapPin, Mail, Phone, Brain, Network, Download, ExternalLink, ChevronRight, Star, TrendingUp } from 'lucide-react';
 import { useState } from 'react';
 
 const About = () => {
@@ -134,7 +134,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-20 bg-white dark:bg-gray-900">
+    <section id="about" className="py-20 bg-[var(--mission-surface)]">
       <div className="container mx-auto px-6">
         <motion.div
           className="text-center mb-16"
@@ -143,10 +143,10 @@ const About = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[var(--mission-text)] mb-4">
             About Me
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-[var(--mission-muted)] max-w-3xl mx-auto">
             Data Science certified Software Test Engineer with expertise in automated testing, AI solutions, and full-stack development. Currently learning LangChain and LangGraph for advanced AI applications.
           </p>
         </motion.div>
@@ -161,20 +161,20 @@ const About = () => {
           >
             {/* Contact Info */}
             <div className="mb-8">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+              <h3 className="text-2xl font-semibold text-[var(--mission-text)] mb-4">
                 Contact Information
               </h3>
               <div className="space-y-3">
-                <div className="flex items-center text-gray-600 dark:text-gray-300">
-                  <Mail className="w-5 h-5 mr-3 text-blue-600" />
+                <div className="flex items-center text-[var(--mission-muted)]">
+                  <Mail className="w-5 h-5 mr-3 text-[var(--mission-accent)]" />
                   <span>ramgopalpampana10@gmail.com</span>
                 </div>
-                <div className="flex items-center text-gray-600 dark:text-gray-300">
-                  <Phone className="w-5 h-5 mr-3 text-blue-600" />
+                <div className="flex items-center text-[var(--mission-muted)]">
+                  <Phone className="w-5 h-5 mr-3 text-[var(--mission-accent)]" />
                   <span>+91 7730072669</span>
                 </div>
-                <div className="flex items-center text-gray-600 dark:text-gray-300">
-                  <MapPin className="w-5 h-5 mr-3 text-blue-600" />
+                <div className="flex items-center text-[var(--mission-muted)]">
+                  <MapPin className="w-5 h-5 mr-3 text-[var(--mission-accent)]" />
                   <span>Bengaluru, Karnataka, India</span>
                 </div>
               </div>
@@ -182,22 +182,22 @@ const About = () => {
 
             {/* Experience */}
             <div className="mb-8">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+              <h3 className="text-2xl font-semibold text-[var(--mission-text)] mb-4">
                 Experience
               </h3>
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+              <div className="rounded-lg p-6 border border-[var(--mission-border)] bg-[var(--mission-panel)]">
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                      <TestTube className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 bg-[rgba(0,227,255,.12)] rounded-lg flex items-center justify-center border border-[var(--mission-border)]">
+                      <TestTube className="w-6 h-6 text-[var(--mission-accent)]" />
                     </div>
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    <h4 className="text-lg font-semibold text-[var(--mission-text)]">
                       Software Test Engineer Trainee
                     </h4>
-                    <p className="text-blue-600 dark:text-blue-400 font-medium">CISCO</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+                    <p className="text-[var(--mission-accent)] font-medium">CISCO</p>
+                    <p className="text-sm text-[var(--mission-muted)] mb-2">
                       November 2024 - Present • Bengaluru, India
                     </p>
                     <ul className="text-gray-600 dark:text-gray-300 space-y-1 text-sm">
@@ -213,20 +213,20 @@ const About = () => {
 
             {/* Education */}
             <div>
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+              <h3 className="text-2xl font-semibold text-[var(--mission-text)] mb-4">
                 Education
               </h3>
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
+              <div className="rounded-lg p-6 border border-[var(--mission-border)] bg-[var(--mission-panel)]">
+                <h4 className="text-lg font-semibold text-[var(--mission-text)]">
                   Bachelor of Technology
                 </h4>
-                <p className="text-blue-600 dark:text-blue-400 font-medium">
+                <p className="text-[var(--mission-accent)] font-medium">
                   Electronics and Communication Engineering
                 </p>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="text-[var(--mission-muted)]">
                   Pragati Engineering College, Kakinada
                 </p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+                <p className="text-sm text-[var(--mission-muted)]">
                   August 2019 - June 2023 • CGPA: 7.87
                 </p>
               </div>
@@ -240,7 +240,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+            <h3 className="text-2xl font-semibold text-[var(--mission-text)] mb-6">
               Technical Skills
             </h3>
             <motion.div
@@ -256,10 +256,10 @@ const About = () => {
                 return (
                   <motion.div
                     key={index}
-                    className={`bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl border transition-all duration-500 cursor-pointer ${
+                    className={`rounded-xl p-6 shadow-lg hover:shadow-2xl border transition-all duration-500 cursor-pointer bg-[var(--mission-panel)] border-[var(--mission-border)] ${
                       isSelected
-                        ? 'border-blue-500 dark:border-blue-400 ring-2 ring-blue-200 dark:ring-blue-800'
-                        : 'border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600'
+                        ? 'ring-2 ring-[var(--mission-accent)]'
+                        : 'hover:border-[var(--mission-accent)]'
                     }`}
                     variants={itemVariants}
                     whileHover={{
@@ -272,26 +272,26 @@ const About = () => {
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center">
                         <motion.div
-                          className="w-12 h-12 bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 dark:from-blue-900 dark:via-blue-800 dark:to-blue-700 rounded-xl flex items-center justify-center mr-4 shadow-lg"
+                          className="w-12 h-12 rounded-xl flex items-center justify-center mr-4 shadow-lg bg-[rgba(0,227,255,.12)] border border-[var(--mission-border)]"
                           whileHover={{ rotate: 10, scale: 1.15 }}
                           transition={{ duration: 0.3 }}
                         >
-                          <IconComponent className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                          <IconComponent className="w-6 h-6 text-[var(--mission-accent)]" />
                         </motion.div>
                         <div>
-                          <h4 className="text-lg font-bold text-gray-900 dark:text-white">
+                          <h4 className="text-lg font-bold text-[var(--mission-text)]">
                             {skillGroup.category}
                           </h4>
                           <div className="flex items-center mt-1">
-                            <div className="w-20 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                            <div className="w-20 h-2 bg-[var(--mission-panel)] rounded-full overflow-hidden border border-[var(--mission-border)]">
                               <motion.div
-                                className="h-full bg-gradient-to-r from-blue-500 to-blue-600"
+                                className="h-full bg-[var(--mission-accent)]"
                                 initial={{ width: 0 }}
                                 animate={{ width: `${skillGroup.level}%` }}
                                 transition={{ duration: 1, delay: index * 0.1 }}
                               />
                             </div>
-                            <span className="ml-2 text-sm font-semibold text-blue-600 dark:text-blue-400">
+                            <span className="ml-2 text-sm font-semibold text-[var(--mission-accent)]">
                               {skillGroup.level}%
                             </span>
                           </div>
@@ -314,7 +314,7 @@ const About = () => {
                           transition={{ duration: 0.3 }}
                           className="mb-4"
                         >
-                          <p className="text-gray-600 dark:text-gray-300 text-sm italic">
+                          <p className="text-[var(--mission-muted)] text-sm italic">
                             {skillGroup.description}
                           </p>
                         </motion.div>
@@ -325,15 +325,9 @@ const About = () => {
                       {skillGroup.items.map((skill, skillIndex) => (
                         <motion.span
                           key={skillIndex}
-                          className="px-4 py-2 bg-gradient-to-r from-blue-50 via-blue-100 to-blue-150 dark:from-blue-900 dark:via-blue-800 dark:to-blue-700 text-blue-800 dark:text-blue-200 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-all duration-300 border border-blue-200 dark:border-blue-600"
-                          whileHover={{
-                            scale: 1.08,
-                            y: -2,
-                            backgroundColor: "#3B82F6",
-                            color: "#FFFFFF",
-                            borderColor: "#1D4ED8"
-                          }}
-                          transition={{ duration: 0.3 }}
+                          className="px-3 py-1.5 bg-[rgba(200,209,229,.06)] text-[var(--mission-text)] rounded-full text-xs font-medium shadow-sm border border-[var(--mission-border)] hover:bg-[rgba(0,227,255,.12)] hover:text-[var(--mission-text)] transition-all duration-200"
+                          whileHover={{ scale: 1.05, y: -1 }}
+                          transition={{ duration: 0.2 }}
                         >
                           {skill}
                         </motion.span>
@@ -347,11 +341,11 @@ const About = () => {
             {/* Certifications */}
             <div className="mt-8">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+                <h3 className="text-2xl font-semibold text-[var(--mission-text)]">
                   Professional Certifications
                 </h3>
                 <motion.div
-                  className="flex items-center text-blue-600 dark:text-blue-400"
+                  className="flex items-center text-[var(--mission-accent)]"
                   whileHover={{ scale: 1.05 }}
                 >
                   <TrendingUp className="w-5 h-5 mr-1" />
@@ -367,10 +361,10 @@ const About = () => {
                   return (
                     <motion.div
                       key={index}
-                      className={`relative bg-gradient-to-r from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl border transition-all duration-300 ${
+                      className={`relative rounded-xl p-6 shadow-lg hover:shadow-xl border transition-all duration-300 bg-[var(--mission-panel)] border-[var(--mission-border)] ${
                         cert.featured
-                          ? 'border-yellow-300 dark:border-yellow-600 bg-gradient-to-r from-yellow-50 to-white dark:from-yellow-900/20 dark:to-gray-800'
-                          : 'border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600'
+                          ? 'ring-1 ring-[rgba(255,200,87,.3)]'
+                          : 'hover:border-[var(--mission-accent)]'
                       }`}
                       whileHover={{ scale: 1.02, y: -3 }}
                       transition={{ duration: 0.3 }}
@@ -379,7 +373,7 @@ const About = () => {
                     >
                       {cert.featured && (
                         <motion.div
-                          className="absolute -top-2 -right-2 bg-yellow-500 text-white rounded-full p-1"
+                          className="absolute -top-2 -right-2 bg-[rgba(255,200,87,1)] text-black rounded-full p-1"
                           animate={{ rotate: [0, 10, -10, 0] }}
                           transition={{ duration: 2, repeat: Infinity }}
                         >
@@ -400,19 +394,19 @@ const About = () => {
                           >
                             <IconComponent className={`w-6 h-6 ${
                               cert.featured
-                                ? 'text-yellow-600 dark:text-yellow-400'
-                                : 'text-blue-600 dark:text-blue-400'
+                                ? 'text-[rgba(255,200,87,1)]'
+                                : 'text-[var(--mission-accent)]'
                             }`} />
                           </motion.div>
 
                           <div className="flex-1">
-                            <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
+                            <h4 className="text-lg font-bold text-[var(--mission-text)] mb-1">
                               {cert.name}
                             </h4>
-                            <p className="text-blue-600 dark:text-blue-400 font-semibold text-sm mb-2">
+                            <p className="text-[var(--mission-accent)] font-semibold text-sm mb-2">
                               {cert.issuer}
                             </p>
-                            <p className="text-gray-600 dark:text-gray-300 text-sm">
+                            <p className="text-[var(--mission-muted)] text-sm">
                               {cert.description}
                             </p>
                           </div>
@@ -423,11 +417,11 @@ const About = () => {
                             href={cert.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="ml-4 flex items-center justify-center w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors duration-200"
+                            className="ml-4 flex items-center justify-center w-10 h-10 bg-[rgba(0,227,255,.12)] rounded-lg border border-[var(--mission-border)] hover:bg-[var(--mission-accent)] hover:text-black transition-colors duration-200"
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.95 }}
                           >
-                            <ExternalLink className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                            <ExternalLink className="w-5 h-5 text-[var(--mission-accent)]" />
                           </motion.a>
                         )}
                       </div>
@@ -438,9 +432,9 @@ const About = () => {
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 10 }}
-                            className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700"
+                            className="mt-4 pt-4 border-t border-[var(--mission-border)]"
                           >
-                            <div className="flex items-center text-blue-600 dark:text-blue-400 text-sm">
+                            <div className="flex items-center text-[var(--mission-accent)] text-sm">
                               <ExternalLink className="w-4 h-4 mr-2" />
                               <span>Click to view certificate</span>
                             </div>
@@ -454,7 +448,7 @@ const About = () => {
 
               {/* Resume Download Section */}
               <div className="mt-8">
-                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+                <h3 className="text-2xl font-semibold text-[var(--mission-text)] mb-4">
                   Resume Downloads
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -462,7 +456,7 @@ const About = () => {
                   <motion.a
                     href="/Pampana_Siva_Surya_Ram_Gopal_Resume_2025.pdf?v=20251022-1405"
                     download
-                    className="flex items-center justify-between bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 text-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="flex items-center justify-between bg-[var(--mission-surface)] border border-[var(--mission-border)] hover:bg-[var(--mission-accent)] hover:text-black text-[var(--mission-text)] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
                     whileHover={{ scale: 1.02, y: -2 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -470,7 +464,7 @@ const About = () => {
                       <Download className="w-5 h-5 mr-3" />
                       <div>
                         <div className="font-semibold">Resume 2025</div>
-                        <div className="text-indigo-100 text-sm">PDF Format</div>
+                        <div className="text-[var(--mission-muted)] text-sm">PDF Format</div>
                       </div>
                     </div>
                     <ChevronRight className="w-5 h-5" />
@@ -479,7 +473,7 @@ const About = () => {
                   <motion.a
                     href="/Pampana_Siva_Surya_Ram_Gopal_Resume_2025.doc?v=20251022-1405"
                     download
-                    className="flex items-center justify-between bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="flex items-center justify-between bg-[var(--mission-surface)] border border-[var(--mission-border)] hover:bg-[var(--mission-accent)] hover:text-black text-[var(--mission-text)] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
                     whileHover={{ scale: 1.02, y: -2 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -487,7 +481,7 @@ const About = () => {
                       <Download className="w-5 h-5 mr-3" />
                       <div>
                         <div className="font-semibold">Resume 2025</div>
-                        <div className="text-teal-100 text-sm">Word Format</div>
+                        <div className="text-[var(--mission-muted)] text-sm">Word Format</div>
                       </div>
                     </div>
                     <ChevronRight className="w-5 h-5" />
@@ -496,7 +490,7 @@ const About = () => {
                   <motion.a
                     href="/Ram_Gopal_Pampana_ATS_Resume.pdf?v=20251022-1405"
                     download
-                    className="flex items-center justify-between bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="flex items-center justify-between bg-[var(--mission-surface)] border border-[var(--mission-border)] hover:bg-[var(--mission-accent)] hover:text-black text-[var(--mission-text)] rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300"
                     whileHover={{ scale: 1.02, y: -2 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -504,7 +498,7 @@ const About = () => {
                       <Download className="w-5 h-5 mr-3" />
                       <div>
                         <div className="font-semibold">ATS Resume</div>
-                        <div className="text-green-100 text-sm">PDF Format</div>
+                        <div className="text-[var(--mission-muted)] text-sm">PDF Format</div>
                       </div>
                     </div>
                     <ChevronRight className="w-5 h-5" />

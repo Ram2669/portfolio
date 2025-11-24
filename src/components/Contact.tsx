@@ -100,7 +100,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-900">
+    <section id="contact" className="py-20 bg-[var(--mission-surface)]">
       <div className="container mx-auto px-6">
         <motion.div
           className="text-center mb-16"
@@ -109,10 +109,10 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[var(--mission-text)] mb-4">
             Get In Touch
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-[var(--mission-muted)] max-w-3xl mx-auto">
             I&apos;m always open to discussing new opportunities, interesting projects, or just having a chat about technology.
           </p>
         </motion.div>
@@ -125,10 +125,10 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+            <h3 className="text-2xl font-semibold text-[var(--mission-text)] mb-6">
               Let&apos;s Connect
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            <p className="text-[var(--mission-muted)] mb-8 leading-relaxed">
               Whether you&apos;re looking for a dedicated software test engineer, want to collaborate on an exciting project,
               or just want to say hello, I&apos;d love to hear from you. Feel free to reach out through any of the channels below.
             </p>
@@ -146,20 +146,20 @@ const Contact = () => {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mr-4">
-                      <IconComponent className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                    <div className="w-12 h-12 rounded-lg flex items-center justify-center mr-4 bg-[rgba(0,227,255,.12)] border border-[var(--mission-border)]">
+                      <IconComponent className="w-6 h-6 text-[var(--mission-accent)]" />
                     </div>
                     <div>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">{item.label}</p>
+                      <p className="text-sm text-[var(--mission-muted)]">{item.label}</p>
                       {item.href !== '#' ? (
                         <a
                           href={item.href}
-                          className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                          className="text-[var(--mission-text)] hover:text-[var(--mission-accent)] transition-colors duration-200"
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <p className="text-gray-900 dark:text-white">{item.value}</p>
+                        <p className="text-[var(--mission-text)]">{item.value}</p>
                       )}
                     </div>
                   </motion.div>
@@ -169,7 +169,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <div>
-              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+              <h4 className="text-lg font-semibold text-[var(--mission-text)] mb-4">
                 Follow Me
               </h4>
               <div className="flex space-x-4">
@@ -181,7 +181,7 @@ const Contact = () => {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 ${link.color} transition-all duration-200`}
+                      className={`w-12 h-12 rounded-lg flex items-center justify-center text-[var(--mission-muted)] bg-[rgba(200,209,229,.06)] border border-[var(--mission-border)] hover:text-[var(--mission-text)] hover:bg-[rgba(0,227,255,.12)] transition-all duration-200`}
                       whileHover={{ scale: 1.1, y: -2 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -201,9 +201,9 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-xl border border-gray-100 dark:border-gray-800">
+            <div className="rounded-2xl p-8 shadow-xl border bg-[var(--mission-panel)] border-[var(--mission-border)]">
               <motion.h3
-                className="text-2xl font-bold text-gray-900 dark:text-white mb-6"
+                className="text-2xl font-bold text-[var(--mission-text)] mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -224,15 +224,15 @@ const Contact = () => {
                 <input type="hidden" name="bot-field" />
                 {/* Name Field */}
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-[var(--mission-muted)] mb-2">
                     Your Name
                   </label>
                   <input
                     type="text"
                     id="name"
-                    name="name"
+
                     {...register('name', { required: 'Name is required' })}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-200 hover:border-blue-400 dark:hover:border-blue-500"
+                    className="w-full px-4 py-3 rounded-lg border bg-[var(--mission-surface)] border-[var(--mission-border)] text-[var(--mission-text)] placeholder-[var(--mission-muted)] focus:ring-2 focus:ring-[var(--mission-accent)] focus:border-transparent transition-all duration-200 hover:border-[var(--mission-accent)]"
                     placeholder="Enter your full name"
                   />
                   {errors.name && (
@@ -242,13 +242,13 @@ const Contact = () => {
 
                 {/* Email Field */}
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-[var(--mission-muted)] mb-2">
                     Email Address
                   </label>
                   <input
                     type="email"
                     id="email"
-                    name="email"
+
                     {...register('email', {
                       required: 'Email is required',
                       pattern: {
@@ -256,7 +256,7 @@ const Contact = () => {
                         message: 'Invalid email address',
                       },
                     })}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-200 hover:border-blue-400 dark:hover:border-blue-500"
+                    className="w-full px-4 py-3 rounded-lg border bg-[var(--mission-surface)] border-[var(--mission-border)] text-[var(--mission-text)] placeholder-[var(--mission-muted)] focus:ring-2 focus:ring-[var(--mission-accent)] focus:border-transparent transition-all duration-200 hover:border-[var(--mission-accent)]"
                     placeholder="Enter your email address"
                   />
                   {errors.email && (
@@ -266,30 +266,30 @@ const Contact = () => {
 
                 {/* Company Field (Optional) */}
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Company <span className="text-gray-400">(Optional)</span>
+                  <label htmlFor="company" className="block text-sm font-medium text-[var(--mission-muted)] mb-2">
+                    Company <span className="text-[var(--mission-muted)]">(Optional)</span>
                   </label>
                   <input
                     type="text"
                     id="company"
-                    name="company"
+
                     {...register('company')}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
+                    className="w-full px-4 py-3 rounded-lg border bg-[var(--mission-surface)] border-[var(--mission-border)] text-[var(--mission-text)] placeholder-[var(--mission-muted)] focus:ring-2 focus:ring-[var(--mission-accent)] focus:border-transparent transition-colors duration-200"
                     placeholder="Your company name"
                   />
                 </div>
 
                 {/* Subject Field */}
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="subject" className="block text-sm font-medium text-[var(--mission-muted)] mb-2">
                     Subject
                   </label>
                   <input
                     type="text"
                     id="subject"
-                    name="subject"
+
                     {...register('subject', { required: 'Subject is required' })}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
+                    className="w-full px-4 py-3 rounded-lg border bg-[var(--mission-surface)] border-[var(--mission-border)] text-[var(--mission-text)] placeholder-[var(--mission-muted)] focus:ring-2 focus:ring-[var(--mission-accent)] focus:border-transparent transition-colors duration-200"
                     placeholder="What's this about?"
                   />
                   {errors.subject && (
@@ -299,15 +299,15 @@ const Contact = () => {
 
                 {/* Message Field */}
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-[var(--mission-muted)] mb-2">
                     Message
                   </label>
                   <textarea
                     id="message"
-                    name="message"
+
                     rows={5}
                     {...register('message', { required: 'Message is required' })}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200 resize-none"
+                    className="w-full px-4 py-3 rounded-lg border bg-[var(--mission-surface)] border-[var(--mission-border)] text-[var(--mission-text)] placeholder-[var(--mission-muted)] focus:ring-2 focus:ring-[var(--mission-accent)] focus:border-transparent transition-colors duration-200 resize-none"
                     placeholder="Tell me about your project or just say hello..."
                   />
                   {errors.message && (
@@ -319,7 +319,7 @@ const Contact = () => {
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
+                  className="w-full bg-[var(--mission-accent)] hover:brightness-110 disabled:opacity-60 text-black font-medium py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
                   whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                   whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
                 >
@@ -341,7 +341,7 @@ const Contact = () => {
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="p-4 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded-lg text-center"
+                    className="p-4 rounded-lg text-center border border-[var(--mission-border)] bg-[rgba(46,230,166,.12)] text-[var(--mission-text)]"
                   >
                     Thank you! Your message has been sent successfully.
                   </motion.div>
@@ -351,7 +351,7 @@ const Contact = () => {
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="p-4 bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 rounded-lg text-center"
+                    className="p-4 rounded-lg text-center border border-[var(--mission-border)] bg-[rgba(255,99,132,.12)] text-[var(--mission-text)]"
                   >
                     Sorry, there was an error sending your message. Please try again.
                   </motion.div>
