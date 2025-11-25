@@ -9,8 +9,8 @@ const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
   const roles = [
     "Software Engineer",
-    "AI & ML Enthusiast",
-    "Cisco Certified DevNet Associate"
+    "AI & Automation",
+    "Full-Stack Developer"
   ];
   const fullText = roles[currentRole];
 
@@ -106,8 +106,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            Software Test Engineer at Cisco with expertise in automated testing, AI solutions, and full-stack development.
-            Currently learning LangChain and LangGraph for advanced AI applications.
+            Python Full-Stack Developer skilled in Django, React, and Azure OpenAI. Builds scalable, AI-driven web applications, backend APIs, and robust data layers.
+            Completed automation testing training; CCNA-certified; strong cloud and networking foundation.
           </motion.p>
 
               {/* Quick credibility metrics */}

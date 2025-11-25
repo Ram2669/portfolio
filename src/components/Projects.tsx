@@ -1,16 +1,16 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Code2, Search, Zap, Shield } from 'lucide-react';
+import { Code2, Zap, Shield } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
     {
-      title: 'AI-Powered Chatbot for Infrastructure Management (Cisco, 2024 – Currently Implementing)',
-      description: 'AI-powered multi-agent architecture: GPT-4.0 primary + GPT-3.5-Turbo SQL agent; intelligent query routing (RAG/SQL/web-search) via LangChain & LangGraph; RAG with Azure AI Search (chunking, Azure embeddings, vector index); autonomous SQL agent generates/validates/executes queries (Azure MySQL Server, Azure Cosmos DB); secure Azure (Azure OpenAI, Blob Storage, VNet + private networking); real-time grounded responses; production-ready.',
+      title: 'AI-Powered Chatbot for Infrastructure Management',
+      description: 'Architected a multi-agent AI chatbot: GPT-4 primary + GPT-3.5-Turbo SQL agent; intelligent routing across RAG/SQL/web-search; RAG via Azure AI Search; autonomous SQL agent for Azure MySQL and Azure Cosmos DB; secure, production-ready Azure architecture with VNet and private networking.',
       technologies: ['LangChain', 'LangGraph', 'Azure AI Search', 'Azure OpenAI (GPT-4.0, GPT-3.5-Turbo)', 'Azure MySQL Server', 'Azure Cosmos DB', 'Azure VNet', 'Azure Blob Storage', 'Django'],
       features: [
-        'Architected multi-agent: GPT-4.0 primary + GPT-3.5-Turbo SQL agent',
+        'Architected multi-agent: GPT-4 primary + GPT-3.5-Turbo SQL agent',
         'Intelligent routing across RAG, SQL, and web-search via LangChain & LangGraph',
         'RAG with Azure AI Search: chunking, Azure embeddings, vector index',
         'Autonomous SQL agent generates, validates, and executes queries (Azure MySQL Server, Azure Cosmos DB)',
@@ -19,36 +19,23 @@ const Projects = () => {
       ],
       icon: Zap,
       status: 'Currently Implementing',
-      category: 'AI/ML & Infrastructure'
-    },
-    {
-      title: 'NETWORK BASED PATTERN SEARCHING',
-      description: 'Python',
-      technologies: ['Python', 'Client-Server Architecture', 'JSON'],
-      features: [
-        'Developed a Network-Based Pattern Searching project with client-server architecture to search for words in a file.',
-        'Implemented client-server communication using JSON requests to query and return matching lines with line numbers.',
-        'Designed a Search class to read, clean, and search file content efficiently, handling errors like "File Not Found."'
-      ],
-      icon: Search,
-      status: 'Completed',
-      category: 'Backend',
-      githubLink: 'https://github.com/Ram2669/-NETWORK-BASED-PATTERN-SEARCHING_project.git'
+      category: 'AI/ML & Infrastructure',
+      githubLink: undefined
     },
     {
       title: 'Self-Fuel Dispensing Automated Framework Using RFID Cards',
-      description: 'Developed and implemented an RFID-based self-fuel dispensing system, reducing operational errors and unauthorized access by 25%. Optimized transaction efficiency by 40%, improving accuracy and user satisfaction through advanced algorithms and real-time data processing.',
+      description: 'Designed and implemented an RFID-based automated fuel dispensing framework to minimize manual errors and unauthorized access. Improved transaction accuracy by 40% through real-time data synchronization and algorithm optimization.',
       technologies: ['Embedded C', 'Arduino', 'RFID Technology', 'Real-time Processing'],
       features: [
-        'RFID card-based authentication',
-        '25% reduction in operational errors',
-        '40% improvement in transaction efficiency',
-        'Real-time data processing',
-        'Advanced security algorithms'
+        'RFID card-based authentication to prevent unauthorized access',
+        'Minimized manual errors with automated dispensing workflow',
+        'Improved transaction accuracy by 40% via real-time synchronization',
+        'Robust, secure control logic with embedded microcontroller'
       ],
       icon: Shield,
       status: 'Completed',
-      category: 'IoT/Embedded'
+      category: 'IoT/Embedded',
+      githubLink: undefined
     }
   ];
 
@@ -111,7 +98,7 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--mission-text)] mb-4">
-            Missions
+            Projects
           </h2>
           <p className="text-xl text-[var(--mission-muted)] max-w-3xl mx-auto">
             A showcase of my technical projects spanning AI/ML, backend development, and IoT solutions

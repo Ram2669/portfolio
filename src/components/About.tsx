@@ -17,38 +17,32 @@ const About = () => {
       level: 90,
     },
     {
-      category: 'Testing & Automation',
-      items: ['Selenium WebDriver', 'TestNG', 'JUnit', 'Automated Testing'],
-      icon: TestTube,
-      description: 'Advanced test automation frameworks and quality assurance',
-      level: 95,
+      category: 'Frameworks & Tools',
+      items: ['React', 'Django', 'REST APIs', 'Selenium WebDriver', 'Pytest', 'Postman'],
+      icon: Code,
+      description: 'Modern frameworks and tools for full-stack delivery and quality',
+      level: 90,
     },
     {
-      category: 'Web Technologies',
-      items: ['React', 'Django', 'REST APIs'],
+      category: 'Version Control & IDEs',
+      items: ['Git', 'GitHub Copilot', 'VSCode', 'PyCharm'],
       icon: Code,
-      description: 'Modern web development frameworks and API integration',
+      description: 'Developer tools, environments, and collaboration',
       level: 85,
     },
     {
       category: 'Cloud & AI Technologies',
-      items: ['Azure OpenAI', 'AWS', 'GPT-4', 'Azure AI Search', 'Generative AI'],
+      items: ['Azure OpenAI', 'AWS', 'GPT-4', 'Azure AI Search', 'LangChain', 'LangGraph', 'RAG'],
       icon: Cloud,
       description: 'Cutting-edge AI and cloud computing platforms',
       level: 88,
     },
+
     {
-      category: 'Data Science',
-      items: ['Generative AI', 'Machine Learning', 'Data Analysis', 'LangChain', 'LangGraph'],
-      icon: Brain,
-      description: 'Advanced AI frameworks and machine learning technologies',
-      level: 82,
-    },
-    {
-      category: 'Databases & Tools',
-      items: ['MySQL', 'Azure Cosmos DB', 'Git', 'VSCode', 'PyCharm', 'GitHub Copilot'],
+      category: 'Databases',
+      items: ['MySQL', 'Azure Cosmos DB'],
       icon: Database,
-      description: 'Database management and development tools',
+      description: 'Relational and NoSQL data stores',
       level: 87,
     },
     {
@@ -147,7 +141,7 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-[var(--mission-muted)] max-w-3xl mx-auto">
-            Data Science certified Software Test Engineer with expertise in automated testing, AI solutions, and full-stack development. Currently learning LangChain and LangGraph for advanced AI applications.
+            Python Full-Stack Developer skilled in Django, React, and Azure OpenAI with a focus on building scalable, AI-driven web applications. Experienced in backend APIs, frontend design, and database management. Completed automation testing training; CCNA-certified with strong cloud and networking knowledge.
           </p>
         </motion.div>
 
@@ -204,7 +198,7 @@ const About = () => {
                       <li>• Automated testing using Python with Selenium and Pytest to ensure software quality</li>
                       <li>• Developing a full-stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure AI Search for real-time natural language query handling</li>
                       <li>• Integrating Azure AI Search for intelligent schema retrieval and dynamic SQL generation</li>
-                      <li>• CCNA Certified; Google Cloud Certified (ACE); proficient in networking, routing, switching, and IP fundamentals</li>
+                      <li>• CCNA Certified; proficient in networking, routing, switching, and IP fundamentals</li>
                     </ul>
                   </div>
                 </div>
