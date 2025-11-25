@@ -37,6 +37,21 @@ const Projects = () => {
       category: 'IoT/Embedded',
       githubLink: undefined
     }
+  ,
+    {
+      title: 'Network-Based Pattern Searching System',
+      description: 'Developed a client-server pattern searching tool using Python and JSON for efficient text matching. Optimized error handling and file parsing, reducing query latency by 25% and improving reliability.',
+      technologies: ['Python', 'JSON', 'Client-Server Architecture'],
+      features: [
+        'Client-server pattern searching for efficient text matching',
+        'Structured data exchange using JSON',
+        'Optimized error handling and file parsing (25% latency reduction)'
+      ],
+      icon: Code2,
+      status: 'Completed',
+      category: 'Backend',
+      githubLink: undefined
+    }
   ];
 
   const containerVariants = {
