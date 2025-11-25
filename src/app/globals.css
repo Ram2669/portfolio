@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  /* Mission Control theme tokens */
-  --mission-bg: #0A0F1F;
-  --mission-surface: #0E1629;
-  --mission-panel: #0C1325;
-  --mission-card: #0F1B2E;
+  /* Aurora vertical theme tokens */
+  --mission-bg: #0B1220;
+  --mission-surface: #111A2C;
+  --mission-panel: #0D1526;
+  --mission-card: #121C2F;
 
-  --mission-text: #C8D1E5;
-  --mission-muted: #9AA6BF;
+  --mission-text: #E6EEF8;
+  --mission-muted: #A5B4CF;
 
-  --mission-accent: #00E3FF;
-  --mission-accent-2: #00FFC6;
+  --mission-accent: #7C4DFF; /* purple */
+  --mission-accent-2: #22D3EE; /* cyan */
 
   --mission-success: #2EE6A6;
   --mission-warning: #FFC857;
   --mission-danger:  #FF6B6B;
 
-  --mission-border: rgba(200, 209, 229, 0.12);
-  --mission-grid: rgba(0, 227, 255, 0.08);
+  --mission-border: rgba(230, 240, 255, 0.12);
+  --mission-grid: rgba(124, 77, 255, 0.10);
 
   /* Default document colors */
   --background: var(--mission-bg);
@@ -170,7 +170,7 @@ a:focus {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(0,227,255,.5), rgba(0,255,198,.35));
+  background: linear-gradient(135deg, rgba(124,77,255,.5), rgba(34,211,238,.35));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -178,7 +178,7 @@ a:focus {
 }
 
 .glow-text {
-  text-shadow: 0 0 8px rgba(0,227,255,.4);
+  text-shadow: 0 0 8px rgba(124,77,255,.35);
 }
 
 .telemetry-dot {

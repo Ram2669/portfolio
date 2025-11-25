@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Orbitron, Inter, Geist_Mono } from "next/font/google";
+import { Rajdhani, Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const heading = Orbitron({
+const heading = Rajdhani({
   variable: "--font-heading",
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["600", "700"],
 });
 
 const body = Inter({
@@ -19,9 +19,9 @@ const mono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ram Gopal Pampana — Python Developer & AI/LLM Engineer",
+  title: "Pampana Siva Surya Ram Gopal — Software Engineer | AI & Automation | Full-Stack Development",
   description:
-    "Python Developer & AI/LLM Engineer at Cisco. Building intelligent systems, multi-agent architectures, and production-grade automation.",
+    "Python Full-Stack Developer skilled in Django, React, and Azure OpenAI. Builds scalable, AI-driven web applications, backend APIs, and robust data layers. CCNA-certified; completed automation testing training.",
   metadataBase: new URL("https://ramgopal-portfolio.vercel.app"),
   alternates: { canonical: "/" },
 };
