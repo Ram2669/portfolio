@@ -5,7 +5,6 @@ import { Code, Database, Cloud, TestTube, MapPin, Mail, Phone, Brain, Network, D
 import { useState } from 'react';
 
 const About = () => {
-  const [selectedSkill, setSelectedSkill] = useState<number | null>(null);
   const [hoveredCert, setHoveredCert] = useState<number | null>(null);
 
   const skills = [
@@ -106,6 +105,9 @@ const About = () => {
     },
   ];
 
+	  const verifiedCount = certifications.filter((c) => !!c.link).length;
+
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -192,13 +194,13 @@ const About = () => {
                     </h4>
                     <p className="text-[var(--mission-accent)] font-medium">CISCO</p>
                     <p className="text-sm text-[var(--mission-muted)] mb-2">
-                      November 2024 - Present • Bengaluru, India
+                      November 2024 - Present c Bengaluru, India
                     </p>
                     <ul className="text-gray-600 dark:text-gray-300 space-y-1 text-sm">
-                      <li>• Automated testing using Python with Selenium and Pytest to ensure software quality</li>
-                      <li>• Developing a full-stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure AI Search for real-time natural language query handling</li>
-                      <li>• Integrating Azure AI Search for intelligent schema retrieval and dynamic SQL generation</li>
-                      <li>• CCNA Certified; proficient in networking, routing, switching, and IP fundamentals</li>
+                      <li>e Automated testing using Python with Selenium and Pytest to ensure software quality</li>
+                      <li>e Developing a full-stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure AI Search for real-time natural language query handling</li>
+                      <li>e Integrating Azure AI Search for intelligent schema retrieval and dynamic SQL generation</li>
+                      <li>e CCNA Certified; proficient in networking, routing, switching, and IP fundamentals</li>
                     </ul>
                   </div>
                 </div>
@@ -221,7 +223,7 @@ const About = () => {
                   Pragati Engineering College, Kakinada
                 </p>
                 <p className="text-sm text-[var(--mission-muted)]">
-                  August 2019 - June 2023 • CGPA: 7.87
+                  August 2019 - June 2023 c CGPA: 7.87
                 </p>
               </div>
             </div>
@@ -238,7 +240,7 @@ const About = () => {
               Technical Skills
             </h3>
             <motion.div
-              className="space-y-6"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
@@ -246,80 +248,45 @@ const About = () => {
             >
               {skills.map((skillGroup, index) => {
                 const IconComponent = skillGroup.icon;
-                const isSelected = selectedSkill === index;
                 return (
                   <motion.div
                     key={index}
-                    className={`rounded-xl p-6 shadow-lg hover:shadow-2xl border transition-all duration-500 cursor-pointer bg-[var(--mission-panel)] border-[var(--mission-border)] ${
-                      isSelected
-                        ? 'ring-2 ring-[var(--mission-accent)]'
-                        : 'hover:border-[var(--mission-accent)]'
-                    }`}
+                    className="relative group rounded-2xl p-6 border border-[var(--mission-border)] bg-[var(--mission-panel)] holo-border hud-card overflow-hidden"
                     variants={itemVariants}
-                    whileHover={{
-                      y: -6,
-                      scale: 1.03,
-                      transition: { duration: 0.3 }
-                    }}
-                    onClick={() => setSelectedSkill(isSelected ? null : index)}
+                    whileHover={{ y: -6, scale: 1.02, transition: { duration: 0.3 } }}
                   >
-                    <div className="flex items-center justify-between mb-4">
+                    <div className="absolute inset-0 hud-scan mask-radial-faded pointer-events-none" aria-hidden="true" />
+                    <div className="flex items-start justify-between">
                       <div className="flex items-center">
                         <motion.div
                           className="w-12 h-12 rounded-xl flex items-center justify-center mr-4 shadow-lg bg-[rgba(0,227,255,.12)] border border-[var(--mission-border)]"
-                          whileHover={{ rotate: 10, scale: 1.15 }}
-                          transition={{ duration: 0.3 }}
+                          whileHover={{ rotate: 8, scale: 1.1 }}
+                          transition={{ duration: 0.2 }}
                         >
                           <IconComponent className="w-6 h-6 text-[var(--mission-accent)]" />
                         </motion.div>
                         <div>
-                          <h4 className="text-lg font-bold text-[var(--mission-text)]">
-                            {skillGroup.category}
-                          </h4>
-                          <div className="flex items-center mt-1">
-                            <div className="w-20 h-2 bg-[var(--mission-panel)] rounded-full overflow-hidden border border-[var(--mission-border)]">
-                              <motion.div
-                                className="h-full bg-[var(--mission-accent)]"
-                                initial={{ width: 0 }}
-                                animate={{ width: `${skillGroup.level}%` }}
-                                transition={{ duration: 1, delay: index * 0.1 }}
-                              />
-                            </div>
-                            <span className="ml-2 text-sm font-semibold text-[var(--mission-accent)]">
-                              {skillGroup.level}%
-                            </span>
-                          </div>
+                          <h4 className="text-lg font-bold text-[var(--mission-text)]">{skillGroup.category}</h4>
+                          <p className="text-xs text-[var(--mission-muted)]">{skillGroup.description}</p>
                         </div>
                       </div>
-                      <motion.div
-                        animate={{ rotate: isSelected ? 90 : 0 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <ChevronRight className="w-5 h-5 text-gray-400" />
-                      </motion.div>
                     </div>
 
-                    <AnimatePresence>
-                      {isSelected && (
-                        <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="mb-4"
-                        >
-                          <p className="text-[var(--mission-muted)] text-sm italic">
-                            {skillGroup.description}
-                          </p>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                    <div className="mt-5 flex items-center justify-center">
+                      <div className="relative hud-ring w-36 h-36" style={{ ['--p' as any]: skillGroup.level }}>
+                        <div className="hud-dial" />
+                        <div className="absolute inset-3 rounded-full flex flex-col items-center justify-center border border-[var(--mission-border)] bg-[var(--mission-surface)]">
+                          <span className="text-2xl font-bold text-[var(--mission-accent)]">{skillGroup.level}%</span>
+                          <span className="text-[10px] uppercase tracking-wider text-[var(--mission-muted)]">Proficiency</span>
+                        </div>
+                      </div>
+                    </div>
 
-                    <div className="flex flex-wrap gap-2">
+                    <div className="mt-5 flex flex-wrap gap-2">
                       {skillGroup.items.map((skill, skillIndex) => (
                         <motion.span
                           key={skillIndex}
-                          className="px-3 py-1.5 bg-[rgba(200,209,229,.06)] text-[var(--mission-text)] rounded-full text-xs font-medium shadow-sm border border-[var(--mission-border)] hover:bg-[rgba(0,227,255,.12)] hover:text-[var(--mission-text)] transition-all duration-200"
+                          className="px-3 py-1.5 bg-[rgba(124,77,255,.10)] text-[var(--mission-text)] rounded-full text-xs font-medium border border-[var(--mission-border)] shadow-sm hover:shadow-md transition-all duration-200"
                           whileHover={{ scale: 1.05, y: -1 }}
                           transition={{ duration: 0.2 }}
                         >
@@ -343,11 +310,11 @@ const About = () => {
                   whileHover={{ scale: 1.05 }}
                 >
                   <TrendingUp className="w-5 h-5 mr-1" />
-                  <span className="text-sm font-semibold">5 Verified</span>
+                  <span className="text-sm font-semibold">{verifiedCount} Verified</span>
                 </motion.div>
               </div>
 
-              <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {certifications.map((cert, index) => {
                   const IconComponent = cert.icon;
                   const isHovered = hoveredCert === index;
@@ -355,55 +322,34 @@ const About = () => {
                   return (
                     <motion.div
                       key={index}
-                      className={`relative rounded-xl p-6 shadow-lg hover:shadow-xl border transition-all duration-300 bg-[var(--mission-panel)] border-[var(--mission-border)] ${
-                        cert.featured
-                          ? 'ring-1 ring-[rgba(255,200,87,.3)]'
-                          : 'hover:border-[var(--mission-accent)]'
-                      }`}
+                      className="relative group rounded-2xl p-6 border border-[var(--mission-border)] bg-[var(--mission-panel)] holo-border hud-card overflow-hidden"
                       whileHover={{ scale: 1.02, y: -3 }}
                       transition={{ duration: 0.3 }}
                       onHoverStart={() => setHoveredCert(index)}
                       onHoverEnd={() => setHoveredCert(null)}
                     >
-                      {cert.featured && (
-                        <motion.div
-                          className="absolute -top-2 -right-2 bg-[rgba(255,200,87,1)] text-black rounded-full p-1"
-                          animate={{ rotate: [0, 10, -10, 0] }}
-                          transition={{ duration: 2, repeat: Infinity }}
-                        >
-                          <Star className="w-4 h-4" />
-                        </motion.div>
+                      <div className="absolute inset-0 hud-scan mask-radial-faded pointer-events-none" aria-hidden="true" />
+
+                      {/* Verified badge */}
+                      {cert.link && (
+                        <span className="absolute top-3 right-3 px-2 py-1 rounded-md text-[10px] font-bold tracking-wider bg-[rgba(34,211,238,.15)] text-[var(--mission-text)] border border-[var(--mission-border)]">
+                          VERIFIED
+                        </span>
                       )}
 
-                      <div className="flex items-start justify-between">
-                        <div className="flex items-start flex-1">
-                          <motion.div
-                            className={`w-12 h-12 rounded-xl flex items-center justify-center mr-4 shadow-md ${
-                              cert.featured
-                                ? 'bg-gradient-to-br from-yellow-100 to-yellow-200 dark:from-yellow-900 dark:to-yellow-800'
-                                : 'bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800'
-                            }`}
-                            whileHover={{ rotate: 5, scale: 1.1 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <IconComponent className={`w-6 h-6 ${
-                              cert.featured
-                                ? 'text-[rgba(255,200,87,1)]'
-                                : 'text-[var(--mission-accent)]'
-                            }`} />
-                          </motion.div>
+                      <div className="flex items-start">
+                        <motion.div
+                          className="w-12 h-12 rounded-xl flex items-center justify-center mr-4 shadow-md bg-[rgba(0,227,255,.12)] border border-[var(--mission-border)]"
+                          whileHover={{ rotate: 5, scale: 1.08 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <IconComponent className={`w-6 h-6 ${cert.featured ? 'text-[var(--mission-warning)]' : 'text-[var(--mission-accent)]'}`} />
+                        </motion.div>
 
-                          <div className="flex-1">
-                            <h4 className="text-lg font-bold text-[var(--mission-text)] mb-1">
-                              {cert.name}
-                            </h4>
-                            <p className="text-[var(--mission-accent)] font-semibold text-sm mb-2">
-                              {cert.issuer}
-                            </p>
-                            <p className="text-[var(--mission-muted)] text-sm">
-                              {cert.description}
-                            </p>
-                          </div>
+                        <div className="flex-1">
+                          <h4 className="text-lg font-bold text-[var(--mission-text)] mb-1">{cert.name}</h4>
+                          <p className="text-[var(--mission-accent)] font-semibold text-sm mb-2">{cert.issuer}</p>
+                          <p className="text-[var(--mission-muted)] text-sm">{cert.description}</p>
                         </div>
 
                         {cert.link && (
