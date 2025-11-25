@@ -105,7 +105,7 @@ const About = () => {
     },
   ];
 
-	  const verifiedCount = certifications.filter((c) => !!c.link).length;
+      const verifiedCount = certifications.filter((c) => !!c.link).length;
 
 
   const containerVariants = {
@@ -130,7 +130,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-20 bg-[var(--mission-surface)]">
+    <section id="about" className="theme-garage py-20 bg-[var(--mission-surface)]">
       <div className="container mx-auto px-6">
         <motion.div
           className="text-center mb-16"
@@ -147,7 +147,7 @@ const About = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 gap-12 items-start">
           {/* Left Column - Personal Info & Experience */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -184,7 +184,7 @@ const About = () => {
               <div className="rounded-lg p-6 border border-[var(--mission-border)] bg-[var(--mission-panel)]">
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-[rgba(0,227,255,.12)] rounded-lg flex items-center justify-center border border-[var(--mission-border)]">
+                    <div className="w-12 h-12 bg-[rgba(198,40,40,.12)] rounded-lg flex items-center justify-center border border-[var(--mission-border)]">
                       <TestTube className="w-6 h-6 text-[var(--mission-accent)]" />
                     </div>
                   </div>
@@ -194,13 +194,13 @@ const About = () => {
                     </h4>
                     <p className="text-[var(--mission-accent)] font-medium">CISCO</p>
                     <p className="text-sm text-[var(--mission-muted)] mb-2">
-                      November 2024 - Present c Bengaluru, India
+                      November 2024 - Present • Bengaluru, India
                     </p>
-                    <ul className="text-gray-600 dark:text-gray-300 space-y-1 text-sm">
-                      <li>e Automated testing using Python with Selenium and Pytest to ensure software quality</li>
-                      <li>e Developing a full-stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure AI Search for real-time natural language query handling</li>
-                      <li>e Integrating Azure AI Search for intelligent schema retrieval and dynamic SQL generation</li>
-                      <li>e CCNA Certified; proficient in networking, routing, switching, and IP fundamentals</li>
+                    <ul className="list-disc pl-5 text-[var(--mission-muted)] space-y-2 leading-relaxed text-sm">
+                      <li>Automated testing using Python with Selenium and Pytest to ensure software quality</li>
+                      <li>Developing a full-stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure AI Search for real-time natural language query handling</li>
+                      <li>Integrating Azure AI Search for intelligent schema retrieval and dynamic SQL generation</li>
+                      <li>CCNA Certified; proficient in networking, routing, switching, and IP fundamentals</li>
                     </ul>
                   </div>
                 </div>
@@ -223,7 +223,7 @@ const About = () => {
                   Pragati Engineering College, Kakinada
                 </p>
                 <p className="text-sm text-[var(--mission-muted)]">
-                  August 2019 - June 2023 c CGPA: 7.87
+                  August 2019 - June 2023 • CGPA: 7.87
                 </p>
               </div>
             </div>
@@ -236,11 +236,11 @@ const About = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-semibold text-[var(--mission-text)] mb-6">
+            <h3 className="text-2xl font-semibold text-[var(--mission-text)] mb-6 text-center">
               Technical Skills
             </h3>
             <motion.div
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
@@ -259,7 +259,7 @@ const About = () => {
                     <div className="flex items-start justify-between">
                       <div className="flex items-center">
                         <motion.div
-                          className="w-12 h-12 rounded-xl flex items-center justify-center mr-4 shadow-lg bg-[rgba(0,227,255,.12)] border border-[var(--mission-border)]"
+                          className="w-12 h-12 rounded-xl flex items-center justify-center mr-4 shadow-lg bg-[rgba(198,40,40,.12)] border border-[var(--mission-border)]"
                           whileHover={{ rotate: 8, scale: 1.1 }}
                           transition={{ duration: 0.2 }}
                         >
@@ -286,7 +286,7 @@ const About = () => {
                       {skillGroup.items.map((skill, skillIndex) => (
                         <motion.span
                           key={skillIndex}
-                          className="px-3 py-1.5 bg-[rgba(124,77,255,.10)] text-[var(--mission-text)] rounded-full text-xs font-medium border border-[var(--mission-border)] shadow-sm hover:shadow-md transition-all duration-200"
+                          className="px-3 py-1.5 bg-[rgba(245,158,11,.10)] text-[var(--mission-text)] rounded-full text-xs font-medium border border-[var(--mission-border)] shadow-sm hover:shadow-md transition-all duration-200"
                           whileHover={{ scale: 1.05, y: -1 }}
                           transition={{ duration: 0.2 }}
                         >
@@ -301,12 +301,12 @@ const About = () => {
 
             {/* Certifications */}
             <div className="mt-8">
-              <div className="flex items-center justify-between mb-6">
+              <div className="mb-6 text-center">
                 <h3 className="text-2xl font-semibold text-[var(--mission-text)]">
                   Professional Certifications
                 </h3>
                 <motion.div
-                  className="flex items-center text-[var(--mission-accent)]"
+                  className="mt-2 inline-flex items-center text-[var(--mission-accent)]"
                   whileHover={{ scale: 1.05 }}
                 >
                   <TrendingUp className="w-5 h-5 mr-1" />
@@ -314,7 +314,7 @@ const About = () => {
                 </motion.div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
                 {certifications.map((cert, index) => {
                   const IconComponent = cert.icon;
                   const isHovered = hoveredCert === index;
@@ -332,14 +332,14 @@ const About = () => {
 
                       {/* Verified badge */}
                       {cert.link && (
-                        <span className="absolute top-3 right-3 px-2 py-1 rounded-md text-[10px] font-bold tracking-wider bg-[rgba(34,211,238,.15)] text-[var(--mission-text)] border border-[var(--mission-border)]">
+                        <span className="absolute top-3 right-3 px-2 py-1 rounded-md text-[10px] font-bold tracking-wider bg-[rgba(245,158,11,.15)] text-[var(--mission-text)] border border-[var(--mission-border)]">
                           VERIFIED
                         </span>
                       )}
 
                       <div className="flex items-start">
                         <motion.div
-                          className="w-12 h-12 rounded-xl flex items-center justify-center mr-4 shadow-md bg-[rgba(0,227,255,.12)] border border-[var(--mission-border)]"
+                          className="w-12 h-12 rounded-xl flex items-center justify-center mr-4 shadow-md bg-[rgba(198,40,40,.12)] border border-[var(--mission-border)]"
                           whileHover={{ rotate: 5, scale: 1.08 }}
                           transition={{ duration: 0.2 }}
                         >
