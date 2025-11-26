@@ -122,7 +122,17 @@ const Chatbot = () => {
     }
 
     // Certifications related
-    if (message.includes('certification') || message.includes('certified') || message.includes('ccna') || message.includes('nptel')) {
+    if (
+      message.includes('certification') ||
+      message.includes('certifications') ||
+      message.includes('certificate') ||
+      message.includes('certificates') ||
+      message.includes('certified') ||
+      message.includes('ccna') ||
+      message.includes('hackerrank') ||
+      message.includes('devnet') ||
+      message.includes('nptel')
+    ) {
       return "My certifications include:\n\n• Cisco Certified DevNet Associate\n• CCNA (Cisco Certified Network Associate)\n• Data Science Certification — Cisco Generative AI Green Belt (2025)\n• Python Programming — NPTEL (2024)\n• Python (Basic) — HackerRank (2024)";
     }
 
