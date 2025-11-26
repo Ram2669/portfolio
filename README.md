@@ -4,7 +4,8 @@ A modern, responsive portfolio website built with Next.js 15, TypeScript, Tailwi
 
 ## 🌟 Live Demo
 
-**Portfolio URL**: [Coming Soon - Will be deployed on Vercel]
+**Portfolio URL**: https://ramgopal-portfolio.vercel.app
+Hosted on Vercel (auto-deploys from GitHub).
 
 ## 👨‍💻 About Me
 
@@ -158,9 +159,14 @@ portfolio/
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 🤝 Contributing
+## 🤝 Contributing & Development
 
-Feel free to fork this project and submit pull requests for any improvements.
+- Development guide: see [CONTRIBUTING.md](CONTRIBUTING.md)
+- Quick start: clone → install → run
+  - git clone https://github.com/Ram2669/portfolio.git && cd portfolio
+  - npm install
+  - npm run dev
+- Open PRs against `main`; Vercel will attach a Preview URL automatically.
 
 ## ⭐ Show Your Support
 
