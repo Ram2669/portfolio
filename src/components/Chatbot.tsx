@@ -53,18 +53,62 @@ const Chatbot = () => {
   }, [isOpen]);
 
 
+  // Project-specific details helper
+  const getProjectDetails = (msg: string): string | null => {
+    // AI-Powered Chatbot for Infrastructure Management
+    if (
+      (msg.includes('chatbot') && (msg.includes('ai') || msg.includes('infrastructure'))) ||
+      msg.includes('ai-powered chatbot') ||
+      msg.includes('ai powered chatbot') ||
+      msg.includes('ai chatbot') ||
+      msg.includes('infrastructure management') ||
+      msg.includes('azure openai') ||
+      msg.includes('langchain') ||
+      msg.includes('langgraph')
+    ) {
+      return "AI-Powered Chatbot for Infrastructure Management\n\nStatus: Currently Implementing\nCategory: AI/ML & Infrastructure\nTechnologies: LangChain, LangGraph, Azure AI Search, Azure OpenAI (GPT-4.0, GPT-3.5-Turbo), Azure MySQL Server, Azure Cosmos DB, Azure VNet, Azure Blob Storage, Django\nHighlights:\n• Multi-agent: GPT-4 primary + GPT-3.5-Turbo SQL agent\n• Intelligent routing across RAG, SQL, and web-search\n• RAG via Azure AI Search; embeddings + vector index\n• SQL agent auto-generates, validates, and executes queries (Azure MySQL & Cosmos DB)\n• Secure Azure architecture with VNet and private networking";
+    }
+
+    // Network-Based Pattern Searching System
+    if (
+      msg.includes('network-based pattern') ||
+      msg.includes('network based pattern') ||
+      msg.includes('pattern searching') ||
+      msg.includes('pattern search') ||
+      msg.includes('client-server') ||
+      msg.includes('client server')
+    ) {
+      return "Network-Based Pattern Searching System\n\nStatus: Completed\nCategory: Backend\nTechnologies: Python, JSON, Client-Server Architecture\nHighlights:\n• Client–server pattern searching for efficient text matching\n• Structured data exchange using JSON\n• Optimized error handling and file parsing (25% latency reduction)";
+    }
+
+    // Self-Fuel Dispensing Automated Framework Using RFID Cards
+    if (
+      msg.includes('self-fuel') ||
+      msg.includes('self fuel') ||
+      msg.includes('fuel dispensing') ||
+      msg.includes('rfid')
+    ) {
+      return "Self-Fuel Dispensing Automated Framework Using RFID Cards\n\nStatus: Completed\nCategory: IoT/Embedded\nTechnologies: Embedded C, Arduino, RFID Technology, Real-time Processing\nHighlights:\n• RFID card-based authentication to prevent unauthorized access\n• Automated dispensing workflow to minimize manual errors\n• ~40% improvement in transaction accuracy via real-time sync\n• Robust microcontroller control logic";
+    }
+
+    return null;
+  };
+
   // AI Response Logic based on Ram's resume
   const getAIResponse = (userMessage: string): string => {
     const message = userMessage.toLowerCase();
 
+    const projectDetails = getProjectDetails(message);
+    if (projectDetails) return projectDetails;
+
     // Experience related
     if (message.includes('experience') || message.includes('work') || message.includes('job') || message.includes('cisco')) {
-      return "I’m a Software Engineer at Cisco (since Nov 2024). I work on automated testing using Python with Selenium and Pytest, and I’m building a full‑stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure AI Search.";
+      return "I’m a Software Test Engineer Trainee at Cisco (since Nov 2024). I work on automated testing using Python with Selenium and Pytest, and I’m building a full‑stack AI chatbot using Azure OpenAI, Django, MySQL, and Azure AI Search.";
     }
 
     // Skills related
     if (message.includes('skill') || message.includes('technology') || message.includes('programming') || message.includes('language')) {
-      return "My technical skills include:\n\n• Programming: Java, Python, JavaScript\n• Frameworks: React, Django, TestNG, JUnit\n• Tools: Git, VSCode, PyCharm, Selenium, Postman, GitHub Copilot\n• Databases: MySQL, Azure Cosmos DB\n• Testing: Automated Testing, Selenium, TestNG, JUnit\n• Cloud: AWS, Azure OpenAI, Azure AI Search";
+      return "My technical skills include:\n\n• Programming: Java, Python, JavaScript\n• Frameworks: React, Django, REST APIs\n• Tools: Git, VSCode, PyCharm, Selenium, Postman, GitHub Copilot\n• Databases: MySQL, Azure Cosmos DB\n• Testing: Selenium, Pytest\n• Cloud: AWS, Azure OpenAI, Azure AI Search";
     }
 
     // Projects related
@@ -84,7 +128,7 @@ const Chatbot = () => {
 
     // Contact related
     if (message.includes('contact') || message.includes('email') || message.includes('phone') || message.includes('linkedin')) {
-      return "You can reach Ram at:\n\nEmail: ramgopalpampana10@gmail.com\nPhone: +91 7730072669\nLinkedIn: https://linkedin.com/in/ramgopal-pampana\nGitHub: https://github.com/Ram2669\nLocation: Bengaluru, Karnataka, India";
+      return "You can reach Ram at:\n\nEmail: ramgopalpampana10@gmail.com\nPhone: +91 7730072669\nLinkedIn: https://www.linkedin.com/in/ramgopalpampana/\nGitHub: https://github.com/Ram2669\nLocation: Bengaluru, Karnataka, India";
     }
 
     // Location related
@@ -129,7 +173,7 @@ const Chatbot = () => {
     setTimeout(() => {
       const botResponse: Message = {
         id: (Date.now() + 1).toString(),
-        text: getAIResponse(inputText),
+        text: getAIResponse(userMessage.text),
         isBot: true,
         timestamp: new Date(),
       };
@@ -139,8 +183,11 @@ const Chatbot = () => {
     }, 1000);
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    // Send on Enter (without Shift), but ignore IME composition
+    // @ts-expect-error React typing for nativeEvent may vary across versions
+    const isComposing = (e as any).nativeEvent?.isComposing;
+    if (e.key === 'Enter' && !e.shiftKey && !isComposing) {
       e.preventDefault();
       handleSendMessage();
     }
@@ -151,11 +198,9 @@ const Chatbot = () => {
       {/* Debug: Always visible chatbot button */}
       <div className="fixed bottom-6 right-6 z-[9999]">
         <button
-          onClick={() => {
-            // toggle chat
-            setIsOpen(!isOpen);
-          }}
-          className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-white flex items-center justify-center"
+          onClick={() => setIsOpen(v => !v)}
+          aria-label={isOpen ? 'Close chat' : 'Open chat'}
+          className="bg-[var(--mission-accent)] hover:opacity-90 text-white p-4 rounded-full shadow-2xl transition-all duration-300 border border-[var(--mission-border)] flex items-center justify-center"
           style={{ minWidth: '60px', minHeight: '60px' }}
         >
           {isOpen ? <X size={24} /> : <MessageCircle size={24} />}
@@ -166,14 +211,14 @@ const Chatbot = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed bottom-24 right-6 z-[9998] w-96 h-96 bg-white dark:bg-gray-800 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 flex flex-col"
+            className="fixed bottom-24 right-6 z-[9998] w-[min(92vw,22rem)] h-[min(65vh,28rem)] bg-[var(--mission-panel)] rounded-lg shadow-2xl border border-[var(--mission-border)] flex flex-col"
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 50, scale: 0.9 }}
             transition={{ duration: 0.3 }}
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4 rounded-t-lg">
+            <div className="bg-[var(--mission-accent)] text-white p-4 rounded-t-lg">
               <div className="flex items-center gap-3">
                 <Bot size={20} />
                 <div>
@@ -194,14 +239,14 @@ const Chatbot = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <div className={`flex items-start gap-2 max-w-[80%] ${message.isBot ? 'flex-row' : 'flex-row-reverse'}`}>
-                    <div className={`p-2 rounded-full ${message.isBot ? 'bg-blue-100 text-blue-600' : 'bg-gray-100 text-gray-600'}`}>
+                    <div className={`p-2 rounded-full ${message.isBot ? 'bg-[rgba(245,158,11,.15)] text-[var(--mission-accent-2)]' : 'bg-[rgba(198,40,40,.15)] text-[var(--mission-accent)]'}`}>
                       {message.isBot ? <Bot size={16} /> : <User size={16} />}
                     </div>
                     <div
                       className={`p-3 rounded-lg ${
                         message.isBot
-                          ? 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200'
-                          : 'bg-blue-600 text-white'
+                          ? 'bg-[var(--mission-surface)] text-[var(--mission-text)] border border-[var(--mission-border)]'
+                          : 'bg-[var(--mission-accent)] text-black'
                       }`}
                     >
                       <p className="text-sm whitespace-pre-line">{message.text}</p>
@@ -217,10 +262,10 @@ const Chatbot = () => {
                   animate={{ opacity: 1 }}
                 >
                   <div className="flex items-start gap-2">
-                    <div className="p-2 rounded-full bg-blue-100 text-blue-600">
+                    <div className="p-2 rounded-full bg-[rgba(245,158,11,.15)] text-[var(--mission-accent-2)]">
                       <Bot size={16} />
                     </div>
-                    <div className="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg">
+                    <div className="bg-[var(--mission-surface)] border border-[var(--mission-border)] p-3 rounded-lg">
                       <div className="flex space-x-1">
                         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
                         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
@@ -234,20 +279,20 @@ const Chatbot = () => {
             </div>
 
             {/* Input */}
-            <div className="p-4 border-t border-gray-200 dark:border-gray-700">
+            <div className="p-4 border-t border-[var(--mission-border)]">
               <div className="flex gap-2">
                 <input
                   type="text"
                   value={inputText}
                   onChange={(e) => setInputText(e.target.value)}
-                  onKeyPress={handleKeyPress}
+                  onKeyDown={handleKeyDown}
                   placeholder="Ask about Ram&apos;s experience..."
-                  className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm"
+                  className="flex-1 px-3 py-2 border border-[var(--mission-border)] rounded-lg focus:ring-2 focus:ring-[var(--mission-accent)] focus:border-transparent bg-[var(--mission-surface)] text-[var(--mission-text)] text-sm"
                 />
                 <button
                   onClick={handleSendMessage}
                   disabled={!inputText.trim()}
-                  className="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white p-2 rounded-lg transition-colors duration-200"
+                  className="bg-[var(--mission-accent)] hover:opacity-90 disabled:opacity-50 text-black p-2 rounded-lg transition-colors duration-200"
                 >
                   <Send size={16} />
                 </button>
